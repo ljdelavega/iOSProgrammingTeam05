@@ -15,6 +15,10 @@
 		F7B42B391BD5FC5D00CB3308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B371BD5FC5D00CB3308 /* LaunchScreen.storyboard */; };
 		F7B42B441BD5FC5E00CB3308 /* CPSC_599_App_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B431BD5FC5E00CB3308 /* CPSC_599_App_ProjectTests.swift */; };
 		F7B42B4F1BD5FC5E00CB3308 /* CPSC_599_App_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B4E1BD5FC5E00CB3308 /* CPSC_599_App_ProjectUITests.swift */; };
+		F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726AA1BDEB22900B5C30A /* Budget.swift */; };
+		F7C726AD1BDEB8B300B5C30A /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726AC1BDEB8B300B5C30A /* Goal.swift */; };
+		F7C726AF1BDEB8F000B5C30A /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726AE1BDEB8F000B5C30A /* Income.swift */; };
+		F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726B01BDEB90F00B5C30A /* Expense.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		F7B42B4A1BD5FC5E00CB3308 /* CPSC 599 App ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CPSC 599 App ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B42B4E1BD5FC5E00CB3308 /* CPSC_599_App_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPSC_599_App_ProjectUITests.swift; sourceTree = "<group>"; };
 		F7B42B501BD5FC5E00CB3308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7C726AA1BDEB22900B5C30A /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		F7C726AC1BDEB8B300B5C30A /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		F7C726AE1BDEB8F000B5C30A /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
+		F7C726B01BDEB90F00B5C30A /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */,
 				F7B42B371BD5FC5D00CB3308 /* LaunchScreen.storyboard */,
 				F7B42B3A1BD5FC5D00CB3308 /* Info.plist */,
+				F7C726AA1BDEB22900B5C30A /* Budget.swift */,
+				F7C726AC1BDEB8B300B5C30A /* Goal.swift */,
+				F7C726AE1BDEB8F000B5C30A /* Income.swift */,
+				F7C726B01BDEB90F00B5C30A /* Expense.swift */,
 			);
 			name = src;
 			path = "CPSC 599 App Project";
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */,
 				F7B42B311BD5FC5D00CB3308 /* SecondViewController.swift in Sources */,
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,
+				F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */,
+				F7C726AD1BDEB8B300B5C30A /* Goal.swift in Sources */,
+				F7C726AF1BDEB8F000B5C30A /* Income.swift in Sources */,
 				F7B42B2F1BD5FC5D00CB3308 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +504,7 @@
 				F7B42B551BD5FC5E00CB3308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7B42B561BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "CPSC 599 App ProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +513,7 @@
 				F7B42B581BD5FC5E00CB3308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7B42B591BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "CPSC 599 App ProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +522,7 @@
 				F7B42B5B1BD5FC5E00CB3308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
