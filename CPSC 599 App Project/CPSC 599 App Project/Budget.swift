@@ -26,8 +26,12 @@ class Budget: NSObject, NSCoding {
     // MARK: Properties
     // Put fields pertaining to the data model class here.
     var name: String
-    var photo: UIImage?
-    var rating: Int
+    var amount: NSDecimalNumber
+    var remaining: NSDecimalNumber
+    var desc: String
+    var date: NSDate
+    var repeating: Bool
+    
     
     // MARK: Archiving Paths
     
@@ -39,22 +43,28 @@ class Budget: NSObject, NSCoding {
     struct PropertyKey {
         // Property keys used to encode and decode data
         static let nameKey = "name"
-        static let photoKey = "photo"
-        static let ratingKey = "rating"
+        static let amountKey = "amount"
+        static let remainingKey = "remaining"
+        static let descKey = "desc"
+        static let dateKey = "date"
+        static let repeatingKey = "repeating"
     }
     
     // MARK: Initialization
     
-    init?(name: String, photo: UIImage?, rating: Int) {
+    init?(name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool) {
         // Initialize stored properties.
         self.name = name
-        self.photo = photo
-        self.rating = rating
+        self.amount = amount
+        self.remaining = remaining
+        self.desc = desc
+        self.date = date
+        self.repeating = repeating
         
         super.init()
         
-        // Initialization should fail if there is no name or if the rating is negative.
-        if name.isEmpty || rating < 0 {
+        // Initialization should fail if there is no name or if the amount is negative.
+        if (name.isEmpty || amount.compare(NSDecimalNumber(int: 0)) == NSComparisonResult.OrderedAscending) {
             return nil
         }
     }
@@ -64,21 +74,28 @@ class Budget: NSObject, NSCoding {
     func encodeWithCoder(aCoder: NSCoder) {
         // encode the fields that we want to save and persist
         aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
-        aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
-        aCoder.encodeInteger(rating, forKey: PropertyKey.ratingKey)
+        aCoder.encodeObject(amount, forKey: PropertyKey.amountKey)
+        aCoder.encodeObject(remaining, forKey: PropertyKey.remainingKey)
+        aCoder.encodeObject(desc, forKey: PropertyKey.descKey)
+        aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
+        aCoder.encodeObject(repeating, forKey: PropertyKey.repeatingKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         // initialize by decoding an existing object from persistent data.
         let name = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String
+        let amount = aDecoder.decodeObjectForKey(PropertyKey.amountKey) as! NSDecimalNumber
+        let remaining = aDecoder.decodeObjectForKey(PropertyKey.remainingKey) as! NSDecimalNumber
+        let desc = aDecoder.decodeObjectForKey(PropertyKey.descKey) as! String
+        let date = aDecoder.decodeObjectForKey(PropertyKey.dateKey) as! NSDate
+        
+        let repeating = aDecoder.decodeBoolForKey(PropertyKey.repeatingKey)
         
         // Because photo is an optional property of Meal, use conditional cast.
-        let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
-        
-        let rating = aDecoder.decodeIntegerForKey(PropertyKey.ratingKey)
+        //let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
         
         // Must call designated initializer.
-        self.init(name: name, photo: photo, rating: rating)
+        self.init(name: name, amount: amount, remaining: remaining, desc: desc, date: date, repeating: repeating)
     }
     
 }
