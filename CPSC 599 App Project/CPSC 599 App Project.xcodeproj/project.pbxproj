@@ -13,14 +13,17 @@
 		F7B42B341BD5FC5D00CB3308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B321BD5FC5D00CB3308 /* Main.storyboard */; };
 		F7B42B361BD5FC5D00CB3308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */; };
 		F7B42B391BD5FC5D00CB3308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B371BD5FC5D00CB3308 /* LaunchScreen.storyboard */; };
-		F7B42B441BD5FC5E00CB3308 /* CPSC_599_App_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B431BD5FC5E00CB3308 /* CPSC_599_App_ProjectTests.swift */; };
-		F7B42B4F1BD5FC5E00CB3308 /* CPSC_599_App_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B4E1BD5FC5E00CB3308 /* CPSC_599_App_ProjectUITests.swift */; };
 		F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726AA1BDEB22900B5C30A /* Budget.swift */; };
 		F7C726AD1BDEB8B300B5C30A /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726AC1BDEB8B300B5C30A /* Goal.swift */; };
 		F7C726AF1BDEB8F000B5C30A /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726AE1BDEB8F000B5C30A /* Income.swift */; };
 		F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726B01BDEB90F00B5C30A /* Expense.swift */; };
 		F7C726B31BE0079B00B5C30A /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726B21BE0079B00B5C30A /* BudgetViewController.swift */; };
 		F7C726B51BE0083600B5C30A /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726B41BE0083600B5C30A /* GoalViewController.swift */; };
+		F7C726BC1BE4334800B5C30A /* FillableLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726BA1BE4334800B5C30A /* FillableLoader.swift */; };
+		F7C726BD1BE4334800B5C30A /* WavesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726BB1BE4334800B5C30A /* WavesLoader.swift */; };
+		F7C726C21BE43E4F00B5C30A /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726C11BE43E4F00B5C30A /* GoalTableViewCell.swift */; };
+		F7C726C41BE43E7600B5C30A /* GoalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726C31BE43E7600B5C30A /* GoalTableViewController.swift */; };
+		F7C726C61BE4447700B5C30A /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726C51BE4447700B5C30A /* GoalDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,17 +53,18 @@
 		F7B42B381BD5FC5D00CB3308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7B42B3A1BD5FC5D00CB3308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7B42B3F1BD5FC5E00CB3308 /* CPSC 599 App ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CPSC 599 App ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7B42B431BD5FC5E00CB3308 /* CPSC_599_App_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPSC_599_App_ProjectTests.swift; sourceTree = "<group>"; };
-		F7B42B451BD5FC5E00CB3308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7B42B4A1BD5FC5E00CB3308 /* CPSC 599 App ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CPSC 599 App ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7B42B4E1BD5FC5E00CB3308 /* CPSC_599_App_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPSC_599_App_ProjectUITests.swift; sourceTree = "<group>"; };
-		F7B42B501BD5FC5E00CB3308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7C726AA1BDEB22900B5C30A /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		F7C726AC1BDEB8B300B5C30A /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		F7C726AE1BDEB8F000B5C30A /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
 		F7C726B01BDEB90F00B5C30A /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		F7C726B21BE0079B00B5C30A /* BudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		F7C726B41BE0083600B5C30A /* GoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
+		F7C726BA1BE4334800B5C30A /* FillableLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FillableLoader.swift; path = Libs/FillableLoader.swift; sourceTree = "<group>"; };
+		F7C726BB1BE4334800B5C30A /* WavesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WavesLoader.swift; path = Libs/WavesLoader.swift; sourceTree = "<group>"; };
+		F7C726C11BE43E4F00B5C30A /* GoalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
+		F7C726C31BE43E7600B5C30A /* GoalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalTableViewController.swift; sourceTree = "<group>"; };
+		F7C726C51BE4447700B5C30A /* GoalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				F7B42B2B1BD5FC5D00CB3308 /* src */,
-				F7B42B421BD5FC5E00CB3308 /* CPSC 599 App ProjectTests */,
-				F7B42B4D1BD5FC5E00CB3308 /* CPSC 599 App ProjectUITests */,
 				F7B42B2A1BD5FC5D00CB3308 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,32 +121,27 @@
 				F7B42B301BD5FC5D00CB3308 /* TransactionViewController.swift */,
 				F7C726B21BE0079B00B5C30A /* BudgetViewController.swift */,
 				F7C726B41BE0083600B5C30A /* GoalViewController.swift */,
+				F7C726C31BE43E7600B5C30A /* GoalTableViewController.swift */,
+				F7C726C11BE43E4F00B5C30A /* GoalTableViewCell.swift */,
+				F7C726C51BE4447700B5C30A /* GoalDetailViewController.swift */,
 				F7B42B3A1BD5FC5D00CB3308 /* Info.plist */,
 				F7C726AA1BDEB22900B5C30A /* Budget.swift */,
 				F7C726AC1BDEB8B300B5C30A /* Goal.swift */,
 				F7C726AE1BDEB8F000B5C30A /* Income.swift */,
 				F7C726B01BDEB90F00B5C30A /* Expense.swift */,
+				F7C726BE1BE4370900B5C30A /* Libs */,
 			);
 			name = src;
 			path = "CPSC 599 App Project";
 			sourceTree = "<group>";
 		};
-		F7B42B421BD5FC5E00CB3308 /* CPSC 599 App ProjectTests */ = {
+		F7C726BE1BE4370900B5C30A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				F7B42B431BD5FC5E00CB3308 /* CPSC_599_App_ProjectTests.swift */,
-				F7B42B451BD5FC5E00CB3308 /* Info.plist */,
+				F7C726BA1BE4334800B5C30A /* FillableLoader.swift */,
+				F7C726BB1BE4334800B5C30A /* WavesLoader.swift */,
 			);
-			path = "CPSC 599 App ProjectTests";
-			sourceTree = "<group>";
-		};
-		F7B42B4D1BD5FC5E00CB3308 /* CPSC 599 App ProjectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F7B42B4E1BD5FC5E00CB3308 /* CPSC_599_App_ProjectUITests.swift */,
-				F7B42B501BD5FC5E00CB3308 /* Info.plist */,
-			);
-			path = "CPSC 599 App ProjectUITests";
+			name = Libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,12 +274,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C726C41BE43E7600B5C30A /* GoalTableViewController.swift in Sources */,
 				F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */,
 				F7B42B311BD5FC5D00CB3308 /* TransactionViewController.swift in Sources */,
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,
 				F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */,
+				F7C726C21BE43E4F00B5C30A /* GoalTableViewCell.swift in Sources */,
 				F7C726AD1BDEB8B300B5C30A /* Goal.swift in Sources */,
+				F7C726BC1BE4334800B5C30A /* FillableLoader.swift in Sources */,
+				F7C726C61BE4447700B5C30A /* GoalDetailViewController.swift in Sources */,
 				F7C726AF1BDEB8F000B5C30A /* Income.swift in Sources */,
+				F7C726BD1BE4334800B5C30A /* WavesLoader.swift in Sources */,
 				F7C726B51BE0083600B5C30A /* GoalViewController.swift in Sources */,
 				F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */,
 				F7C726B31BE0079B00B5C30A /* BudgetViewController.swift in Sources */,
@@ -293,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7B42B441BD5FC5E00CB3308 /* CPSC_599_App_ProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7B42B4F1BD5FC5E00CB3308 /* CPSC_599_App_ProjectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
