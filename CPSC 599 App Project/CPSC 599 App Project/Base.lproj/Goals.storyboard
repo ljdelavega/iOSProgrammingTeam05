@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8gW-Sg-X7X">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Primary Goal-->
+        <scene sceneID="DkU-Sq-awA">
+            <objects>
+                <viewController id="8gW-Sg-X7X" userLabel="Primary Goal" customClass="GoalViewController" customModule="CPSC_599_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lYd-xK-Tcm"/>
+                        <viewControllerLayoutGuide type="bottom" id="tnz-pb-fhO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tn9-dH-6sh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYz-8Z-kHX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Drm-VC-x7C"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Primary Goal" id="nkG-ix-xiR"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fund_thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="l1x-XT-bBB">
+                                <rect key="frame" x="20" y="129" width="560" height="361"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLB-Jz-3Vz">
+                                <rect key="frame" x="234" y="509" width="131" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="pMp-Ht-Paq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Goal List"/>
+                                <connections>
+                                    <segue destination="ORa-A9-utl" kind="presentation" id="iF0-nT-3PF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Goal Title" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SoZ-q7-cms">
+                                <rect key="frame" x="224" y="64" width="153" height="42"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFZ-O8-o2t">
+                                <rect key="frame" x="224" y="104" width="153" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l1x-XT-bBB" firstAttribute="top" secondItem="SoZ-q7-cms" secondAttribute="bottom" constant="23" id="0ja-sR-8P9"/>
+                            <constraint firstItem="l1x-XT-bBB" firstAttribute="centerX" secondItem="FLB-Jz-3Vz" secondAttribute="centerX" id="3lh-en-9TT"/>
+                            <constraint firstItem="SoZ-q7-cms" firstAttribute="top" secondItem="OYz-8Z-kHX" secondAttribute="bottom" id="4pO-Tj-APs"/>
+                            <constraint firstItem="OYz-8Z-kHX" firstAttribute="top" secondItem="lYd-xK-Tcm" secondAttribute="bottom" id="6zK-jX-t0H"/>
+                            <constraint firstItem="l1x-XT-bBB" firstAttribute="top" secondItem="RFZ-O8-o2t" secondAttribute="bottom" constant="8" symbolic="YES" id="BQW-Mr-eg6"/>
+                            <constraint firstItem="OYz-8Z-kHX" firstAttribute="centerX" secondItem="SoZ-q7-cms" secondAttribute="centerX" id="Bm4-aA-zPV"/>
+                            <constraint firstItem="FLB-Jz-3Vz" firstAttribute="top" secondItem="l1x-XT-bBB" secondAttribute="bottom" constant="19" id="IV1-uu-m38"/>
+                            <constraint firstItem="FLB-Jz-3Vz" firstAttribute="bottom" secondItem="tnz-pb-fhO" secondAttribute="top" id="Ju0-oS-czN"/>
+                            <constraint firstItem="SoZ-q7-cms" firstAttribute="leading" secondItem="RFZ-O8-o2t" secondAttribute="leading" id="TJC-rN-Hn1"/>
+                            <constraint firstItem="RFZ-O8-o2t" firstAttribute="top" secondItem="OYz-8Z-kHX" secondAttribute="bottom" constant="40" id="fcs-Ga-8EA"/>
+                            <constraint firstItem="OYz-8Z-kHX" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leading" id="fko-PS-a5j"/>
+                            <constraint firstItem="l1x-XT-bBB" firstAttribute="centerX" secondItem="RFZ-O8-o2t" secondAttribute="centerX" id="kYi-zJ-LEY"/>
+                            <constraint firstItem="l1x-XT-bBB" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leadingMargin" id="kaK-Et-slU"/>
+                            <constraint firstAttribute="trailing" secondItem="OYz-8Z-kHX" secondAttribute="trailing" id="pEm-b9-tur"/>
+                            <constraint firstItem="RFZ-O8-o2t" firstAttribute="trailing" secondItem="SoZ-q7-cms" secondAttribute="trailing" id="zeK-QZ-QDP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Goals" image="second" id="V3v-6e-rgs" userLabel="Goals"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <exit id="ri2-ch-zhV" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iX4-FH-WrW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="912"/>
+        </scene>
+        <!--Goal Table View-->
+        <scene sceneID="jc8-dh-YzI">
+            <objects>
+                <tableViewController id="Cjy-1f-gF5" userLabel="Goal Table View" customClass="GoalTableViewController" customModule="CPSC_599_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJD-Tx-L3B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="emC-vw-BsE" customClass="GoalTableViewCell" customModule="CPSC_599_App_Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="emC-vw-BsE" id="u6C-0d-cgg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vk1-6R-oOQ" kind="showDetail" id="OlA-m0-t9W"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cjy-1f-gF5" id="cdp-QF-b6J"/>
+                            <outlet property="delegate" destination="Cjy-1f-gF5" id="fNg-nk-zkD"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Goals" image="second" id="eQh-iJ-J8i" userLabel="Goals"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Goal List" id="ggo-iv-5Lz" userLabel="Goal List Navigation Bar">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="v1g-Xs-BBC">
+                            <connections>
+                                <action selector="back:" destination="Cjy-1f-gF5" id="OIy-Bu-0Pr"/>
+                                <segue destination="ri2-ch-zhV" kind="unwind" unwindAction="unwindToPrimaryGoal:" id="6tj-CT-emu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J1g-xX-vnn">
+                            <connections>
+                                <segue destination="fat-p7-VIu" kind="presentation" id="Y01-ap-4wa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73L-ij-qOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="912"/>
+        </scene>
+        <!--Goal List to Details Navigation Controller-->
+        <scene sceneID="f9s-XS-vMQ">
+            <objects>
+                <navigationController id="fat-p7-VIu" userLabel="Goal List to Details Navigation Controller" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gf6-vC-7lJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vk1-6R-oOQ" kind="relationship" relationship="rootViewController" id="AdW-UP-I9e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Sl-H7-qfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="1632"/>
+        </scene>
+        <!--Goal Details-->
+        <scene sceneID="RBY-DK-OX2">
+            <objects>
+                <viewController id="vk1-6R-oOQ" userLabel="Goal Details" customClass="GoalDetailViewController" customModule="CPSC_599_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k3I-mU-3NE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kwu-VV-9xG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1q2-Db-peW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Goal Details" id="2BP-Kz-dIM" userLabel="Goal Details Navigation Bar">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ji8-ng-pxd">
+                            <connections>
+                                <action selector="cancel:" destination="vk1-6R-oOQ" id="Ybq-qA-ZwO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dk6-lc-hXt"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Odw-yf-a0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="912"/>
+        </scene>
+        <!--Goal Primary to List Navigation Controller-->
+        <scene sceneID="dQK-ML-AQG">
+            <objects>
+                <navigationController id="ORa-A9-utl" userLabel="Goal Primary to List Navigation Controller" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TwT-55-OkK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Cjy-1f-gF5" kind="relationship" relationship="rootViewController" id="TMF-gZ-aQY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEZ-Oe-FWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="1632"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fund_thermometer" width="288" height="288"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OlA-m0-t9W"/>
+    </inferredMetricsTieBreakers>
+</document>
