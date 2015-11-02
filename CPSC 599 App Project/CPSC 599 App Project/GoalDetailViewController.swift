@@ -13,13 +13,17 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
     
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var dateField: UITextField!
+    @IBOutlet weak var descTextField: UITextView!
+    @IBOutlet weak var primaryCheck: Checkbox!
+    //@IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
 
     
     /*
-    This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)`
-    or constructed as part of adding a new meal.
+    This value is either passed by `GoalTableViewController` in `prepareForSegue(_:sender:)`
+    or constructed as part of adding a new goal.
     */
     var goal: Goal?
     
@@ -27,19 +31,17 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
         super.viewDidLoad()
         
         // Handle the text field’s user input through delegate callbacks.
-        /*
         nameTextField.delegate = self
-        categoryLabel.text = category?.name
         
         // Set up views if editing an existing Meal.
-        if let meal = meal {
-            navigationItem.title = meal.title
-            nameTextField.text   = meal.title
-            categoryLabel.text   = meal.category
-            photoImageView.image = meal.photo
-            ratingControl.rating = meal.rating
+        if let goal = goal {
+            navigationItem.title = goal.name
+            nameTextField.text = goal.name
+            amountTextField.text   = goal.amount.stringValue
+            descTextField.text   = goal.desc
+            //photoImageView.image = meal.photo
+            primaryCheck.selected = goal.primary
         }
-        */
         
         // Enable the Save button only if the text field has a valid Meal name.
         checkValidGoal()
@@ -65,12 +67,14 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
     
     func checkValidGoal() {
         // Disable the Save button if not a valid goal.
-        //let text = nameTextField.text ?? ""
-        //saveButton.enabled = !text.isEmpty
+        let text = nameTextField.text ?? ""
+        let num = amountTextField.text ?? ""
+        saveButton.enabled = !text.isEmpty && !num.isEmpty
     }
     
     // MARK: UIImagePickerControllerDelegate
     
+    /*
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         // Dismiss the picker if the user canceled.
         dismissViewControllerAnimated(true, completion: nil)
@@ -81,11 +85,12 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         // Set photoImageView to display the selected image.
-        photoImageView.image = selectedImage
+        //photoImageView.image = selectedImage
         
         // Dismiss the picker.
         dismissViewControllerAnimated(true, completion: nil)
     }
+    */
     
     // MARK: Navigation
     
@@ -103,20 +108,23 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
-            /*
+            
             let name = nameTextField.text ?? ""
-            let category = categoryLabel.text ?? ""
-            let photo = photoImageView.image
-            let rating = ratingControl.rating
+            let amount = NSDecimalNumber(string: amountTextField.text)
+            let remaining = NSDecimalNumber(string: amountTextField.text)
+            let desc = descTextField.text
+            let primary = primaryCheck.selected
+            
+
             
             // Set the meal to be passed to MealListTableViewController after the unwind segue.
-            meal = Meal(title: name, category: category, photo: photo, rating: rating)
-            */
+            goal = Goal(name: name, amount: amount, remaining: remaining, desc: desc, primary: primary)
+            
         }
     }
     
     // MARK: Actions
-    
+    /*
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
         // Hide the keyboard.
         nameTextField.resignFirstResponder()
@@ -132,6 +140,7 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
         
         presentViewController(imagePickerController, animated: true, completion: nil)
     }
+    */
     
 }
 

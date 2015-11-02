@@ -26,8 +26,7 @@ class Goal: NSObject, NSCoding {
     var amount: NSDecimalNumber
     var remaining: NSDecimalNumber
     var desc: String
-    var date: NSDate
-    var repeating: Bool
+    var primary: Bool
     
     
     // MARK: Archiving Paths
@@ -43,20 +42,18 @@ class Goal: NSObject, NSCoding {
         static let amountKey = "amount"
         static let remainingKey = "remaining"
         static let descKey = "desc"
-        static let dateKey = "date"
-        static let repeatingKey = "repeating"
+        static let primaryKey = "primary"
     }
     
     // MARK: Initialization
     
-    init?(name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool) {
+    init?(name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, primary: Bool) {
         // Initialize stored properties.
         self.name = name
         self.amount = amount
         self.remaining = remaining
         self.desc = desc
-        self.date = date
-        self.repeating = repeating
+        self.primary = primary
         
         super.init()
         
@@ -74,8 +71,7 @@ class Goal: NSObject, NSCoding {
         aCoder.encodeObject(amount, forKey: PropertyKey.amountKey)
         aCoder.encodeObject(remaining, forKey: PropertyKey.remainingKey)
         aCoder.encodeObject(desc, forKey: PropertyKey.descKey)
-        aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
-        aCoder.encodeObject(repeating, forKey: PropertyKey.repeatingKey)
+        aCoder.encodeBool(primary, forKey: PropertyKey.primaryKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -84,14 +80,13 @@ class Goal: NSObject, NSCoding {
         let amount = aDecoder.decodeObjectForKey(PropertyKey.amountKey) as! NSDecimalNumber
         let remaining = aDecoder.decodeObjectForKey(PropertyKey.remainingKey) as! NSDecimalNumber
         let desc = aDecoder.decodeObjectForKey(PropertyKey.descKey) as! String
-        let date = aDecoder.decodeObjectForKey(PropertyKey.dateKey) as! NSDate
         
-        let repeating = aDecoder.decodeBoolForKey(PropertyKey.repeatingKey)
+        let primary = aDecoder.decodeBoolForKey(PropertyKey.primaryKey)
         
         // Because photo is an optional property of Meal, use conditional cast.
         //let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
         
         // Must call designated initializer.
-        self.init(name: name, amount: amount, remaining: remaining, desc: desc, date: date, repeating: repeating)
+        self.init(name: name, amount: amount, remaining: remaining, desc: desc, primary: primary)
     }
 }

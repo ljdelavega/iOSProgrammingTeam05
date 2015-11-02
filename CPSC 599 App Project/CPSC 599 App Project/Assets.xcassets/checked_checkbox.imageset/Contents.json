@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "fund_thermometer.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "checked_checkbox@2x.png",
       "scale" : "2x"
     },
     {

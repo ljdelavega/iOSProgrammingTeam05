@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="emC-vw-BsE" customClass="GoalTableViewCell" customModule="CPSC_599_App_Project" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoalTableViewCell" id="emC-vw-BsE" customClass="GoalTableViewCell" customModule="CPSC_599_App_Project" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="emC-vw-BsE" id="u6C-0d-cgg">
@@ -154,7 +154,89 @@
                     <view key="view" contentMode="scaleToFill" id="1q2-Db-peW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9Qv-9h-Qcq">
+                                <rect key="frame" x="20" y="28" width="560" height="564"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjS-jE-DHg">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter goal name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y40-ha-qyX">
+                                        <rect key="frame" x="0.0" y="36" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-Jb-9gQ">
+                                        <rect key="frame" x="0.0" y="81" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cost of the goal..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDo-J1-ddf">
+                                        <rect key="frame" x="0.0" y="117" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI2-KS-QUD">
+                                        <rect key="frame" x="0.0" y="162" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOT-3b-7WY">
+                                        <rect key="frame" x="0.0" y="198" width="560" height="290"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set as primary goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTe-js-1Xm">
+                                        <rect key="frame" x="0.0" y="503" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tia-SU-uTl" userLabel="Checkbox" customClass="Checkbox" customModule="CPSC_599_App_Project" customModuleProvider="target">
+                                        <rect key="frame" x="268" y="539" width="25" height="25"/>
+                                        <state key="normal" image="unchecked_checkbox"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="y40-ha-qyX" secondAttribute="trailing" id="GbW-hi-hDF"/>
+                                    <constraint firstItem="CDo-J1-ddf" firstAttribute="leading" secondItem="9Qv-9h-Qcq" secondAttribute="leading" id="HYN-Pa-w9T"/>
+                                    <constraint firstItem="CTe-js-1Xm" firstAttribute="leading" secondItem="9Qv-9h-Qcq" secondAttribute="leading" id="KNJ-Va-bI2"/>
+                                    <constraint firstItem="GOT-3b-7WY" firstAttribute="leading" secondItem="9Qv-9h-Qcq" secondAttribute="leading" id="M9R-BH-DDe"/>
+                                    <constraint firstItem="cUc-Jb-9gQ" firstAttribute="leading" secondItem="9Qv-9h-Qcq" secondAttribute="leading" id="R6t-Gz-Vg3"/>
+                                    <constraint firstAttribute="trailing" secondItem="GOT-3b-7WY" secondAttribute="trailing" id="VNP-mg-TqN"/>
+                                    <constraint firstAttribute="trailing" secondItem="JjS-jE-DHg" secondAttribute="trailing" id="YCs-aR-xZZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="JI2-KS-QUD" secondAttribute="trailing" id="c25-ds-3kP"/>
+                                    <constraint firstItem="JI2-KS-QUD" firstAttribute="leading" secondItem="9Qv-9h-Qcq" secondAttribute="leading" id="kY5-ga-f4l"/>
+                                    <constraint firstItem="y40-ha-qyX" firstAttribute="leading" secondItem="9Qv-9h-Qcq" secondAttribute="leading" id="pKl-m2-MmK"/>
+                                    <constraint firstAttribute="trailing" secondItem="CTe-js-1Xm" secondAttribute="trailing" id="pfb-zD-msz"/>
+                                    <constraint firstItem="JjS-jE-DHg" firstAttribute="leading" secondItem="9Qv-9h-Qcq" secondAttribute="leading" id="rqh-xk-N4o"/>
+                                    <constraint firstAttribute="trailing" secondItem="CDo-J1-ddf" secondAttribute="trailing" id="u5e-oc-UGl"/>
+                                    <constraint firstAttribute="trailing" secondItem="cUc-Jb-9gQ" secondAttribute="trailing" id="uWZ-Ww-DYy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Qv-9h-Qcq" firstAttribute="centerX" secondItem="1q2-Db-peW" secondAttribute="centerX" id="02F-ZO-Jv8"/>
+                            <constraint firstItem="9Qv-9h-Qcq" firstAttribute="centerX" secondItem="1q2-Db-peW" secondAttribute="centerX" id="3Sj-hg-dk7"/>
+                            <constraint firstItem="9Qv-9h-Qcq" firstAttribute="top" secondItem="k3I-mU-3NE" secondAttribute="bottom" constant="8" symbolic="YES" id="F1a-ix-1L9"/>
+                            <constraint firstItem="9Qv-9h-Qcq" firstAttribute="leading" secondItem="1q2-Db-peW" secondAttribute="leadingMargin" id="G2y-bd-wUa"/>
+                            <constraint firstItem="9Qv-9h-Qcq" firstAttribute="trailing" secondItem="1q2-Db-peW" secondAttribute="trailingMargin" id="YKY-eF-WsK"/>
+                            <constraint firstItem="9Qv-9h-Qcq" firstAttribute="centerY" secondItem="1q2-Db-peW" secondAttribute="centerY" id="a2f-YZ-Snr"/>
+                            <constraint firstItem="Kwu-VV-9xG" firstAttribute="top" secondItem="9Qv-9h-Qcq" secondAttribute="bottom" constant="8" id="nZR-dU-leB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="02F-ZO-Jv8"/>
+                                <exclude reference="3Sj-hg-dk7"/>
+                                <exclude reference="a2f-YZ-Snr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Goal Details" id="2BP-Kz-dIM" userLabel="Goal Details Navigation Bar">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ji8-ng-pxd">
@@ -164,6 +246,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="dk6-lc-hXt"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="amountTextField" destination="CDo-J1-ddf" id="h0s-hv-vxY"/>
+                        <outlet property="descTextField" destination="GOT-3b-7WY" id="ROT-E3-F4M"/>
+                        <outlet property="nameTextField" destination="y40-ha-qyX" id="kSi-Ok-pfF"/>
+                        <outlet property="primaryCheck" destination="tia-SU-uTl" id="5lz-mr-1fP"/>
+                        <outlet property="saveButton" destination="dk6-lc-hXt" id="yWU-2c-uMN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Odw-yf-a0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,6 +278,7 @@
     <resources>
         <image name="fund_thermometer" width="288" height="288"/>
         <image name="second" width="30" height="30"/>
+        <image name="unchecked_checkbox" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OlA-m0-t9W"/>

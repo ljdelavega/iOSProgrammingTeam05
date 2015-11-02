@@ -28,6 +28,8 @@
 		F7D1F30F1BE48231000E1A17 /* Budgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F30D1BE48231000E1A17 /* Budgets.storyboard */; };
 		F7D1F3121BE48257000E1A17 /* Transactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F3101BE48257000E1A17 /* Transactions.storyboard */; };
 		F7D1F3151BE4826B000E1A17 /* Overview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F3131BE4826B000E1A17 /* Overview.storyboard */; };
+		F7D1F3181BE6D377000E1A17 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1F3161BE6D377000E1A17 /* Checkbox.swift */; };
+		F7D1F3191BE6D377000E1A17 /* CheckboxDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1F3171BE6D377000E1A17 /* CheckboxDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		F7D1F30E1BE48231000E1A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Budgets.storyboard; sourceTree = "<group>"; };
 		F7D1F3111BE48257000E1A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Transactions.storyboard; sourceTree = "<group>"; };
 		F7D1F3141BE4826B000E1A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Overview.storyboard; sourceTree = "<group>"; };
+		F7D1F3161BE6D377000E1A17 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Checkbox.swift; path = Libs/Checkbox.swift; sourceTree = "<group>"; };
+		F7D1F3171BE6D377000E1A17 /* CheckboxDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckboxDelegate.swift; path = Libs/CheckboxDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 		F7C726BE1BE4370900B5C30A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				F7D1F3161BE6D377000E1A17 /* Checkbox.swift */,
+				F7D1F3171BE6D377000E1A17 /* CheckboxDelegate.swift */,
 				F7C726BA1BE4334800B5C30A /* FillableLoader.swift */,
 				F7C726BB1BE4334800B5C30A /* WavesLoader.swift */,
 			);
@@ -293,6 +299,7 @@
 				F7C726C41BE43E7600B5C30A /* GoalTableViewController.swift in Sources */,
 				F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */,
 				F7B42B311BD5FC5D00CB3308 /* TransactionViewController.swift in Sources */,
+				F7D1F3191BE6D377000E1A17 /* CheckboxDelegate.swift in Sources */,
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,
 				F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */,
 				F7C726C21BE43E4F00B5C30A /* GoalTableViewCell.swift in Sources */,
@@ -304,6 +311,7 @@
 				F7C726B51BE0083600B5C30A /* GoalViewController.swift in Sources */,
 				F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */,
 				F7C726B31BE0079B00B5C30A /* BudgetViewController.swift in Sources */,
+				F7D1F3181BE6D377000E1A17 /* Checkbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
