@@ -9,6 +9,10 @@
 import UIKit
 
 class GoalTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

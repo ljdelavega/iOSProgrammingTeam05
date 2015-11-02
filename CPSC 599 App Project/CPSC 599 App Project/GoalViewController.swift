@@ -43,9 +43,9 @@ class GoalViewController: UIViewController {
     }
     
     @IBAction func unwindToPrimaryGoal(sender: UIStoryboardSegue) {
-        //if let sourceViewController = sender.sourceViewController as? GoalTableViewController {
-            //sourceViewController.saveMeals()
-        //}
+        if let sourceViewController = sender.sourceViewController as? GoalTableViewController {
+            sourceViewController.saveGoals()
+        }
     }
 
 }
