@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
-		0A8FC4621BE8448D00ECA99F /* BudgetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FC4611BE8448D00ECA99F /* BudgetTableViewController.swift */; };
-=======
 		3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */; };
 		3952B9601BE832C500AB2BB2 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */; };
->>>>>>> master
+		3952B9641BE84B7000AB2BB2 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */; };
+		F7606FE41BE93FAF004A7F73 /* NSDecimalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7606FE31BE93FAF004A7F73 /* NSDecimalNumber.swift */; };
 		F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */; };
 		F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */; };
-		F7B42B311BD5FC5D00CB3308 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B301BD5FC5D00CB3308 /* TransactionViewController.swift */; };
 		F7B42B341BD5FC5D00CB3308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B321BD5FC5D00CB3308 /* Main.storyboard */; };
 		F7B42B361BD5FC5D00CB3308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */; };
 		F7B42B391BD5FC5D00CB3308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B371BD5FC5D00CB3308 /* LaunchScreen.storyboard */; };
@@ -56,22 +53,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-		0A8FC4611BE8448D00ECA99F /* BudgetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTableViewController.swift; sourceTree = "<group>"; };
-=======
 		3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
 		3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
->>>>>>> master
-		F7B42B291BD5FC5D00CB3308 /* CPSC 599 App Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CPSC 599 App Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		F7606FE31BE93FAF004A7F73 /* NSDecimalNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDecimalNumber.swift; path = Libs/NSDecimalNumber.swift; sourceTree = "<group>"; };
+		F7B42B291BD5FC5D00CB3308 /* Budget Balancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget Balancer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
-		F7B42B301BD5FC5D00CB3308 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		F7B42B331BD5FC5D00CB3308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7B42B381BD5FC5D00CB3308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7B42B3A1BD5FC5D00CB3308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7B42B3F1BD5FC5E00CB3308 /* CPSC 599 App ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CPSC 599 App ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7B42B4A1BD5FC5E00CB3308 /* CPSC 599 App ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CPSC 599 App ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B42B3F1BD5FC5E00CB3308 /* Budget Balancer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget Balancer.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B42B4A1BD5FC5E00CB3308 /* Budget Balancer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget Balancer.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C726AA1BDEB22900B5C30A /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		F7C726AC1BDEB8B300B5C30A /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		F7C726AE1BDEB8F000B5C30A /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
@@ -127,9 +121,9 @@
 		F7B42B2A1BD5FC5D00CB3308 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F7B42B291BD5FC5D00CB3308 /* CPSC 599 App Project.app */,
-				F7B42B3F1BD5FC5E00CB3308 /* CPSC 599 App ProjectTests.xctest */,
-				F7B42B4A1BD5FC5E00CB3308 /* CPSC 599 App ProjectUITests.xctest */,
+				F7B42B291BD5FC5D00CB3308 /* Budget Balancer.app */,
+				F7B42B3F1BD5FC5E00CB3308 /* Budget Balancer.xctest */,
+				F7B42B4A1BD5FC5E00CB3308 /* Budget Balancer.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,16 +134,15 @@
 				F7B42B321BD5FC5D00CB3308 /* Main.storyboard */,
 				F7D1F3131BE4826B000E1A17 /* Overview.storyboard */,
 				F7D1F3101BE48257000E1A17 /* Transactions.storyboard */,
+				3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */,
 				3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */,
 				3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */,
 				F7D1F30D1BE48231000E1A17 /* Budgets.storyboard */,
-				0A8FC4611BE8448D00ECA99F /* BudgetTableViewController.swift */,
 				F7D1F30A1BE481E7000E1A17 /* Goals.storyboard */,
 				F7B42B371BD5FC5D00CB3308 /* LaunchScreen.storyboard */,
 				F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */,
 				F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */,
 				F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */,
-				F7B42B301BD5FC5D00CB3308 /* TransactionViewController.swift */,
 				F7C726B21BE0079B00B5C30A /* BudgetViewController.swift */,
 				F7C726B41BE0083600B5C30A /* GoalViewController.swift */,
 				F7C726C31BE43E7600B5C30A /* GoalTableViewController.swift */,
@@ -169,6 +162,7 @@
 		F7C726BE1BE4370900B5C30A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				F7606FE31BE93FAF004A7F73 /* NSDecimalNumber.swift */,
 				F7D1F3161BE6D377000E1A17 /* Checkbox.swift */,
 				F7D1F3171BE6D377000E1A17 /* CheckboxDelegate.swift */,
 				F7C726BA1BE4334800B5C30A /* FillableLoader.swift */,
@@ -180,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F7B42B281BD5FC5D00CB3308 /* CPSC 599 App Project */ = {
+		F7B42B281BD5FC5D00CB3308 /* Budget Balancer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7B42B531BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "CPSC 599 App Project" */;
+			buildConfigurationList = F7B42B531BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget Balancer" */;
 			buildPhases = (
 				F7B42B251BD5FC5D00CB3308 /* Sources */,
 				F7B42B261BD5FC5D00CB3308 /* Frameworks */,
@@ -192,14 +186,14 @@
 			);
 			dependencies = (
 			);
-			name = "CPSC 599 App Project";
+			name = "Budget Balancer";
 			productName = "CPSC 599 App Project";
-			productReference = F7B42B291BD5FC5D00CB3308 /* CPSC 599 App Project.app */;
+			productReference = F7B42B291BD5FC5D00CB3308 /* Budget Balancer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F7B42B3E1BD5FC5E00CB3308 /* CPSC 599 App ProjectTests */ = {
+		F7B42B3E1BD5FC5E00CB3308 /* Budget BalancerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7B42B561BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "CPSC 599 App ProjectTests" */;
+			buildConfigurationList = F7B42B561BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget BalancerTests" */;
 			buildPhases = (
 				F7B42B3B1BD5FC5E00CB3308 /* Sources */,
 				F7B42B3C1BD5FC5E00CB3308 /* Frameworks */,
@@ -210,14 +204,14 @@
 			dependencies = (
 				F7B42B411BD5FC5E00CB3308 /* PBXTargetDependency */,
 			);
-			name = "CPSC 599 App ProjectTests";
+			name = "Budget BalancerTests";
 			productName = "CPSC 599 App ProjectTests";
-			productReference = F7B42B3F1BD5FC5E00CB3308 /* CPSC 599 App ProjectTests.xctest */;
+			productReference = F7B42B3F1BD5FC5E00CB3308 /* Budget Balancer.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F7B42B491BD5FC5E00CB3308 /* CPSC 599 App ProjectUITests */ = {
+		F7B42B491BD5FC5E00CB3308 /* Budget BalancerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7B42B591BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "CPSC 599 App ProjectUITests" */;
+			buildConfigurationList = F7B42B591BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget BalancerUITests" */;
 			buildPhases = (
 				F7B42B461BD5FC5E00CB3308 /* Sources */,
 				F7B42B471BD5FC5E00CB3308 /* Frameworks */,
@@ -228,9 +222,9 @@
 			dependencies = (
 				F7B42B4C1BD5FC5E00CB3308 /* PBXTargetDependency */,
 			);
-			name = "CPSC 599 App ProjectUITests";
+			name = "Budget BalancerUITests";
 			productName = "CPSC 599 App ProjectUITests";
-			productReference = F7B42B4A1BD5FC5E00CB3308 /* CPSC 599 App ProjectUITests.xctest */;
+			productReference = F7B42B4A1BD5FC5E00CB3308 /* Budget Balancer.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -255,7 +249,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F7B42B241BD5FC5D00CB3308 /* Build configuration list for PBXProject "CPSC 599 App Project" */;
+			buildConfigurationList = F7B42B241BD5FC5D00CB3308 /* Build configuration list for PBXProject "Budget Balancer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -268,9 +262,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F7B42B281BD5FC5D00CB3308 /* CPSC 599 App Project */,
-				F7B42B3E1BD5FC5E00CB3308 /* CPSC 599 App ProjectTests */,
-				F7B42B491BD5FC5E00CB3308 /* CPSC 599 App ProjectUITests */,
+				F7B42B281BD5FC5D00CB3308 /* Budget Balancer */,
+				F7B42B3E1BD5FC5E00CB3308 /* Budget BalancerTests */,
+				F7B42B491BD5FC5E00CB3308 /* Budget BalancerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,8 +308,7 @@
 				3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */,
 				F7C726C41BE43E7600B5C30A /* GoalTableViewController.swift in Sources */,
 				F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */,
-				0A8FC4621BE8448D00ECA99F /* BudgetTableViewController.swift in Sources */,
-				F7B42B311BD5FC5D00CB3308 /* TransactionViewController.swift in Sources */,
+				F7606FE41BE93FAF004A7F73 /* NSDecimalNumber.swift in Sources */,
 				F7D1F3191BE6D377000E1A17 /* CheckboxDelegate.swift in Sources */,
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,
 				F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */,
@@ -326,6 +319,7 @@
 				F7C726AF1BDEB8F000B5C30A /* Income.swift in Sources */,
 				F7C726BD1BE4334800B5C30A /* WavesLoader.swift in Sources */,
 				F7C726B51BE0083600B5C30A /* GoalViewController.swift in Sources */,
+				3952B9641BE84B7000AB2BB2 /* TransactionViewController.swift in Sources */,
 				F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */,
 				F7C726B31BE0079B00B5C30A /* BudgetViewController.swift in Sources */,
 				3952B9601BE832C500AB2BB2 /* TransactionTableViewCell.swift in Sources */,
@@ -352,12 +346,12 @@
 /* Begin PBXTargetDependency section */
 		F7B42B411BD5FC5E00CB3308 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F7B42B281BD5FC5D00CB3308 /* CPSC 599 App Project */;
+			target = F7B42B281BD5FC5D00CB3308 /* Budget Balancer */;
 			targetProxy = F7B42B401BD5FC5E00CB3308 /* PBXContainerItemProxy */;
 		};
 		F7B42B4C1BD5FC5E00CB3308 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F7B42B281BD5FC5D00CB3308 /* CPSC 599 App Project */;
+			target = F7B42B281BD5FC5D00CB3308 /* Budget Balancer */;
 			targetProxy = F7B42B4B1BD5FC5E00CB3308 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -503,8 +497,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CPSC 599 App Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-Project";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "team05.Budget-Balancer";
+				PRODUCT_NAME = "Budget Balancer";
 			};
 			name = Debug;
 		};
@@ -514,8 +508,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CPSC 599 App Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-Project";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "team05.Budget-Balancer";
+				PRODUCT_NAME = "Budget Balancer";
 			};
 			name = Release;
 		};
@@ -526,8 +520,8 @@
 				INFOPLIST_FILE = "CPSC 599 App ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-ProjectTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CPSC 599 App Project.app/CPSC 599 App Project";
+				PRODUCT_NAME = "Budget Balancer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Budget Balancer.app/Budget Balancer";
 			};
 			name = Debug;
 		};
@@ -538,8 +532,8 @@
 				INFOPLIST_FILE = "CPSC 599 App ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-ProjectTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CPSC 599 App Project.app/CPSC 599 App Project";
+				PRODUCT_NAME = "Budget Balancer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Budget Balancer.app/Budget Balancer";
 			};
 			name = Release;
 		};
@@ -549,7 +543,7 @@
 				INFOPLIST_FILE = "CPSC 599 App ProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-ProjectUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Budget Balancer";
 				TEST_TARGET_NAME = "CPSC 599 App Project";
 				USES_XCTRUNNER = YES;
 			};
@@ -561,7 +555,7 @@
 				INFOPLIST_FILE = "CPSC 599 App ProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-ProjectUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Budget Balancer";
 				TEST_TARGET_NAME = "CPSC 599 App Project";
 				USES_XCTRUNNER = YES;
 			};
@@ -570,7 +564,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F7B42B241BD5FC5D00CB3308 /* Build configuration list for PBXProject "CPSC 599 App Project" */ = {
+		F7B42B241BD5FC5D00CB3308 /* Build configuration list for PBXProject "Budget Balancer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7B42B511BD5FC5E00CB3308 /* Debug */,
@@ -579,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7B42B531BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "CPSC 599 App Project" */ = {
+		F7B42B531BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget Balancer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7B42B541BD5FC5E00CB3308 /* Debug */,
@@ -588,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7B42B561BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "CPSC 599 App ProjectTests" */ = {
+		F7B42B561BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget BalancerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7B42B571BD5FC5E00CB3308 /* Debug */,
@@ -597,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7B42B591BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "CPSC 599 App ProjectUITests" */ = {
+		F7B42B591BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget BalancerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7B42B5A1BD5FC5E00CB3308 /* Debug */,

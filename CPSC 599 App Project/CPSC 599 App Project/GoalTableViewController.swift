@@ -30,18 +30,12 @@ class GoalTableViewController: UITableViewController {
     }
     
     func loadSampleGoals() {
-        /*
-        let photo1 = UIImage(named: "meal1")!
-        let meal1 = Meal(name: "Caprese Salad", photo: photo1, rating: 4)!
+
+        let goal1 = Goal(name: "New Computer", amount: 1000, contributed: 0, desc: "A new computer. Separate parts should total about $1000", primary: true)!
+        let photo1 = UIImage(named: "defaultPhoto")!
+        goal1.photo = photo1
+        goals += [goal1]
         
-        let photo2 = UIImage(named: "meal2")!
-        let meal2 = Meal(name: "Chicken and Potatoes", photo: photo2, rating: 5)!
-        
-        let photo3 = UIImage(named: "meal3")!
-        let meal3 = Meal(name: "Pasta with Meatballs", photo: photo3, rating: 3)!
-        
-        meals += [meal1, meal2, meal3]
-        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -118,8 +112,13 @@ class GoalTableViewController: UITableViewController {
         let goal = goals[indexPath.row]
         
         cell.nameLabel.text = goal.name
-        cell.costLabel.text = goal.amount.stringValue
-        cell.progressView.progress = goal.remaining.floatValue / goal.amount.floatValue
+        cell.costLabel.text = goal.contributed.asLocaleCurrency + " / " + goal.amount.asLocaleCurrency
+        var progress = goal.contributed / goal.amount
+        if (progress > 1) {
+            progress = NSDecimalNumber(int: 1)
+        }
+        cell.progressView.progress = progress.floatValue
+        cell.photoImageView.image = goal.photo
         
         return cell
     }
@@ -142,22 +141,6 @@ class GoalTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
-    
-    
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-    
-    }
-    */
-    
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the item to be re-orderable.
-    return true
-    }
-    */
     
     
     // MARK: NSCoding

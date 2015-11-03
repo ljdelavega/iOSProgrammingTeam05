@@ -14,10 +14,10 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
-    @IBOutlet weak var remainingTextField: UITextField!
+    @IBOutlet weak var contributedTextField: UITextField!
     @IBOutlet weak var descTextField: UITextView!
     @IBOutlet weak var primaryCheck: Checkbox!
-    //@IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
 
     
@@ -32,6 +32,9 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
         
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
+        amountTextField.delegate = self
+        contributedTextField.delegate = self
+        
         
         setupCheckbox()
         
@@ -40,13 +43,13 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
             navigationItem.title = goal.name
             nameTextField.text = goal.name
             amountTextField.text   = goal.amount.stringValue
-            remainingTextField.text   = goal.remaining.stringValue
+            contributedTextField.text   = goal.contributed.stringValue
             descTextField.text   = goal.desc
-            //photoImageView.image = meal.photo
+            photoImageView.image = goal.photo
             //primaryCheck.selected = goal.primary
         }
         
-        // Enable the Save button only if the text field has a valid Meal name.
+        // Enable the Save button only if the text field has a valid Goal name.
         checkValidGoal()
     }
     
@@ -79,7 +82,6 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
     
     func textFieldDidEndEditing(textField: UITextField) {
         checkValidGoal()
-        navigationItem.title = textField.text
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -91,13 +93,13 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
         // Disable the Save button if not a valid goal.
         let text = nameTextField.text ?? ""
         let amt = amountTextField.text ?? ""
-        let rem = remainingTextField.text ?? ""
+        let rem = contributedTextField.text ?? ""
         saveButton.enabled = !text.isEmpty && !amt.isEmpty && !rem.isEmpty
     }
     
     // MARK: UIImagePickerControllerDelegate
     
-    /*
+    
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         // Dismiss the picker if the user canceled.
         dismissViewControllerAnimated(true, completion: nil)
@@ -108,12 +110,11 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         // Set photoImageView to display the selected image.
-        //photoImageView.image = selectedImage
+        photoImageView.image = selectedImage
         
         // Dismiss the picker.
         dismissViewControllerAnimated(true, completion: nil)
     }
-    */
     
     // MARK: Navigation
     
@@ -134,21 +135,21 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
             
             let name = nameTextField.text ?? ""
             let amount = NSDecimalNumber(string: amountTextField.text)
-            let remaining = NSDecimalNumber(string: remainingTextField.text)
+            let contributed = NSDecimalNumber(string: contributedTextField.text)
             let desc = descTextField.text
             //let primary = primaryCheck.selected
-            let primary = true
+            let primary = false
             
 
             
             // Set the meal to be passed to MealListTableViewController after the unwind segue.
-            goal = Goal(name: name, amount: amount, remaining: remaining, desc: desc, primary: primary)
+            goal = Goal(name: name, amount: amount, contributed: contributed, desc: desc, primary: primary)
+            goal?.photo = photoImageView.image
             
         }
     }
     
     // MARK: Actions
-    /*
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
         // Hide the keyboard.
         nameTextField.resignFirstResponder()
@@ -164,7 +165,6 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
         
         presentViewController(imagePickerController, animated: true, completion: nil)
     }
-    */
     
 }
 
