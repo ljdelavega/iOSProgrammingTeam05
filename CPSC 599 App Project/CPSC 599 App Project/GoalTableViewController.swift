@@ -112,7 +112,7 @@ class GoalTableViewController: UITableViewController {
         let goal = goals[indexPath.row]
         
         cell.nameLabel.text = goal.name
-        cell.costLabel.text = goal.amount.asLocaleCurrency
+        cell.costLabel.text = goal.contributed.asLocaleCurrency + " / " + goal.amount.asLocaleCurrency
         var progress = goal.contributed / goal.amount
         if (progress > 1) {
             progress = NSDecimalNumber(int: 1)
