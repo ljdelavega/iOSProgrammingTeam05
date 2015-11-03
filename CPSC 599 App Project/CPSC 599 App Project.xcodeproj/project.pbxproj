@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */; };
 		3952B9601BE832C500AB2BB2 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */; };
+		3952B9641BE84B7000AB2BB2 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */; };
 		F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */; };
 		F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */; };
-		F7B42B311BD5FC5D00CB3308 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B301BD5FC5D00CB3308 /* TransactionViewController.swift */; };
 		F7B42B341BD5FC5D00CB3308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B321BD5FC5D00CB3308 /* Main.storyboard */; };
 		F7B42B361BD5FC5D00CB3308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */; };
 		F7B42B391BD5FC5D00CB3308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B42B371BD5FC5D00CB3308 /* LaunchScreen.storyboard */; };
@@ -54,10 +54,10 @@
 /* Begin PBXFileReference section */
 		3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
 		3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		F7B42B291BD5FC5D00CB3308 /* CPSC 599 App Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CPSC 599 App Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
-		F7B42B301BD5FC5D00CB3308 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		F7B42B331BD5FC5D00CB3308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7B42B381BD5FC5D00CB3308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,6 +132,7 @@
 				F7B42B321BD5FC5D00CB3308 /* Main.storyboard */,
 				F7D1F3131BE4826B000E1A17 /* Overview.storyboard */,
 				F7D1F3101BE48257000E1A17 /* Transactions.storyboard */,
+				3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */,
 				3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */,
 				3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */,
 				F7D1F30D1BE48231000E1A17 /* Budgets.storyboard */,
@@ -140,7 +141,6 @@
 				F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */,
 				F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */,
 				F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */,
-				F7B42B301BD5FC5D00CB3308 /* TransactionViewController.swift */,
 				F7C726B21BE0079B00B5C30A /* BudgetViewController.swift */,
 				F7C726B41BE0083600B5C30A /* GoalViewController.swift */,
 				F7C726C31BE43E7600B5C30A /* GoalTableViewController.swift */,
@@ -305,7 +305,6 @@
 				3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */,
 				F7C726C41BE43E7600B5C30A /* GoalTableViewController.swift in Sources */,
 				F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */,
-				F7B42B311BD5FC5D00CB3308 /* TransactionViewController.swift in Sources */,
 				F7D1F3191BE6D377000E1A17 /* CheckboxDelegate.swift in Sources */,
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,
 				F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */,
@@ -316,6 +315,7 @@
 				F7C726AF1BDEB8F000B5C30A /* Income.swift in Sources */,
 				F7C726BD1BE4334800B5C30A /* WavesLoader.swift in Sources */,
 				F7C726B51BE0083600B5C30A /* GoalViewController.swift in Sources */,
+				3952B9641BE84B7000AB2BB2 /* TransactionViewController.swift in Sources */,
 				F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */,
 				F7C726B31BE0079B00B5C30A /* BudgetViewController.swift in Sources */,
 				3952B9601BE832C500AB2BB2 /* TransactionTableViewCell.swift in Sources */,
