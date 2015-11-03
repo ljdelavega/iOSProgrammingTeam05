@@ -1,52 +1,175 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VSQ-cM-aBh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t3e-jw-KBL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Budgets-->
-        <scene sceneID="4hC-JX-UYf">
+        <!--Graph-->
+        <scene sceneID="l4w-b1-OpD">
             <objects>
-                <viewController id="VSQ-cM-aBh" userLabel="Budgets" customClass="BudgetViewController" customModule="CPSC_599_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Graph" id="ha9-t8-nrd" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cSU-19-7Ch"/>
-                        <viewControllerLayoutGuide type="bottom" id="NTO-pD-mkj"/>
+                        <viewControllerLayoutGuide type="top" id="WmO-E9-HhM"/>
+                        <viewControllerLayoutGuide type="bottom" id="OR3-DQ-pQ7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2LX-KX-6KL">
+                    <view key="view" contentMode="scaleToFill" id="4hb-JG-28f">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Budgets" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-jm-fKq">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loaded by BudgetViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDy-Wd-m0w">
-                                <rect key="frame" x="167" y="329" width="266" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="hJ2-jm-fKq" secondAttribute="centerY" id="0HC-yD-dfD"/>
-                            <constraint firstItem="ZDy-Wd-m0w" firstAttribute="top" secondItem="hJ2-jm-fKq" secondAttribute="bottom" constant="8" symbolic="YES" id="7eH-u7-hFO"/>
-                            <constraint firstAttribute="centerX" secondItem="hJ2-jm-fKq" secondAttribute="centerX" id="dgU-iu-mwe"/>
-                            <constraint firstItem="ZDy-Wd-m0w" firstAttribute="centerX" secondItem="hJ2-jm-fKq" secondAttribute="centerX" id="xkN-bH-rAe"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Budgets" image="first" id="CUq-ku-C54" userLabel="Budgets"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Graph" id="XsW-6O-XVc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="vTv-2o-TU8">
+                            <connections>
+                                <segue destination="79T-2R-NJy" kind="unwind" unwindAction="unwindToBudgetList:" id="OaZ-LG-n1E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O9c-Xl-hHt" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLY-sk-QmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="79T-2R-NJy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="94" y="-368"/>
+            <point key="canvasLocation" x="1706" y="-870"/>
+        </scene>
+        <!--Budget-->
+        <scene sceneID="nAO-bC-hp2">
+            <objects>
+                <tableViewController title="Budget" id="x68-tc-dn2" customClass="BudgetTableViewController" customModule="CPSC_599_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="176" sectionHeaderHeight="28" sectionFooterHeight="28" id="iIP-ac-DGV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="176" id="84J-8y-ON4">
+                                <rect key="frame" x="0.0" y="92" width="600" height="176"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="84J-8y-ON4" id="TlC-Vf-J2b">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hX-s1-Mur">
+                                            <rect key="frame" x="413" y="128" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="x68-tc-dn2" id="CLn-gb-KHx"/>
+                            <outlet property="delegate" destination="x68-tc-dn2" id="Ztr-rq-y9i"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Budget" id="gWp-lk-nz2">
+                        <barButtonItem key="leftBarButtonItem" title="Graph" id="leA-g7-IzP">
+                            <connections>
+                                <segue destination="4oB-rx-KQE" kind="presentation" id="bxi-nF-NGd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9v6-u2-UC7">
+                            <connections>
+                                <segue destination="Na7-qW-pAr" kind="presentation" id="1CN-JA-QSW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nc8-Xi-z6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="-368"/>
+        </scene>
+        <!--Add Budget-->
+        <scene sceneID="LbI-sB-MQ3">
+            <objects>
+                <viewController title="Add Budget" id="OWK-oz-4YY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="80I-Df-49W"/>
+                        <viewControllerLayoutGuide type="bottom" id="koE-cf-x7V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gnL-Dl-Et4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add" id="zU3-Gg-hI2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9Wg-z5-vhq">
+                            <connections>
+                                <segue destination="9tz-e2-hlm" kind="unwind" unwindAction="unwindToBudgetList:" id="BNS-OI-I9K"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="AIO-Q3-M12">
+                            <connections>
+                                <segue destination="9tz-e2-hlm" kind="unwind" unwindAction="unwindToBudgetList:" id="mza-QL-kTR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJ2-p4-S1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9tz-e2-hlm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1608" y="-44"/>
+        </scene>
+        <!--Budget Navigation-->
+        <scene sceneID="Y1T-z2-S5v">
+            <objects>
+                <navigationController title="Budget Navigation" automaticallyAdjustsScrollViewInsets="NO" id="t3e-jw-KBL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Budgets" image="second" id="pgi-kW-Rux"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qwf-YD-Qwk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x68-tc-dn2" kind="relationship" relationship="rootViewController" id="WzP-WQ-zLd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwz-H4-9N9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-566" y="-368"/>
+        </scene>
+        <!--AddBudgetNavi-->
+        <scene sceneID="rFO-25-vkn">
+            <objects>
+                <navigationController title="AddBudgetNavi" automaticallyAdjustsScrollViewInsets="NO" id="Na7-qW-pAr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hKa-oA-Sbf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OWK-oz-4YY" kind="relationship" relationship="rootViewController" id="R5H-dU-JqK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwH-Kh-9Ze" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680" y="430"/>
+        </scene>
+        <!--GraphNavi-->
+        <scene sceneID="yo7-hz-ahi">
+            <objects>
+                <navigationController title="GraphNavi" automaticallyAdjustsScrollViewInsets="NO" id="4oB-rx-KQE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oWk-Od-Jln">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ha9-t8-nrd" kind="relationship" relationship="rootViewController" id="gCT-g3-Bmx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zci-XI-n9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="-1018"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
     </resources>
 </document>
