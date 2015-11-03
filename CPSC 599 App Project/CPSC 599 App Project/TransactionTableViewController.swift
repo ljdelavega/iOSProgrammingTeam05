@@ -11,7 +11,7 @@ import UIKit
 class TransactionTableViewController: UITableViewController {
 
     var incomes = [Income]()
-    var expenses = [Expense]()
+    var transactions = [Expense]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class TransactionTableViewController: UITableViewController {
         incomes += [income1]
         
         let expense1 = Expense(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), repeating: false)!
-        expenses += [expense1]
+        transactions += [expense1]
         
         
         
@@ -44,25 +44,25 @@ class TransactionTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return expenses.count
+        return transactions.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellIdentifier = "TransactionTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TransactionTableViewCell
-        let expense = expenses[indexPath.row]
+        let transaction = transactions[indexPath.row]
         
         //converts NSDate into NSString
         let formatter: NSDateFormatter = NSDateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        let datePrefix: String = formatter.stringFromDate(expense.date)
+        let datePrefix: String = formatter.stringFromDate(transaction.date)
         
         //converts NSDecimalNumber to NSString
-        let priceString: String = expense.amount.stringValue
+        let priceString: String = transaction.amount.stringValue
         
         
-        cell.titleLabel.text = expense.name
+        cell.titleLabel.text = transaction.name
         cell.dateLabel.text = datePrefix
         cell.priceLabel.text = priceString
         
@@ -106,9 +106,19 @@ class TransactionTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
+/*
+    @IBAction func unwindToTransactionList(sender: UIStoryboardSegue){
+        if let sourceViewController = sender.sourceViewController as? TransactionViewController, transaction = sourceViewController.transaction {
+            let newIndexPath = NSIndexPath(forRow: transactions.count, inSection: 0)
+            
+            transactions.append(transaction)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
+  */  
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
