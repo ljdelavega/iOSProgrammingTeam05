@@ -61,7 +61,7 @@ class Goal: NSObject, NSCoding {
         super.init()
         
         // Initialization should fail if there is no name or if the amount is negative.
-        if (name.isEmpty || amount.compare(NSDecimalNumber(int: 0)) == NSComparisonResult.OrderedAscending) {
+        if (name.isEmpty || amount < 1) {
             return nil
         }
     }

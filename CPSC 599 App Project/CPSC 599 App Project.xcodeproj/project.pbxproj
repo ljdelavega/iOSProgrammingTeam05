@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */; };
 		3952B9601BE832C500AB2BB2 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */; };
+		F7606FE41BE93FAF004A7F73 /* NSDecimalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7606FE31BE93FAF004A7F73 /* NSDecimalNumber.swift */; };
 		F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */; };
 		F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */; };
 		F7B42B311BD5FC5D00CB3308 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B301BD5FC5D00CB3308 /* TransactionViewController.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
 		3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		F7606FE31BE93FAF004A7F73 /* NSDecimalNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDecimalNumber.swift; path = Libs/NSDecimalNumber.swift; sourceTree = "<group>"; };
 		F7B42B291BD5FC5D00CB3308 /* CPSC 599 App Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CPSC 599 App Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		F7C726BE1BE4370900B5C30A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				F7606FE31BE93FAF004A7F73 /* NSDecimalNumber.swift */,
 				F7D1F3161BE6D377000E1A17 /* Checkbox.swift */,
 				F7D1F3171BE6D377000E1A17 /* CheckboxDelegate.swift */,
 				F7C726BA1BE4334800B5C30A /* FillableLoader.swift */,
@@ -305,6 +308,7 @@
 				3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */,
 				F7C726C41BE43E7600B5C30A /* GoalTableViewController.swift in Sources */,
 				F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */,
+				F7606FE41BE93FAF004A7F73 /* NSDecimalNumber.swift in Sources */,
 				F7B42B311BD5FC5D00CB3308 /* TransactionViewController.swift in Sources */,
 				F7D1F3191BE6D377000E1A17 /* CheckboxDelegate.swift in Sources */,
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,

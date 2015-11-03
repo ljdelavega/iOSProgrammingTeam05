@@ -138,7 +138,7 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
             let contributed = NSDecimalNumber(string: contributedTextField.text)
             let desc = descTextField.text
             //let primary = primaryCheck.selected
-            let primary = true
+            let primary = false
             
 
             

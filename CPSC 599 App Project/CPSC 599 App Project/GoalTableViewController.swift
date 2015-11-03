@@ -112,8 +112,12 @@ class GoalTableViewController: UITableViewController {
         let goal = goals[indexPath.row]
         
         cell.nameLabel.text = goal.name
-        cell.costLabel.text = goal.amount.stringValue
-        cell.progressView.progress = goal.contributed.floatValue / goal.amount.floatValue
+        cell.costLabel.text = goal.amount.asLocaleCurrency
+        var progress = goal.contributed / goal.amount
+        if (progress > 1) {
+            progress = NSDecimalNumber(int: 1)
+        }
+        cell.progressView.progress = progress.floatValue
         cell.photoImageView.image = goal.photo
         
         return cell
