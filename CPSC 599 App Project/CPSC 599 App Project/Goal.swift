@@ -18,15 +18,17 @@ class Goal: NSObject, NSCoding {
     Date
     Description
     Time Period
+    Photo
     */
     
     // MARK: Properties
     // Put fields pertaining to the data model class here.
     var name: String
     var amount: NSDecimalNumber
-    var remaining: NSDecimalNumber
+    var contributed: NSDecimalNumber
     var desc: String
     var primary: Bool
+    var photo: UIImage?
     
     
     // MARK: Archiving Paths
@@ -40,18 +42,19 @@ class Goal: NSObject, NSCoding {
         // Property keys used to encode and decode data
         static let nameKey = "name"
         static let amountKey = "amount"
-        static let remainingKey = "remaining"
+        static let contributedKey = "contributed"
         static let descKey = "desc"
         static let primaryKey = "primary"
+        static let photoKey = "photo"
     }
     
     // MARK: Initialization
     
-    init?(name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, primary: Bool) {
+    init?(name: String, amount: NSDecimalNumber, contributed: NSDecimalNumber, desc: String, primary: Bool) {
         // Initialize stored properties.
         self.name = name
         self.amount = amount
-        self.remaining = remaining
+        self.contributed = contributed
         self.desc = desc
         self.primary = primary
         
@@ -69,24 +72,25 @@ class Goal: NSObject, NSCoding {
         // encode the fields that we want to save and persist
         aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
         aCoder.encodeObject(amount, forKey: PropertyKey.amountKey)
-        aCoder.encodeObject(remaining, forKey: PropertyKey.remainingKey)
+        aCoder.encodeObject(contributed, forKey: PropertyKey.contributedKey)
         aCoder.encodeObject(desc, forKey: PropertyKey.descKey)
         aCoder.encodeBool(primary, forKey: PropertyKey.primaryKey)
+        aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         // initialize by decoding an existing object from persistent data.
         let name = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String
         let amount = aDecoder.decodeObjectForKey(PropertyKey.amountKey) as! NSDecimalNumber
-        let remaining = aDecoder.decodeObjectForKey(PropertyKey.remainingKey) as! NSDecimalNumber
+        let contributed = aDecoder.decodeObjectForKey(PropertyKey.contributedKey) as! NSDecimalNumber
         let desc = aDecoder.decodeObjectForKey(PropertyKey.descKey) as! String
-        
         let primary = aDecoder.decodeBoolForKey(PropertyKey.primaryKey)
         
         // Because photo is an optional property of Meal, use conditional cast.
-        //let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
+        let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
         
         // Must call designated initializer.
-        self.init(name: name, amount: amount, remaining: remaining, desc: desc, primary: primary)
+        self.init(name: name, amount: amount, contributed: contributed, desc: desc, primary: primary)
+        self.photo = photo
     }
 }
