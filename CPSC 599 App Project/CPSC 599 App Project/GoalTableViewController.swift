@@ -32,7 +32,7 @@ class GoalTableViewController: UITableViewController {
     func loadSampleGoals() {
 
         let goal1 = Goal(name: "New Computer", amount: 1000, contributed: 0, desc: "A new computer. Separate parts should total about $1000", primary: true)!
-        let photo1 = UIImage(named: "defaultImage")!
+        let photo1 = UIImage(named: "defaultPhoto")!
         goal1.photo = photo1
         goals += [goal1]
         
