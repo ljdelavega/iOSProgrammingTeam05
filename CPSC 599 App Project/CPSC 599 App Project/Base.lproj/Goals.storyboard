@@ -117,9 +117,6 @@
                                         </label>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FII-JO-k22">
                                             <rect key="frame" x="8" y="66" width="584" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="25" id="gvr-Or-QqW"/>
-                                            </constraints>
                                             <color key="progressTintColor" red="0.18008001867534495" green="1" blue="0.16399367346857752" alpha="1" colorSpace="calibratedRGB"/>
                                         </progressView>
                                     </subviews>
@@ -127,14 +124,15 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="FII-JO-k22" secondAttribute="bottom" id="0aw-vA-aV7"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="t5y-Zd-ugf" secondAttribute="trailing" id="23l-Jo-uGr"/>
                                         <constraint firstItem="r4h-Qr-gJP" firstAttribute="leading" secondItem="t5y-Zd-ugf" secondAttribute="leading" id="Bec-xB-e8m"/>
-                                        <constraint firstItem="FII-JO-k22" firstAttribute="top" secondItem="t5y-Zd-ugf" secondAttribute="bottom" constant="8" id="Mil-N6-LoO"/>
                                         <constraint firstItem="r4h-Qr-gJP" firstAttribute="top" secondItem="u6C-0d-cgg" secondAttribute="topMargin" id="Sz6-1F-6c1"/>
                                         <constraint firstItem="r4h-Qr-gJP" firstAttribute="trailing" secondItem="u6C-0d-cgg" secondAttribute="trailingMargin" id="X6h-mJ-l7y"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="FII-JO-k22" secondAttribute="bottom" id="bZy-ba-bkZ"/>
                                         <constraint firstItem="t5y-Zd-ugf" firstAttribute="top" secondItem="r4h-Qr-gJP" secondAttribute="bottom" constant="8" id="k2D-NX-Mzd"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FII-JO-k22" secondAttribute="trailing" id="kj0-Ua-8X9"/>
                                         <constraint firstItem="FII-JO-k22" firstAttribute="leading" secondItem="u6C-0d-cgg" secondAttribute="leadingMargin" id="mJf-Ye-T7y"/>
+                                        <constraint firstItem="FII-JO-k22" firstAttribute="bottom" secondItem="u6C-0d-cgg" secondAttribute="bottomMargin" id="nRO-A7-Hfz"/>
                                         <constraint firstItem="r4h-Qr-gJP" firstAttribute="leading" secondItem="u6C-0d-cgg" secondAttribute="leadingMargin" id="sbt-H0-SDp"/>
+                                        <constraint firstItem="FII-JO-k22" firstAttribute="top" secondItem="t5y-Zd-ugf" secondAttribute="bottom" constant="8" id="uSc-rm-L53"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -199,15 +197,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9Qv-9h-Qcq">
                                 <rect key="frame" x="20" y="72" width="560" height="476"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjS-jE-DHg">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="26"/>
+=======
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9Qv-9h-Qcq">
+                                <rect key="frame" x="20" y="72" width="560" height="476"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjS-jE-DHg">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="31"/>
+>>>>>>> master
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter goal name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y40-ha-qyX">
                                         <rect key="frame" x="0.0" y="41" width="560" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -215,10 +222,20 @@
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cost:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-Jb-9gQ">
                                         <rect key="frame" x="0.0" y="92" width="560" height="26"/>
+=======
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter goal name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y40-ha-qyX">
+                                        <rect key="frame" x="0.0" y="46" width="560" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-Jb-9gQ">
+                                        <rect key="frame" x="0.0" y="106" width="560" height="31"/>
+>>>>>>> master
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cost of the goal..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDo-J1-ddf">
                                         <rect key="frame" x="0.0" y="133" width="560" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -226,10 +243,20 @@
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Remaining:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf7-ov-sop">
                                         <rect key="frame" x="0.0" y="184" width="560" height="26"/>
+=======
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cost of the goal..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDo-J1-ddf">
+                                        <rect key="frame" x="0.0" y="152" width="560" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf7-ov-sop">
+                                        <rect key="frame" x="0.0" y="212" width="560" height="32"/>
+>>>>>>> master
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Enter remainder to be paid..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-Mq-Iq0">
                                         <rect key="frame" x="0.0" y="225" width="560" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -237,10 +264,20 @@
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI2-KS-QUD">
                                         <rect key="frame" x="0.0" y="277" width="560" height="25"/>
+=======
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Enter remainder to be paid..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-Mq-Iq0">
+                                        <rect key="frame" x="0.0" y="259" width="560" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI2-KS-QUD">
+                                        <rect key="frame" x="0.0" y="318" width="560" height="32"/>
+>>>>>>> master
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOT-3b-7WY">
                                         <rect key="frame" x="0.0" y="317" width="560" height="87"/>
                                         <constraints>
@@ -251,6 +288,15 @@
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tia-SU-uTl" userLabel="Checkbox" customClass="Checkbox" customModule="CPSC_599_App_Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="419" width="560" height="57"/>
+=======
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOT-3b-7WY">
+                                        <rect key="frame" x="0.0" y="365" width="560" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tia-SU-uTl" userLabel="Checkbox" customClass="Checkbox" customModule="CPSC_599_App_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="380" width="560" height="96"/>
+>>>>>>> master
                                         <state key="normal" title=" Set as Primary Goal" image="unchecked_checkbox">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -263,7 +309,6 @@
                             <constraint firstItem="9Qv-9h-Qcq" firstAttribute="centerX" secondItem="1q2-Db-peW" secondAttribute="centerX" id="02F-ZO-Jv8"/>
                             <constraint firstItem="9Qv-9h-Qcq" firstAttribute="centerX" secondItem="1q2-Db-peW" secondAttribute="centerX" id="3Sj-hg-dk7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Qv-9h-Qcq" secondAttribute="trailing" id="EsI-Q3-uSi"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="9Qv-9h-Qcq" secondAttribute="bottom" constant="8" id="XHh-p6-fwV"/>
                             <constraint firstItem="9Qv-9h-Qcq" firstAttribute="top" secondItem="k3I-mU-3NE" secondAttribute="bottom" constant="8" id="YsZ-PN-uT5"/>
                             <constraint firstItem="9Qv-9h-Qcq" firstAttribute="centerY" secondItem="1q2-Db-peW" secondAttribute="centerY" id="a2f-YZ-Snr"/>
                             <constraint firstItem="Kwu-VV-9xG" firstAttribute="top" secondItem="9Qv-9h-Qcq" secondAttribute="bottom" constant="8" id="fBD-9i-oez"/>
