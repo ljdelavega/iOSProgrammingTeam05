@@ -138,7 +138,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Transactions" id="wnk-WE-PmG">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nK4-ut-SrI"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0kY-ws-EFb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0kY-ws-EFb">
+                            <connections>
+                                <segue destination="ZTj-5U-KJ2" kind="unwind" unwindAction="unwindToTransactionList:" id="MGE-hH-gE0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="amountTextField" destination="8ti-ny-24g" id="DU6-Qk-DzV"/>
@@ -149,6 +153,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLz-Ul-mT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZTj-5U-KJ2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3033" y="-1640"/>
         </scene>

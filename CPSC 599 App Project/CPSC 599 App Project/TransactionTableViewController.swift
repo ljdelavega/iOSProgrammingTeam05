@@ -10,7 +10,6 @@ import UIKit
 
 class TransactionTableViewController: UITableViewController {
 
-    var incomes = [Income]()
     var transactions = [Expense]()
     
     override func viewDidLoad() {
@@ -20,8 +19,6 @@ class TransactionTableViewController: UITableViewController {
     }
     
     func loadSampleTransactions() {
-        let income1 = Income(name: "Job", amount: 1000.42, desc: "Worked at job", date: NSDate())!
-        incomes += [income1]
         
         let expense1 = Expense(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), repeating: false)!
         transactions += [expense1]
@@ -108,16 +105,15 @@ class TransactionTableViewController: UITableViewController {
 
     
     // MARK: - Navigation
-/*
+
     @IBAction func unwindToTransactionList(sender: UIStoryboardSegue){
         if let sourceViewController = sender.sourceViewController as? TransactionViewController, transaction = sourceViewController.transaction {
             let newIndexPath = NSIndexPath(forRow: transactions.count, inSection: 0)
-            
+            //append to the list of transactions
             transactions.append(transaction)
             tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
         }
     }
-  */  
     /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

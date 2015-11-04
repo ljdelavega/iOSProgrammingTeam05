@@ -65,11 +65,24 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
     
 
     // MARK: - Navigation
+    
+    var transaction: Expense?
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(saveButton === sender){
+            let name = nameTextField.text ?? ""
+            let amount = amountTextField.text
+            let date = NSDate()
+            let description = descriptionTextField.text ?? ""
+            
+            var amt = NSDecimalNumber(string: amount)
+            if(amt == NSDecimalNumber.notANumber()){
+                amt = NSDecimalNumber(int: 0)
+            }
+            
+            transaction = Expense(name: name, amount: amt, desc: description, date: date, repeating: false)
+        }
     }
 
 
