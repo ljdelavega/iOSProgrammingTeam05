@@ -106,18 +106,40 @@ class TransactionTableViewController: UITableViewController {
 
     @IBAction func unwindToTransactionList(sender: UIStoryboardSegue){
         if let sourceViewController = sender.sourceViewController as? TransactionViewController, transaction = sourceViewController.transaction {
-            let newIndexPath = NSIndexPath(forRow: transactions.count, inSection: 0)
-            //append to the list of transactions
-            transactions.append(transaction)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            
+            //edits and replaces old transaction with newly edited transaction
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                transactions[selectedIndexPath.row] = transaction
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            }
+                
+            //add a new transaction
+            else {
+                let newIndexPath = NSIndexPath(forRow: transactions.count, inSection: 0)
+                //append to the list of transactions
+                transactions.append(transaction)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
         }
     }
-    /*
+    
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetail" {
+           let transactionDetailViewController = segue.destinationViewController as! TransactionViewController
+            if let selectedTransactionCell = sender as? TransactionTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedTransactionCell)!
+                let selectedTransaction = transactions[indexPath.row]
+                transactionDetailViewController.transaction = selectedTransaction
+            }
+        }
+        else if segue.identifier == "AddItem" {
+            
+        }
+        else {
+            print("Adding new Transaction")
+        }
     }
-    */
 
 }

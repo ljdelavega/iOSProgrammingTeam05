@@ -212,6 +212,7 @@
                                     <outlet property="imageview" destination="in0-Wb-bTv" id="Cad-MA-bTI"/>
                                     <outlet property="priceLabel" destination="1JK-5j-LY2" id="HFH-1S-ghy"/>
                                     <outlet property="titleLabel" destination="lz9-cj-UBa" id="HjK-9X-x4e"/>
+                                    <segue destination="eCN-S2-xiM" kind="show" identifier="ShowDetail" id="ag0-IA-KZf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -231,7 +232,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNI-Cj-MOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568" y="-1640"/>
+            <point key="canvasLocation" x="1564" y="-1640"/>
         </scene>
         <!--Transactions-->
         <scene sceneID="V9q-l0-VfQ">
@@ -271,10 +272,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyV-tQ-CCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2221" y="-1640"/>
+            <point key="canvasLocation" x="2289" y="-1208"/>
         </scene>
     </scenes>
     <resources>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ag0-IA-KZf"/>
+    </inferredMetricsTieBreakers>
 </document>

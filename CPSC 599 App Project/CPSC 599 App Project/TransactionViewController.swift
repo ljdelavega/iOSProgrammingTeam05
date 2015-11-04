@@ -23,8 +23,22 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
         amountTextField.delegate = self;
         dateTextField.delegate = self;
         descriptionTextField.delegate = self;
-        saveButton.enabled = false
         // Do any additional setup after loading the view.
+        
+        if let transaction = transaction {
+            navigationItem.title = transaction.name
+            nameTextField.text = transaction.name
+            amountTextField.text = transaction.amount.asLocaleCurrency
+            descriptionTextField.text = transaction.desc
+            
+            //converts NSDate into NSString
+            let formatter: NSDateFormatter = NSDateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            let datePrefix: String = formatter.stringFromDate(transaction.date)
+            dateTextField.text = datePrefix
+        }
+        
+        checkValidTransaction()
     }
 
     override func didReceiveMemoryWarning() {
