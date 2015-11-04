@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t3e-jw-KBL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t3e-jw-KBL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,7 +21,7 @@
                     <navigationItem key="navigationItem" title="Graph" id="XsW-6O-XVc">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="vTv-2o-TU8">
                             <connections>
-                                <segue destination="79T-2R-NJy" kind="unwind" unwindAction="unwindToBudget:" id="aI3-hD-MAb"/>
+                                <segue destination="79T-2R-NJy" kind="unwind" unwindAction="unwindToBudgetList:" id="fG5-Qf-G4q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="84J-8y-ON4" customClass="BudgetTableViewCell" customModule="Budget_Balancer" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BudgetTableViewCell" rowHeight="79" id="84J-8y-ON4" customClass="BudgetTableViewCell" customModule="Budget_Balancer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="84J-8y-ON4" id="TlC-Vf-J2b">
@@ -210,12 +210,12 @@
                     <navigationItem key="navigationItem" title="Add" id="zU3-Gg-hI2">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9Wg-z5-vhq">
                             <connections>
-                                <segue destination="9tz-e2-hlm" kind="unwind" unwindAction="unwindToBudget:" id="2IF-rV-064"/>
+                                <segue destination="9tz-e2-hlm" kind="unwind" unwindAction="unwindToBudgetList:" id="ld3-Vu-UoW"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="AIO-Q3-M12">
                             <connections>
-                                <segue destination="9tz-e2-hlm" kind="unwind" unwindAction="unwindToBudget:" id="4QX-qc-BLC"/>
+                                <segue destination="9tz-e2-hlm" kind="unwind" unwindAction="unwindToBudgetList:" id="yJr-pQ-ZzC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -230,7 +230,7 @@
         <scene sceneID="Y1T-z2-S5v">
             <objects>
                 <navigationController title="Budget Navigation" automaticallyAdjustsScrollViewInsets="NO" id="t3e-jw-KBL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Budgets" image="second" id="pgi-kW-Rux"/>
+                    <tabBarItem key="tabBarItem" title="Budgets" image="first" id="pgi-kW-Rux"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qwf-YD-Qwk">
@@ -284,6 +284,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
+        <image name="first" width="30" height="30"/>
     </resources>
 </document>

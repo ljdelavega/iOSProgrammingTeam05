@@ -33,6 +33,8 @@
 		F7D1F3151BE4826B000E1A17 /* Overview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F3131BE4826B000E1A17 /* Overview.storyboard */; };
 		F7D1F3181BE6D377000E1A17 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1F3161BE6D377000E1A17 /* Checkbox.swift */; };
 		F7D1F3191BE6D377000E1A17 /* CheckboxDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1F3171BE6D377000E1A17 /* CheckboxDelegate.swift */; };
+		F7ED287E1BEAA13400CC2453 /* BudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED287D1BEAA13400CC2453 /* BudgetTableViewCell.swift */; };
+		F7ED28801BEAA13B00CC2453 /* BudgetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED287F1BEAA13B00CC2453 /* BudgetTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		F7D1F3141BE4826B000E1A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Overview.storyboard; sourceTree = "<group>"; };
 		F7D1F3161BE6D377000E1A17 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Checkbox.swift; path = Libs/Checkbox.swift; sourceTree = "<group>"; };
 		F7D1F3171BE6D377000E1A17 /* CheckboxDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckboxDelegate.swift; path = Libs/CheckboxDelegate.swift; sourceTree = "<group>"; };
+		F7ED287D1BEAA13400CC2453 /* BudgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTableViewCell.swift; sourceTree = "<group>"; };
+		F7ED287F1BEAA13B00CC2453 /* BudgetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,26 +137,28 @@
 			children = (
 				F7B42B321BD5FC5D00CB3308 /* Main.storyboard */,
 				F7D1F3131BE4826B000E1A17 /* Overview.storyboard */,
+				F7C726B01BDEB90F00B5C30A /* Transaction.swift */,
+				F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */,
 				F7D1F3101BE48257000E1A17 /* Transactions.storyboard */,
+				F7C726AE1BDEB8F000B5C30A /* Income.swift */,
 				3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */,
 				3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */,
 				3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */,
 				F7D1F30D1BE48231000E1A17 /* Budgets.storyboard */,
-				F7D1F30A1BE481E7000E1A17 /* Goals.storyboard */,
-				F7B42B371BD5FC5D00CB3308 /* LaunchScreen.storyboard */,
-				F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */,
-				F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */,
-				F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */,
 				F7C726B21BE0079B00B5C30A /* BudgetViewController.swift */,
+				F7ED287D1BEAA13400CC2453 /* BudgetTableViewCell.swift */,
+				F7ED287F1BEAA13B00CC2453 /* BudgetTableViewController.swift */,
+				F7C726AA1BDEB22900B5C30A /* Budget.swift */,
+				F7D1F30A1BE481E7000E1A17 /* Goals.storyboard */,
 				F7C726B41BE0083600B5C30A /* GoalViewController.swift */,
 				F7C726C31BE43E7600B5C30A /* GoalTableViewController.swift */,
 				F7C726C11BE43E4F00B5C30A /* GoalTableViewCell.swift */,
 				F7C726C51BE4447700B5C30A /* GoalDetailViewController.swift */,
-				F7B42B3A1BD5FC5D00CB3308 /* Info.plist */,
-				F7C726AA1BDEB22900B5C30A /* Budget.swift */,
 				F7C726AC1BDEB8B300B5C30A /* Goal.swift */,
-				F7C726AE1BDEB8F000B5C30A /* Income.swift */,
-				F7C726B01BDEB90F00B5C30A /* Transaction.swift */,
+				F7B42B371BD5FC5D00CB3308 /* LaunchScreen.storyboard */,
+				F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */,
+				F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */,
+				F7B42B3A1BD5FC5D00CB3308 /* Info.plist */,
 				F7C726BE1BE4370900B5C30A /* Libs */,
 			);
 			name = src;
@@ -311,6 +317,7 @@
 				F7606FE41BE93FAF004A7F73 /* NSDecimalNumber.swift in Sources */,
 				F7D1F3191BE6D377000E1A17 /* CheckboxDelegate.swift in Sources */,
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,
+				F7ED287E1BEAA13400CC2453 /* BudgetTableViewCell.swift in Sources */,
 				F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */,
 				F7C726C21BE43E4F00B5C30A /* GoalTableViewCell.swift in Sources */,
 				F7C726AD1BDEB8B300B5C30A /* Goal.swift in Sources */,
@@ -319,6 +326,7 @@
 				F7C726AF1BDEB8F000B5C30A /* Income.swift in Sources */,
 				F7C726BD1BE4334800B5C30A /* WavesLoader.swift in Sources */,
 				F7C726B51BE0083600B5C30A /* GoalViewController.swift in Sources */,
+				F7ED28801BEAA13B00CC2453 /* BudgetTableViewController.swift in Sources */,
 				3952B9641BE84B7000AB2BB2 /* TransactionViewController.swift in Sources */,
 				F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */,
 				F7C726B31BE0079B00B5C30A /* BudgetViewController.swift in Sources */,

@@ -8,7 +8,7 @@
         <!--Primary Goal-->
         <scene sceneID="DkU-Sq-awA">
             <objects>
-                <viewController id="8gW-Sg-X7X" userLabel="Primary Goal" customClass="GoalViewController" customModule="CPSC_599_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8gW-Sg-X7X" userLabel="Primary Goal" customClass="GoalViewController" customModule="Budget_Balancer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lYd-xK-Tcm"/>
                         <viewControllerLayoutGuide type="bottom" id="tnz-pb-fhO"/>
@@ -88,13 +88,13 @@
         <!--Goal Table View-->
         <scene sceneID="jc8-dh-YzI">
             <objects>
-                <tableViewController id="Cjy-1f-gF5" userLabel="Goal Table View" customClass="GoalTableViewController" customModule="CPSC_599_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Cjy-1f-gF5" userLabel="Goal Table View" customClass="GoalTableViewController" customModule="Budget_Balancer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJD-Tx-L3B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoalTableViewCell" rowHeight="100" id="emC-vw-BsE" customClass="GoalTableViewCell" customModule="CPSC_599_App_Project" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoalTableViewCell" rowHeight="100" id="emC-vw-BsE" customClass="GoalTableViewCell" customModule="Budget_Balancer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="emC-vw-BsE" id="u6C-0d-cgg">
@@ -199,7 +199,7 @@
         <!--Goal Details-->
         <scene sceneID="RBY-DK-OX2">
             <objects>
-                <viewController id="vk1-6R-oOQ" userLabel="Goal Details" customClass="GoalDetailViewController" customModule="CPSC_599_App_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vk1-6R-oOQ" userLabel="Goal Details" customClass="GoalDetailViewController" customModule="Budget_Balancer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k3I-mU-3NE"/>
                         <viewControllerLayoutGuide type="bottom" id="Kwu-VV-9xG"/>
@@ -271,7 +271,7 @@
                                             <outletCollection property="gestureRecognizers" destination="ARN-gk-hnl" appends="YES" id="5FA-sR-0eb"/>
                                         </connections>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tia-SU-uTl" userLabel="Checkbox" customClass="Checkbox" customModule="CPSC_599_App_Project" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tia-SU-uTl" userLabel="Checkbox" customClass="Checkbox" customModule="Budget_Balancer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="451" width="560" height="25"/>
                                         <state key="normal" title=" Set as Primary Goal" image="unchecked_checkbox">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
