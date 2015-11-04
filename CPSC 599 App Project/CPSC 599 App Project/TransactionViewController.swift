@@ -82,8 +82,18 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     var transaction: Expense?
 
+    
     @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        //two different ways of dismissing the view controller
+        //BUG: UITabBarController is supposed to be UINavigationController but it doesn't work like that
+        //print(presentingViewController)
+        let isPresentingInAddTransactionMode = presentingViewController is UITabBarController
+        if isPresentingInAddTransactionMode {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+        else {
+            navigationController!.popViewControllerAnimated(true)
+        }
     }
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

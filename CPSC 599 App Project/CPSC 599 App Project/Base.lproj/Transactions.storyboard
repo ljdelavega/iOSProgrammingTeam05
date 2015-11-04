@@ -178,26 +178,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="in0-Wb-bTv" userLabel="Icon">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="in0-Wb-bTv" userLabel="Icon">
                                             <rect key="frame" x="8" y="8" width="53" height="53"/>
                                             <animations/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz9-cj-UBa">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz9-cj-UBa">
                                             <rect key="frame" x="83" y="8" width="206" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUQ-iX-wi9">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUQ-iX-wi9">
                                             <rect key="frame" x="83" y="37" width="206" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JK-5j-LY2">
-                                            <rect key="frame" x="492" y="24" width="100" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JK-5j-LY2">
+                                            <rect key="frame" x="465" y="24" width="100" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -205,6 +205,17 @@
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="zUQ-iX-wi9" firstAttribute="leading" secondItem="in0-Wb-bTv" secondAttribute="trailing" constant="22" id="5OZ-Hc-7yT"/>
+                                        <constraint firstItem="lz9-cj-UBa" firstAttribute="top" secondItem="ngz-Eg-Qfx" secondAttribute="topMargin" id="5cZ-mU-rQD"/>
+                                        <constraint firstItem="in0-Wb-bTv" firstAttribute="top" secondItem="ngz-Eg-Qfx" secondAttribute="topMargin" id="QiM-h3-gYL"/>
+                                        <constraint firstItem="1JK-5j-LY2" firstAttribute="top" secondItem="ngz-Eg-Qfx" secondAttribute="topMargin" constant="16" id="WgK-Zy-uu9"/>
+                                        <constraint firstItem="in0-Wb-bTv" firstAttribute="bottom" secondItem="ngz-Eg-Qfx" secondAttribute="bottomMargin" id="hCn-6K-LkV"/>
+                                        <constraint firstItem="zUQ-iX-wi9" firstAttribute="top" secondItem="lz9-cj-UBa" secondAttribute="bottom" constant="8" id="jnH-QL-cyw"/>
+                                        <constraint firstItem="in0-Wb-bTv" firstAttribute="leading" secondItem="ngz-Eg-Qfx" secondAttribute="leadingMargin" id="qgh-fZ-WUm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1JK-5j-LY2" secondAttribute="trailing" constant="27" id="rtT-Is-NsW"/>
+                                        <constraint firstItem="lz9-cj-UBa" firstAttribute="leading" secondItem="in0-Wb-bTv" secondAttribute="trailing" constant="22" id="zEx-WA-emU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
@@ -222,7 +233,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Transactions" id="jxf-Tw-sL0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="NuG-k1-vBJ"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="O33-2t-WU6">
                             <connections>
                                 <segue destination="l27-WF-Ytz" kind="presentation" id="MgH-fH-KHJ"/>
