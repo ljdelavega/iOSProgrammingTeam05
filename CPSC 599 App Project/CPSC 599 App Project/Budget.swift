@@ -51,7 +51,7 @@ class Budget: NSObject, NSCoding {
     }
     
     // MARK: Initialization
-    
+    //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
     init?(name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool) {
         // Initialize stored properties.
         self.name = name

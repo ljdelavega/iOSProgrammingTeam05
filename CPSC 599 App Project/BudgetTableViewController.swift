@@ -9,15 +9,24 @@
 import UIKit
 
 class BudgetTableViewController: UITableViewController {
+    
+    //MARK: Properties
+    
+    var budgets = [Budget]()
+    
+    /*
+    func loadSampleBudgets() {
+        let budget1 = Budget(name: "Car", amount: "$1.00", remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool)!
+        budgets += [budget1]
+    }*/
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //Load the sample data.
+        //loadSampleBudgets()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +46,8 @@ class BudgetTableViewController: UITableViewController {
         return 0
     }
 
+    @IBAction func unwindToBudget(sender: UIStoryboardSegue) {
+            }
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
