@@ -15,6 +15,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,12 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             amountTextField.text = transaction.amount.asLocaleCurrency
             descriptionTextField.text = transaction.desc
             
+            if(transaction.type == "Expense") {
+                segmentControl.selectedSegmentIndex = 0
+            }
+            else {
+                segmentControl.selectedSegmentIndex = 1
+            }
             //converts NSDate into NSString
             let formatter: NSDateFormatter = NSDateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
@@ -98,10 +105,16 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(saveButton === sender){
+            var type = ""
+            if(segmentControl.selectedSegmentIndex == 0){
+                type = "Expense"
+            } else {
+                type = "Income"
+            }
+            
             let name = nameTextField.text ?? ""
             let amount = amountTextField.text
             let date = NSDate()
-            let type = "Expense"
             let description = descriptionTextField.text ?? ""
             
             var amt = NSDecimalNumber(string: amount)

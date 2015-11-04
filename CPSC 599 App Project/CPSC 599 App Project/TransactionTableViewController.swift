@@ -23,7 +23,11 @@ class TransactionTableViewController: UITableViewController {
     func loadSampleTransactions() {
         
         let expense1 = Transaction(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: false)!
-        transactions += [expense1]
+        
+        
+        let income1 = Transaction(name: "Salary", amount: 250.00, desc: "Job", date: NSDate(), type: "Income", repeating: false)!
+        
+        transactions += [expense1, income1]
         
         
         
@@ -64,9 +68,9 @@ class TransactionTableViewController: UITableViewController {
         cell.priceLabel.text = transaction.amount.asLocaleCurrency
         
         if transaction.type == "Expense" {
-            cell.backgroundColor = UIColor.redColor()
+            cell.priceLabel.textColor = UIColor.redColor()
         } else if transaction.type == "Income"{
-            cell.backgroundColor = UIColor.greenColor()
+            cell.priceLabel.textColor = UIColor.greenColor()
         }
         // Configure the cell...
         
