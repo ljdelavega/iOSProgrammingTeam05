@@ -19,7 +19,7 @@
 		F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726AA1BDEB22900B5C30A /* Budget.swift */; };
 		F7C726AD1BDEB8B300B5C30A /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726AC1BDEB8B300B5C30A /* Goal.swift */; };
 		F7C726AF1BDEB8F000B5C30A /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726AE1BDEB8F000B5C30A /* Income.swift */; };
-		F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726B01BDEB90F00B5C30A /* Expense.swift */; };
+		F7C726B11BDEB90F00B5C30A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726B01BDEB90F00B5C30A /* Transaction.swift */; };
 		F7C726B31BE0079B00B5C30A /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726B21BE0079B00B5C30A /* BudgetViewController.swift */; };
 		F7C726B51BE0083600B5C30A /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726B41BE0083600B5C30A /* GoalViewController.swift */; };
 		F7C726BC1BE4334800B5C30A /* FillableLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C726BA1BE4334800B5C30A /* FillableLoader.swift */; };
@@ -69,7 +69,7 @@
 		F7C726AA1BDEB22900B5C30A /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		F7C726AC1BDEB8B300B5C30A /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		F7C726AE1BDEB8F000B5C30A /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
-		F7C726B01BDEB90F00B5C30A /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		F7C726B01BDEB90F00B5C30A /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		F7C726B21BE0079B00B5C30A /* BudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		F7C726B41BE0083600B5C30A /* GoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		F7C726BA1BE4334800B5C30A /* FillableLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FillableLoader.swift; path = Libs/FillableLoader.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				F7C726AA1BDEB22900B5C30A /* Budget.swift */,
 				F7C726AC1BDEB8B300B5C30A /* Goal.swift */,
 				F7C726AE1BDEB8F000B5C30A /* Income.swift */,
-				F7C726B01BDEB90F00B5C30A /* Expense.swift */,
+				F7C726B01BDEB90F00B5C30A /* Transaction.swift */,
 				F7C726BE1BE4370900B5C30A /* Libs */,
 			);
 			name = src;
@@ -307,7 +307,7 @@
 			files = (
 				3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */,
 				F7C726C41BE43E7600B5C30A /* GoalTableViewController.swift in Sources */,
-				F7C726B11BDEB90F00B5C30A /* Expense.swift in Sources */,
+				F7C726B11BDEB90F00B5C30A /* Transaction.swift in Sources */,
 				F7606FE41BE93FAF004A7F73 /* NSDecimalNumber.swift in Sources */,
 				F7D1F3191BE6D377000E1A17 /* CheckboxDelegate.swift in Sources */,
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,

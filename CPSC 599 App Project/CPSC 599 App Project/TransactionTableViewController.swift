@@ -10,7 +10,7 @@ import UIKit
 
 class TransactionTableViewController: UITableViewController {
 
-    var transactions = [Expense]()
+    var transactions = [Transaction]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class TransactionTableViewController: UITableViewController {
     
     func loadSampleTransactions() {
         
-        let expense1 = Expense(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), repeating: false)!
+        let expense1 = Transaction(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: false)!
         transactions += [expense1]
         
         
@@ -63,6 +63,11 @@ class TransactionTableViewController: UITableViewController {
         cell.dateLabel.text = datePrefix
         cell.priceLabel.text = transaction.amount.asLocaleCurrency
         
+        if transaction.type == "Expense" {
+            cell.backgroundColor = UIColor.redColor()
+        } else if transaction.type == "Income"{
+            cell.backgroundColor = UIColor.greenColor()
+        }
         // Configure the cell...
         
         return cell

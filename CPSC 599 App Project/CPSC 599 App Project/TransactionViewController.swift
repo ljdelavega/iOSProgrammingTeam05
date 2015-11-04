@@ -80,7 +80,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
 
     // MARK: - Navigation
     
-    var transaction: Expense?
+    var transaction: Transaction?
 
     
     @IBAction func cancel(sender: UIBarButtonItem) {
@@ -101,6 +101,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             let name = nameTextField.text ?? ""
             let amount = amountTextField.text
             let date = NSDate()
+            let type = "Expense"
             let description = descriptionTextField.text ?? ""
             
             var amt = NSDecimalNumber(string: amount)
@@ -108,7 +109,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
                 amt = NSDecimalNumber(int: 0)
             }
             
-            transaction = Expense(name: name, amount: amt, desc: description, date: date, repeating: false)
+            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: false)
         }
     }
 

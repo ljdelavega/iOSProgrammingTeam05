@@ -1,14 +1,15 @@
 //
-//  Expense.swift
+//  Transaction.swift
 //  CPSC 599 App Project
 //
 //  Created by Lester Dela Vega on 2015-10-26.
+//  Coded by Brandon Yip
 //  Copyright © 2015 Team 05. All rights reserved.
 //
 
 import UIKit
 
-class Expense: NSObject, NSCoding {
+class Transaction: NSObject, NSCoding {
     
     /* Fields:
     Amount
@@ -28,13 +29,14 @@ class Expense: NSObject, NSCoding {
     var amount: NSDecimalNumber
     var desc: String
     var date: NSDate
+    var type: String
     var repeating: Bool
     
     
     // MARK: Archiving Paths
     
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("expenses")
+    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("transactions")
     
     // MARK: Types
     
@@ -44,17 +46,19 @@ class Expense: NSObject, NSCoding {
         static let amountKey = "amount"
         static let descKey = "desc"
         static let dateKey = "date"
+        static let typeKey = "type"
         static let repeatingKey = "repeating"
     }
     
     // MARK: Initialization
     
-    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool) {
+    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, type: String, repeating: Bool) {
         // Initialize stored properties.
         self.name = name
         self.amount = amount
         self.desc = desc
         self.date = date
+        self.type = type
         self.repeating = repeating
         
         super.init()
@@ -73,6 +77,7 @@ class Expense: NSObject, NSCoding {
         aCoder.encodeObject(amount, forKey: PropertyKey.amountKey)
         aCoder.encodeObject(desc, forKey: PropertyKey.descKey)
         aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
+        aCoder.encodeObject(type, forKey: PropertyKey.typeKey)
         aCoder.encodeObject(repeating, forKey: PropertyKey.repeatingKey)
     }
     
@@ -83,12 +88,14 @@ class Expense: NSObject, NSCoding {
         let desc = aDecoder.decodeObjectForKey(PropertyKey.descKey) as! String
         let date = aDecoder.decodeObjectForKey(PropertyKey.dateKey) as! NSDate
         
+        let type = aDecoder.decodeObjectForKey(PropertyKey.typeKey) as! String
+        
         let repeating = aDecoder.decodeBoolForKey(PropertyKey.repeatingKey)
         
         // Because photo is an optional property of Meal, use conditional cast.
         //let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
         
         // Must call designated initializer.
-        self.init(name: name, amount: amount, desc: desc, date: date, repeating: repeating)
+        self.init(name: name, amount: amount, desc: desc, date: date, type: type, repeating: repeating)
     }
 }
