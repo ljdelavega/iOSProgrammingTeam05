@@ -137,7 +137,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Transactions" id="wnk-WE-PmG">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nK4-ut-SrI"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nK4-ut-SrI">
+                            <connections>
+                                <action selector="cancel:" destination="eCN-S2-xiM" id="dlq-mo-iUE"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="0kY-ws-EFb">
                             <connections>
                                 <segue destination="ZTj-5U-KJ2" kind="unwind" unwindAction="unwindToTransactionList:" id="MGE-hH-gE0"/>

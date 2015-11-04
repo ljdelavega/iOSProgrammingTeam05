@@ -55,13 +55,11 @@ class TransactionTableViewController: UITableViewController {
         formatter.dateFormat = "yyyy-MM-dd"
         let datePrefix: String = formatter.stringFromDate(transaction.date)
         
-        //converts NSDecimalNumber to NSString
-        let priceString: String = transaction.amount.stringValue
         
-        
+        //fills the cell with the information
         cell.titleLabel.text = transaction.name
         cell.dateLabel.text = datePrefix
-        cell.priceLabel.text = priceString
+        cell.priceLabel.text = transaction.amount.asLocaleCurrency
         
         // Configure the cell...
         
