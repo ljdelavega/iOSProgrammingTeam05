@@ -8,11 +8,22 @@
 
 import UIKit
 
-class TransactionViewController: UIViewController {
+class TransactionViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        nameTextField.delegate = self;
+        amountTextField.delegate = self;
+        dateTextField.delegate = self;
+        descriptionTextField.delegate = self;
+        saveButton.enabled = false
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +31,37 @@ class TransactionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    // MARK: UITextFieldDelegate
+    
+    //Text Field: When pressing the return button on the keyboard
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //Text Field: When editing is ended
+    func textFieldDidEndEditing(textField: UITextField) {
+        checkValidTransaction()
+    }
+    
+    //Text Field is selected to edit
+    func textFieldDidBeginEditing(textField: UITextField) {
+        // Disable the Save button while editing.
+        saveButton.enabled = false
+    }
+    
+    
+    func checkValidTransaction(){
+        let name = nameTextField.text ?? ""
+        let amount = amountTextField.text ?? ""
+        saveButton.enabled = !name.isEmpty && !amount.isEmpty
+    }
+    
+    
+    
     
 
     // MARK: - Navigation
