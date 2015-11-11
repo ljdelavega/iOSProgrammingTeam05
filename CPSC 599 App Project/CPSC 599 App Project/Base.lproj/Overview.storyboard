@@ -18,8 +18,11 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgS-QU-5jc">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.70588235290000001" green="0.89019607840000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Overview" id="Pru-hj-Wtp"/>
+                                    <navigationItem title="Overview" id="Pru-hj-Wtp">
+                                        <barButtonItem key="leftBarButtonItem" image="uptrend" id="zpu-pE-4QS"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -41,5 +44,6 @@
     </scenes>
     <resources>
         <image name="file-document-7" width="30" height="30"/>
+        <image name="uptrend" width="30" height="30"/>
     </resources>
 </document>

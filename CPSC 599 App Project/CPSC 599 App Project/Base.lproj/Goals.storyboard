@@ -22,10 +22,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Drm-VC-x7C"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.70588235290000001" green="0.89019607840000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Primary Goal" id="nkG-ix-xiR">
                                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="dKy-ED-oPm"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="ldU-1m-hU8">
+                                        <barButtonItem key="rightBarButtonItem" image="layout-arrange-10-7" id="ldU-1m-hU8">
                                             <connections>
                                                 <segue destination="ORa-A9-utl" kind="presentation" id="bJ0-Xi-Y1C"/>
                                             </connections>
@@ -350,6 +351,7 @@
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
         <image name="fund_thermometer" width="288" height="288"/>
+        <image name="layout-arrange-10-7" width="29" height="30"/>
         <image name="second" width="30" height="30"/>
         <image name="trophy-7" width="30" height="30"/>
         <image name="unchecked_checkbox" width="25" height="25"/>

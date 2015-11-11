@@ -102,7 +102,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Budget" id="gWp-lk-nz2">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="leA-g7-IzP">
+                        <barButtonItem key="leftBarButtonItem" image="uptrend" id="leA-g7-IzP">
                             <connections>
                                 <segue destination="4oB-rx-KQE" kind="presentation" id="bxi-nF-NGd"/>
                             </connections>
@@ -246,6 +246,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qwf-YD-Qwk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.70588235290000001" green="0.89019607840000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -295,5 +296,6 @@
     </scenes>
     <resources>
         <image name="pie-chart-7" width="30" height="30"/>
+        <image name="uptrend" width="30" height="30"/>
     </resources>
 </document>
