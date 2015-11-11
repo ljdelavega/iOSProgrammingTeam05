@@ -59,15 +59,15 @@
 		3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		F7606FE31BE93FAF004A7F73 /* NSDecimalNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDecimalNumber.swift; path = Libs/NSDecimalNumber.swift; sourceTree = "<group>"; };
-		F7B42B291BD5FC5D00CB3308 /* Budget Balancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget Balancer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B42B291BD5FC5D00CB3308 /* Zeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		F7B42B331BD5FC5D00CB3308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7B42B351BD5FC5D00CB3308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7B42B381BD5FC5D00CB3308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7B42B3A1BD5FC5D00CB3308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7B42B3F1BD5FC5E00CB3308 /* Budget Balancer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget Balancer.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7B42B4A1BD5FC5E00CB3308 /* Budget Balancer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget Balancer.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B42B3F1BD5FC5E00CB3308 /* Zeal.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zeal.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B42B4A1BD5FC5E00CB3308 /* Zeal.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zeal.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C726AA1BDEB22900B5C30A /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		F7C726AC1BDEB8B300B5C30A /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		F7C726AE1BDEB8F000B5C30A /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
@@ -125,9 +125,9 @@
 		F7B42B2A1BD5FC5D00CB3308 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F7B42B291BD5FC5D00CB3308 /* Budget Balancer.app */,
-				F7B42B3F1BD5FC5E00CB3308 /* Budget Balancer.xctest */,
-				F7B42B4A1BD5FC5E00CB3308 /* Budget Balancer.xctest */,
+				F7B42B291BD5FC5D00CB3308 /* Zeal.app */,
+				F7B42B3F1BD5FC5E00CB3308 /* Zeal.xctest */,
+				F7B42B4A1BD5FC5E00CB3308 /* Zeal.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,9 +180,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F7B42B281BD5FC5D00CB3308 /* Budget Balancer */ = {
+		F7B42B281BD5FC5D00CB3308 /* Zeal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7B42B531BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget Balancer" */;
+			buildConfigurationList = F7B42B531BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Zeal" */;
 			buildPhases = (
 				F7B42B251BD5FC5D00CB3308 /* Sources */,
 				F7B42B261BD5FC5D00CB3308 /* Frameworks */,
@@ -192,14 +192,14 @@
 			);
 			dependencies = (
 			);
-			name = "Budget Balancer";
+			name = Zeal;
 			productName = "CPSC 599 App Project";
-			productReference = F7B42B291BD5FC5D00CB3308 /* Budget Balancer.app */;
+			productReference = F7B42B291BD5FC5D00CB3308 /* Zeal.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F7B42B3E1BD5FC5E00CB3308 /* Budget BalancerTests */ = {
+		F7B42B3E1BD5FC5E00CB3308 /* ZealTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7B42B561BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget BalancerTests" */;
+			buildConfigurationList = F7B42B561BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "ZealTests" */;
 			buildPhases = (
 				F7B42B3B1BD5FC5E00CB3308 /* Sources */,
 				F7B42B3C1BD5FC5E00CB3308 /* Frameworks */,
@@ -210,14 +210,14 @@
 			dependencies = (
 				F7B42B411BD5FC5E00CB3308 /* PBXTargetDependency */,
 			);
-			name = "Budget BalancerTests";
+			name = ZealTests;
 			productName = "CPSC 599 App ProjectTests";
-			productReference = F7B42B3F1BD5FC5E00CB3308 /* Budget Balancer.xctest */;
+			productReference = F7B42B3F1BD5FC5E00CB3308 /* Zeal.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F7B42B491BD5FC5E00CB3308 /* Budget BalancerUITests */ = {
+		F7B42B491BD5FC5E00CB3308 /* ZealUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7B42B591BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget BalancerUITests" */;
+			buildConfigurationList = F7B42B591BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "ZealUITests" */;
 			buildPhases = (
 				F7B42B461BD5FC5E00CB3308 /* Sources */,
 				F7B42B471BD5FC5E00CB3308 /* Frameworks */,
@@ -228,9 +228,9 @@
 			dependencies = (
 				F7B42B4C1BD5FC5E00CB3308 /* PBXTargetDependency */,
 			);
-			name = "Budget BalancerUITests";
+			name = ZealUITests;
 			productName = "CPSC 599 App ProjectUITests";
-			productReference = F7B42B4A1BD5FC5E00CB3308 /* Budget Balancer.xctest */;
+			productReference = F7B42B4A1BD5FC5E00CB3308 /* Zeal.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -255,7 +255,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F7B42B241BD5FC5D00CB3308 /* Build configuration list for PBXProject "Budget Balancer" */;
+			buildConfigurationList = F7B42B241BD5FC5D00CB3308 /* Build configuration list for PBXProject "Zeal" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -268,9 +268,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F7B42B281BD5FC5D00CB3308 /* Budget Balancer */,
-				F7B42B3E1BD5FC5E00CB3308 /* Budget BalancerTests */,
-				F7B42B491BD5FC5E00CB3308 /* Budget BalancerUITests */,
+				F7B42B281BD5FC5D00CB3308 /* Zeal */,
+				F7B42B3E1BD5FC5E00CB3308 /* ZealTests */,
+				F7B42B491BD5FC5E00CB3308 /* ZealUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,12 +354,12 @@
 /* Begin PBXTargetDependency section */
 		F7B42B411BD5FC5E00CB3308 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F7B42B281BD5FC5D00CB3308 /* Budget Balancer */;
+			target = F7B42B281BD5FC5D00CB3308 /* Zeal */;
 			targetProxy = F7B42B401BD5FC5E00CB3308 /* PBXContainerItemProxy */;
 		};
 		F7B42B4C1BD5FC5E00CB3308 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F7B42B281BD5FC5D00CB3308 /* Budget Balancer */;
+			target = F7B42B281BD5FC5D00CB3308 /* Zeal */;
 			targetProxy = F7B42B4B1BD5FC5E00CB3308 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -505,8 +505,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CPSC 599 App Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "team05.Budget-Balancer";
-				PRODUCT_NAME = "Budget Balancer";
+				PRODUCT_BUNDLE_IDENTIFIER = team05.Zeal;
+				PRODUCT_NAME = Zeal;
 			};
 			name = Debug;
 		};
@@ -516,8 +516,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CPSC 599 App Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "team05.Budget-Balancer";
-				PRODUCT_NAME = "Budget Balancer";
+				PRODUCT_BUNDLE_IDENTIFIER = team05.Zeal;
+				PRODUCT_NAME = Zeal;
 			};
 			name = Release;
 		};
@@ -528,8 +528,8 @@
 				INFOPLIST_FILE = "CPSC 599 App ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-ProjectTests";
-				PRODUCT_NAME = "Budget Balancer";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Budget Balancer.app/Budget Balancer";
+				PRODUCT_NAME = Zeal;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zeal.app/Zeal";
 			};
 			name = Debug;
 		};
@@ -540,8 +540,8 @@
 				INFOPLIST_FILE = "CPSC 599 App ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-ProjectTests";
-				PRODUCT_NAME = "Budget Balancer";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Budget Balancer.app/Budget Balancer";
+				PRODUCT_NAME = Zeal;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zeal.app/Zeal";
 			};
 			name = Release;
 		};
@@ -551,7 +551,7 @@
 				INFOPLIST_FILE = "CPSC 599 App ProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-ProjectUITests";
-				PRODUCT_NAME = "Budget Balancer";
+				PRODUCT_NAME = Zeal;
 				TEST_TARGET_NAME = "CPSC 599 App Project";
 				USES_XCTRUNNER = YES;
 			};
@@ -563,7 +563,7 @@
 				INFOPLIST_FILE = "CPSC 599 App ProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "team05.CPSC-599-App-ProjectUITests";
-				PRODUCT_NAME = "Budget Balancer";
+				PRODUCT_NAME = Zeal;
 				TEST_TARGET_NAME = "CPSC 599 App Project";
 				USES_XCTRUNNER = YES;
 			};
@@ -572,7 +572,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F7B42B241BD5FC5D00CB3308 /* Build configuration list for PBXProject "Budget Balancer" */ = {
+		F7B42B241BD5FC5D00CB3308 /* Build configuration list for PBXProject "Zeal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7B42B511BD5FC5E00CB3308 /* Debug */,
@@ -581,7 +581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7B42B531BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget Balancer" */ = {
+		F7B42B531BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Zeal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7B42B541BD5FC5E00CB3308 /* Debug */,
@@ -590,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7B42B561BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget BalancerTests" */ = {
+		F7B42B561BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "ZealTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7B42B571BD5FC5E00CB3308 /* Debug */,
@@ -599,7 +599,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7B42B591BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Budget BalancerUITests" */ = {
+		F7B42B591BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "ZealUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7B42B5A1BD5FC5E00CB3308 /* Debug */,
