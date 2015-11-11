@@ -8,7 +8,7 @@
         <!--Transactions-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="TransactionViewController" customModule="Budget_Balancer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="TransactionViewController" customModule="Zeal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -42,7 +42,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Transactions" image="second" id="cPa-gy-q4n" userLabel="Transactions"/>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="wallet-7" id="cPa-gy-q4n" userLabel="Transactions"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -52,7 +52,7 @@
         <!--New Transactions-->
         <scene sceneID="cor-xr-9eu">
             <objects>
-                <viewController id="eCN-S2-xiM" customClass="TransactionViewController" customModule="Budget_Balancer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eCN-S2-xiM" customClass="TransactionViewController" customModule="Zeal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="St2-zY-nEf"/>
                         <viewControllerLayoutGuide type="bottom" id="GRi-9Q-Map"/>
@@ -177,14 +177,14 @@
         <!--Transactions-->
         <scene sceneID="shJ-Wc-hAR">
             <objects>
-                <tableViewController id="IL6-6d-V7L" customClass="TransactionTableViewController" customModule="Budget_Balancer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="IL6-6d-V7L" customClass="TransactionTableViewController" customModule="Zeal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="AcA-VX-6EC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionTableViewCell" rowHeight="70" id="Mxf-Ef-AGV" customClass="TransactionTableViewCell" customModule="Budget_Balancer" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionTableViewCell" rowHeight="70" id="Mxf-Ef-AGV" customClass="TransactionTableViewCell" customModule="Zeal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mxf-Ef-AGV" id="ngz-Eg-Qfx">
@@ -268,7 +268,7 @@
         <scene sceneID="V9q-l0-VfQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DnL-pF-IFQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Transactions" image="second" selectedImage="second" id="aiw-sI-2Vx"/>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="wallet-7" selectedImage="second" id="aiw-sI-2Vx"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OyJ-fJ-QVW">
@@ -307,6 +307,7 @@
     </scenes>
     <resources>
         <image name="second" width="30" height="30"/>
+        <image name="wallet-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ag0-IA-KZf"/>

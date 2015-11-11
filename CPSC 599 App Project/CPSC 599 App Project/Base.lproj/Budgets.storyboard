@@ -102,7 +102,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Budget" id="gWp-lk-nz2">
-                        <barButtonItem key="leftBarButtonItem" title="Graph" id="leA-g7-IzP">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="leA-g7-IzP">
                             <connections>
                                 <segue destination="4oB-rx-KQE" kind="presentation" id="bxi-nF-NGd"/>
                             </connections>
@@ -240,7 +240,7 @@
         <scene sceneID="Y1T-z2-S5v">
             <objects>
                 <navigationController title="Budget Navigation" automaticallyAdjustsScrollViewInsets="NO" id="t3e-jw-KBL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Budgets" image="first" id="pgi-kW-Rux"/>
+                    <tabBarItem key="tabBarItem" title="Budgets" image="pie-chart-7" id="pgi-kW-Rux"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qwf-YD-Qwk">
@@ -294,6 +294,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="pie-chart-7" width="30" height="30"/>
     </resources>
 </document>
