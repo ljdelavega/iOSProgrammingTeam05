@@ -17,27 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PgS-QU-5jc">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <animations/>
-                                <color key="barTintColor" red="0.70588235290000001" green="0.89019607840000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="Overview" id="Pru-hj-Wtp">
-                                        <barButtonItem key="leftBarButtonItem" image="uptrend" id="zpu-pE-4QS"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Jkt-yj-6rU">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Jkt-yj-6rU">
                                 <rect key="frame" x="50" y="236" width="500" height="122"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-sx-QmE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-sx-QmE">
                                         <rect key="frame" x="0.0" y="0.0" width="500" height="26"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e33-Dl-Hyx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e33-Dl-Hyx">
                                         <rect key="frame" x="0.0" y="96" width="500" height="26"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -47,10 +37,10 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cvP-J2-tvv">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cvP-J2-tvv">
                                 <rect key="frame" x="50" y="109" width="500" height="84"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3fI-A0-9EF">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fI-A0-9EF">
                                         <rect key="frame" x="0.0" y="0.0" width="500" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Incomes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJH-Lb-DoU">
@@ -70,7 +60,7 @@
                                         </subviews>
                                         <animations/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ug-ss-ZUb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ug-ss-ZUb">
                                         <rect key="frame" x="0.0" y="30" width="500" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Expenses: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vK-fd-SeF">
@@ -90,7 +80,7 @@
                                         </subviews>
                                         <animations/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBn-ob-nrm">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBn-ob-nrm">
                                         <rect key="frame" x="0.0" y="60" width="500" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMH-FX-Wo2">
@@ -113,13 +103,23 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="-------------------------------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob4-ba-KdH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-------------------------------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob4-ba-KdH">
                                 <rect key="frame" x="50" y="156" width="500" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgS-QU-5jc">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <animations/>
+                                <color key="barTintColor" red="0.70588235290000001" green="0.89019607840000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Overview" id="Pru-hj-Wtp">
+                                        <barButtonItem key="leftBarButtonItem" image="uptrend" id="zpu-pE-4QS"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -127,12 +127,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ob4-ba-KdH" secondAttribute="trailing" constant="30" id="36U-F8-aFd"/>
                             <constraint firstItem="Jkt-yj-6rU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="30" id="5pm-JM-Fs6"/>
                             <constraint firstItem="Jkt-yj-6rU" firstAttribute="top" secondItem="cvP-J2-tvv" secondAttribute="bottom" constant="25" id="E5x-tz-JhR"/>
+                            <constraint firstItem="PgS-QU-5jc" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="GkB-b1-H9H"/>
                             <constraint firstItem="ob4-ba-KdH" firstAttribute="top" secondItem="PgS-QU-5jc" secondAttribute="bottom" constant="92" id="USF-Oy-1vN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jkt-yj-6rU" secondAttribute="trailing" constant="30" id="Y5i-WU-vei"/>
                             <constraint firstItem="ob4-ba-KdH" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="30" id="YW9-ir-Bqj"/>
+                            <constraint firstItem="PgS-QU-5jc" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="aIt-5B-HLQ"/>
                             <constraint firstItem="cvP-J2-tvv" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="30" id="crq-I3-P9I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cvP-J2-tvv" secondAttribute="trailing" constant="30" id="pMu-X1-MAU"/>
                             <constraint firstItem="cvP-J2-tvv" firstAttribute="top" secondItem="PgS-QU-5jc" secondAttribute="bottom" constant="45" id="rCW-IB-aJ3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PgS-QU-5jc" secondAttribute="trailing" constant="-20" id="ydV-mb-Z2a"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" image="file-document-7" id="acW-dT-cKf" userLabel="Overview"/>
