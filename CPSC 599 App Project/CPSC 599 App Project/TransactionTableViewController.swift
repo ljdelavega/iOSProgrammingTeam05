@@ -67,11 +67,11 @@ class TransactionTableViewController: UITableViewController {
         cell.dateLabel.text = datePrefix
         cell.priceLabel.text = transaction.amount.asLocaleCurrency
         
-        if transaction.type == "Expense" {
+        /*if transaction.type == "Expense" {
             cell.priceLabel.textColor = UIColor.redColor()
         } else if transaction.type == "Income"{
             cell.priceLabel.textColor = UIColor.greenColor()
-        }
+        }*/
         // Configure the cell...
         
         return cell
