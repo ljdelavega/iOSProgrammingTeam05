@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import BEMCheckBox
 
-class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+// Goal Add / Edit screen
+class GoalDetailViewController: UIViewController, UITextFieldDelegate, BEMCheckBoxDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: Properties
+
     
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var contributedTextField: UITextField!
     @IBOutlet weak var descTextField: UITextView!
-    @IBOutlet weak var primaryCheck: Checkbox!
+    @IBOutlet weak var primaryCheck: BEMCheckBox!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
 
@@ -61,20 +64,7 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
     // setup the primary goal checkbox
     func setupCheckbox ()
     {
-        let lFrame = primaryCheck.frame
-        //let lFrame = CGRectMake(primaryCheck.frame.minX, primaryCheck.frame.minY, primaryCheck.frame.width, primaryCheck.frame.height)
-        let lCheckbox = Checkbox(frame: lFrame, title: (primaryCheck.titleLabel?.text)!, selected: false);
-        lCheckbox.mDelegate = self;
-        lCheckbox.tag = 0;
-        //primaryCheck.addSubview(lCheckbox)
-        self.primaryCheck = lCheckbox
-        //self.view.addSubview(lCheckbox);
-    }
-    
-    //MARK: CheckboxDelegate
-    func didSelectCheckbox(state: Bool, identifier: Int, title: String) {
-        print("checkbox '\(title)' has state \(state)")
-        goal?.primary = state
+        
     }
     
     // MARK: UITextFieldDelegate

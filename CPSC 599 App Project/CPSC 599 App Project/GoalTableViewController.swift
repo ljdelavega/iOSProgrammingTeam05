@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Goal List screen
 class GoalTableViewController: UITableViewController {
     
     // MARK: Properties

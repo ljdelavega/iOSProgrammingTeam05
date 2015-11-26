@@ -1,12 +1,15 @@
 PODS:
+  - BEMCheckBox (1.1.1)
   - Charts (2.1.6)
   - FillableLoaders (1.2.4)
 
 DEPENDENCIES:
+  - BEMCheckBox (= 1.1.1)
   - Charts (= 2.1.6)
   - FillableLoaders (= 1.2.4)
 
 SPEC CHECKSUMS:
+  BEMCheckBox: e1dd80417e0a9f1db4b55d8b8d2f3f477d120795
   Charts: 5e1e5ac23898e5b09d226a2fc3e9d86bc281937e
   FillableLoaders: 833331f85c24a5b7640cc3e5ae24f278853c10d0
 
