@@ -49,6 +49,11 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, CheckboxD
             //primaryCheck.selected = goal.primary
         }
         
+        // change the desc text view to have a border like the other text fields
+        descTextField.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor
+        descTextField.layer.borderWidth = 1.0
+        descTextField.layer.cornerRadius = 5
+        
         // Enable the Save button only if the text field has a valid Goal name.
         checkValidGoal()
     }
