@@ -10,6 +10,7 @@
 		3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */; };
 		3952B9601BE832C500AB2BB2 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */; };
 		3952B9641BE84B7000AB2BB2 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */; };
+		5CA81171E2859DD45F0E300D /* Pods_Zeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61C7CA5CE40C19484F5286E /* Pods_Zeal.framework */; };
 		F7606FE41BE93FAF004A7F73 /* NSDecimalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7606FE31BE93FAF004A7F73 /* NSDecimalNumber.swift */; };
 		F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */; };
 		F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */; };
@@ -58,6 +59,9 @@
 		3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
 		3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		4E7785B536C1EBE45FC9A172 /* Pods-Zeal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zeal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zeal/Pods-Zeal.release.xcconfig"; sourceTree = "<group>"; };
+		639F9FE93DDAB711F79CBD85 /* Pods-Zeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zeal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zeal/Pods-Zeal.debug.xcconfig"; sourceTree = "<group>"; };
+		B61C7CA5CE40C19484F5286E /* Pods_Zeal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zeal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7606FE31BE93FAF004A7F73 /* NSDecimalNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDecimalNumber.swift; path = Libs/NSDecimalNumber.swift; sourceTree = "<group>"; };
 		F7B42B291BD5FC5D00CB3308 /* Zeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B42B2C1BD5FC5D00CB3308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA81171E2859DD45F0E300D /* Pods_Zeal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,11 +119,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51A5A06EB47D5364EC12B661 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				639F9FE93DDAB711F79CBD85 /* Pods-Zeal.debug.xcconfig */,
+				4E7785B536C1EBE45FC9A172 /* Pods-Zeal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A46FC1118C85C7C220CE250 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B61C7CA5CE40C19484F5286E /* Pods_Zeal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F7B42B201BD5FC5D00CB3308 = {
 			isa = PBXGroup;
 			children = (
 				F7B42B2B1BD5FC5D00CB3308 /* src */,
 				F7B42B2A1BD5FC5D00CB3308 /* Products */,
+				51A5A06EB47D5364EC12B661 /* Pods */,
+				5A46FC1118C85C7C220CE250 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7B42B531BD5FC5E00CB3308 /* Build configuration list for PBXNativeTarget "Zeal" */;
 			buildPhases = (
+				E4BAD323CF42AFE6C92EE35A /* Check Pods Manifest.lock */,
 				F7B42B251BD5FC5D00CB3308 /* Sources */,
 				F7B42B261BD5FC5D00CB3308 /* Frameworks */,
 				F7B42B271BD5FC5D00CB3308 /* Resources */,
+				74E43F74582D480D79502772 /* Embed Pods Frameworks */,
+				A04F6B973FB61408AACB19CD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,6 +332,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74E43F74582D480D79502772 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zeal/Pods-Zeal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A04F6B973FB61408AACB19CD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zeal/Pods-Zeal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4BAD323CF42AFE6C92EE35A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F7B42B251BD5FC5D00CB3308 /* Sources */ = {
@@ -501,9 +576,11 @@
 		};
 		F7B42B541BD5FC5E00CB3308 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 639F9FE93DDAB711F79CBD85 /* Pods-Zeal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CPSC 599 App Project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = team05.Zeal;
 				PRODUCT_NAME = Zeal;
@@ -512,9 +589,11 @@
 		};
 		F7B42B551BD5FC5E00CB3308 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E7785B536C1EBE45FC9A172 /* Pods-Zeal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CPSC 599 App Project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = team05.Zeal;
 				PRODUCT_NAME = Zeal;
