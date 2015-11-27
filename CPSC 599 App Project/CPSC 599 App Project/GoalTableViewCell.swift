@@ -14,6 +14,7 @@ class GoalTableViewCell: UITableViewCell {
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var primaryImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

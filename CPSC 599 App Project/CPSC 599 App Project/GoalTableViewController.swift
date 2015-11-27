@@ -35,7 +35,12 @@ class GoalTableViewController: UITableViewController {
         let goal1 = Goal(name: "Trip to Niagara Falls", amount: 1000, contributed: 0, desc: "Plane ticket to Ontario. Hotel Accomodations", primary: true)!
         let photo1 = UIImage(named: "defaultPhoto")!
         goal1.photo = photo1
-        goals += [goal1]
+        
+        let goal2 = Goal(name: "New MacBook", amount: 1500, contributed: 0, desc: "A new MacBook Pro from the Apple store.", primary: false)!
+        let photo2 = UIImage(named: "defaultPhoto")!
+        goal2.photo = photo2
+        
+        goals += [goal1, goal2]
         
     }
 
@@ -90,11 +95,29 @@ class GoalTableViewController: UITableViewController {
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
             
+            // TODO: need to fix this so it doesn't interrupt the segue
+            /*
             if (goal.primary)
             {
                 let alert = UIAlertController(title: "Primary Goal", message: "The primary goal has been changed to \name", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
+            }
+            */
+            if (goal.primary)
+            {
+                // change all the goals' primary properties to false except the the actual primary goal.
+                for g in goals
+                {
+                    if (g.primary)
+                    {
+                        g.primary = false;
+                    }
+                }
+                // reset the new primary goal
+                goal.primary = true;
+                // reload the data so the primary image changes.
+                tableView.reloadData()
             }
             
             // Save the goals.
@@ -128,6 +151,16 @@ class GoalTableViewController: UITableViewController {
         }
         cell.progressView.progress = progress.floatValue
         cell.photoImageView.image = goal.photo
+        
+        //TODO: Change the picture of this later to fit the theme.
+        if (goal.primary)
+        {
+            cell.primaryImageView.image = UIImage(named: "star")!
+        }
+        else
+        {
+            cell.primaryImageView.image = nil
+        }
         
         return cell
     }
