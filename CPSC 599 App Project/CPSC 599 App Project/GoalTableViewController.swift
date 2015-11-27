@@ -89,6 +89,14 @@ class GoalTableViewController: UITableViewController {
                 goals.append(goal)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
+            
+            if (goal.primary)
+            {
+                let alert = UIAlertController(title: "Primary Goal", message: "The primary goal has been changed to \name", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+            
             // Save the goals.
             saveGoals()
         }

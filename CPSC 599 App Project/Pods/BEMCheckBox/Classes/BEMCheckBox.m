@@ -59,8 +59,8 @@
     _tintColor = [UIColor lightGrayColor];
     _lineWidth = 2.0;
     _animationDuration = 0.5;
-    _onAnimationType = BEMAnimationTypeStroke;
-    _offAnimationType = BEMAnimationTypeStroke;
+    _onAnimationType = BEMAnimationTypeBounce;
+    _offAnimationType = BEMAnimationTypeBounce;
     self.backgroundColor = [UIColor clearColor];
     
     [self initPathManager];

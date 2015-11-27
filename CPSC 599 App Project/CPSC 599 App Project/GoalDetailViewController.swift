@@ -11,10 +11,8 @@ import BEMCheckBox
 
 // Goal Add / Edit screen
 class GoalDetailViewController: UIViewController, UITextFieldDelegate, BEMCheckBoxDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     // MARK: Properties
-
-    
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var contributedTextField: UITextField!
@@ -49,7 +47,7 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, BEMCheckB
             contributedTextField.text   = goal.contributed.stringValue
             descTextField.text   = goal.desc
             photoImageView.image = goal.photo
-            //primaryCheck.selected = goal.primary
+            primaryCheck.on = goal.primary
         }
         
         // change the desc text view to have a border like the other text fields
@@ -132,10 +130,7 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, BEMCheckB
             let amount = NSDecimalNumber(string: amountTextField.text)
             let contributed = NSDecimalNumber(string: contributedTextField.text)
             let desc = descTextField.text
-            //let primary = primaryCheck.selected
-            let primary = false
-            
-
+            let primary = primaryCheck.on
             
             // Set the meal to be passed to MealListTableViewController after the unwind segue.
             goal = Goal(name: name, amount: amount, contributed: contributed, desc: desc, primary: primary)
