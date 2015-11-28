@@ -85,6 +85,40 @@ class GoalViewController: UIViewController {
         }
     }
 
+    @IBAction func contributePressed(sender: AnyObject) {
+        
+        var alertController:UIAlertController?
+        alertController = UIAlertController(title: "Contribute",
+            message: "Enter the amount you wish to contribute:",
+            preferredStyle: .Alert)
+        
+        alertController!.addTextFieldWithConfigurationHandler(
+            {(textField: UITextField!) in
+                textField.placeholder = "Enter contribution..."
+                textField.keyboardType = UIKeyboardType.DecimalPad
+        })
+        
+        var amount: String?
+        
+        // TODO: Fix the saving of the user's input.
+        let action = UIAlertAction(title: "OK",
+            style: UIAlertActionStyle.Default,
+            handler: {[weak self]
+                (paramAction:UIAlertAction!) in
+                if let textFields = alertController?.textFields{
+                    let theTextFields = textFields as [UITextField]
+                    amount = theTextFields[0].text
+                    //self!.displayLabel.text = enteredText
+                }
+            })
+        alertController?.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler:nil))
+        alertController?.addAction(action)
+        self.presentViewController(alertController!,
+            animated: true,
+            completion: nil)
+        
+        print(amount)
+    }
     
 
     // MARK: - Navigation

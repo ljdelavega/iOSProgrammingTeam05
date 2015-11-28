@@ -60,6 +60,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Contribute"/>
+                                <connections>
+                                    <action selector="contributePressed:" destination="8gW-Sg-X7X" eventType="touchUpInside" id="kDd-tP-piY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahn-ja-5Vq" userLabel="Amount Remaining Label">
                                 <rect key="frame" x="20" y="140" width="560" height="26"/>
