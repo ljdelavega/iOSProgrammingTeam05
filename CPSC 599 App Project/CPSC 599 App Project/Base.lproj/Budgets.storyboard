@@ -111,7 +111,7 @@
         <!--Shopping-->
         <scene sceneID="ts9-zN-3Zu">
             <objects>
-                <tableViewController id="Y6z-q4-bUx" customClass="BudgetTableViewController" customModule="Zeal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Y6z-q4-bUx" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" id="h1M-gn-XoR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,7 +157,7 @@
                     <navigationItem key="navigationItem" title="Shopping" id="GnV-EP-aFk">
                         <barButtonItem key="leftBarButtonItem" image="pie-chart-7" id="qpi-im-xdX">
                             <connections>
-                                <segue destination="BPk-bD-YlE" kind="unwind" unwindAction="unwindToBudgetList:" id="Tjq-RB-zhs"/>
+                                <segue destination="BPk-bD-YlE" kind="unwind" unwindAction="unwindToBudgetList:" id="Wme-7e-JbY"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="dxD-3o-l8i"/>
