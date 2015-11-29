@@ -30,7 +30,7 @@ class Transaction: NSObject, NSCoding {
     var desc: String
     var date: NSDate
     var type: String
-    var repeating: Bool
+    var repeating: String
     
     
     // MARK: Archiving Paths
@@ -52,7 +52,7 @@ class Transaction: NSObject, NSCoding {
     
     // MARK: Initialization
     
-    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, type: String, repeating: Bool) {
+    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, type: String, repeating: String) {
         // Initialize stored properties.
         self.name = name
         self.amount = amount
@@ -90,7 +90,7 @@ class Transaction: NSObject, NSCoding {
         
         let type = aDecoder.decodeObjectForKey(PropertyKey.typeKey) as! String
         
-        let repeating = aDecoder.decodeBoolForKey(PropertyKey.repeatingKey)
+        let repeating = aDecoder.decodeObjectForKey(PropertyKey.repeatingKey) as! String
         
         // Because photo is an optional property of Meal, use conditional cast.
         //let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
