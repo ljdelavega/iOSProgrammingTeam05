@@ -99,7 +99,7 @@ class GoalTableViewController: UITableViewController {
             /*
             if (goal.primary)
             {
-                let alert = UIAlertController(title: "Primary Goal", message: "The primary goal has been changed to \name", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "Primary Goal", message: "The primary goal has been changed to \(name)", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
             }

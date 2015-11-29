@@ -84,40 +84,80 @@ class GoalViewController: UIViewController {
             primaryGoal = goals[0]
         }
     }
+    
+    var tField: UITextField!
 
     @IBAction func contributePressed(sender: AnyObject) {
+        let alert = UIAlertController(title: "Contribute", message: "Enter the amount you wish to contribute:", preferredStyle: UIAlertControllerStyle.Alert)
         
-        var alertController:UIAlertController?
-        alertController = UIAlertController(title: "Contribute",
-            message: "Enter the amount you wish to contribute:",
-            preferredStyle: .Alert)
-        
-        alertController!.addTextFieldWithConfigurationHandler(
-            {(textField: UITextField!) in
-                textField.placeholder = "Enter contribution..."
-                textField.keyboardType = UIKeyboardType.DecimalPad
+        alert.addTextFieldWithConfigurationHandler(configurationTextField)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler:handleCancel))
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
+            print("Done !!")
+            print("Input : \(self.tField.text!)")
+            let amount = self.tField.text!
+            self.contributeToGoal(amount)
+        }))
+        self.presentViewController(alert, animated: true, completion: {
+            print("completion block")
         })
+
         
-        var amount: String?
-        
-        // TODO: Fix the saving of the user's input.
-        let action = UIAlertAction(title: "OK",
-            style: UIAlertActionStyle.Default,
-            handler: {[weak self]
-                (paramAction:UIAlertAction!) in
-                if let textFields = alertController?.textFields{
-                    let theTextFields = textFields as [UITextField]
-                    amount = theTextFields[0].text
-                    //self!.displayLabel.text = enteredText
-                }
-            })
-        alertController?.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler:nil))
-        alertController?.addAction(action)
-        self.presentViewController(alertController!,
-            animated: true,
-            completion: nil)
-        
-        print(amount)
+    }
+    
+    // helper functions for handling input in contribution UIAlertController
+    func configurationTextField(textField: UITextField!)
+    {
+        print("generating the TextField")
+        textField.placeholder = "Contribution amount..."
+        textField.keyboardType = UIKeyboardType.DecimalPad
+        tField = textField
+    }
+    
+    
+    func handleCancel(alertView: UIAlertAction!)
+    {
+        print("Cancelled !!")
+    }
+    
+    // contribute to the goal
+    func contributeToGoal(amount: String)
+    {
+        let contribution = NSDecimalNumber(string: amount)
+        primaryGoal?.contributed = (primaryGoal?.contributed)! + contribution
+        if (primaryGoal?.contributed >= primaryGoal?.amount)
+        {
+            // goal reached!
+            
+            let alertController = UIAlertController(title: "Goal reached!", message: "Congratulations! You have reached your goal!", preferredStyle: .Alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            presentViewController(alertController, animated: true, completion: nil)
+            
+        }
+        else
+        {
+            // Goal not reached yet. Show a motivational message.
+            var message: String
+            let contributed = primaryGoal?.contributed
+            let amount = primaryGoal?.amount
+            let remaining = amount! - contributed!
+            // calculate closest motivational message.
+            let daysLeft = remaining / contribution
+            message = "\(daysLeft) days"
+            let alertController = UIAlertController(title: "Goal progress!", message: "If you contributed this much every day, you would reach your goal in \(message)!", preferredStyle: .Alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            presentViewController(alertController, animated: true, completion: nil)
+        }
+        // save the goals
+        saveGoals()
+        // reload the view to update
+        self.viewDidLoad()
     }
     
 
