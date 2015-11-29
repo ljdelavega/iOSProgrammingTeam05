@@ -28,7 +28,7 @@ class GoalViewController: UIViewController {
         
         // Load any saved goals, otherwise load sample data.
         if let savedGoals = loadGoals() {
-            goals += savedGoals
+            goals = savedGoals
         } else {
             // Load the sample data.
             loadSampleGoals()
@@ -40,15 +40,6 @@ class GoalViewController: UIViewController {
         nameLabel.text = primaryGoal?.name
         progressLabel.text = primaryGoal!.contributed.asLocaleCurrency + " / " + primaryGoal!.amount.asLocaleCurrency
         amountRemainingLabel.text = (primaryGoal!.amount - primaryGoal!.contributed).asLocaleCurrency
-        /*
-        cell.costLabel.text = goal.contributed.asLocaleCurrency + " / " + goal.amount.asLocaleCurrency
-        var progress = goal.contributed / goal.amount
-        if (progress > 1) {
-            progress = NSDecimalNumber(int: 1)
-        }
-        cell.progressView.progress = progress.floatValue
-        */
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -145,7 +136,8 @@ class GoalViewController: UIViewController {
             let amount = primaryGoal?.amount
             let remaining = amount! - contributed!
             // calculate closest motivational message.
-            let daysLeft = remaining / contribution
+            // round NSDecimalNumber up
+            let daysLeft = (remaining / contribution).decimalNumberByRoundingAccordingToBehavior( NSDecimalNumberHandler(roundingMode: NSRoundingMode.RoundUp, scale: 0, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false))
             message = "\(daysLeft) days"
             let alertController = UIAlertController(title: "Goal progress!", message: "If you contributed this much every day, you would reach your goal in \(message)!", preferredStyle: .Alert)
             
