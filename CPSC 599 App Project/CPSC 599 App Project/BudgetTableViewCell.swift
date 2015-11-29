@@ -13,9 +13,11 @@ class BudgetTableViewCell: UITableViewCell {
     //MARK: Properties
     
     @IBOutlet weak var budgetNameLbl: UILabel!
-    @IBOutlet weak var budgetDurLbl: UILabel!
     @IBOutlet weak var budgetAmtLbl: UILabel!
     @IBOutlet weak var budgetProgBar: UIProgressView!
+    @IBOutlet weak var budgetPic: UIImageView!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

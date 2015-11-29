@@ -10,6 +10,8 @@ import UIKit
 
 class BudgetTableViewController: UITableViewController {
 
+    var budgets = [Budget]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +20,20 @@ class BudgetTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        loadSampleBudgets()
     }
+    
+    func loadSampleBudgets() {
+        
+        //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
+        let budget1 = Budget(name: "Total", amount: 1000.00, remaining: 750.00, desc: "Total Budget", date: NSDate(), repeating: false)!
+        
+        let budget2 = Budget(name: "Shopping", amount: 500.00, remaining: 250.00, desc: "Shopping Budget", date: NSDate(), repeating: false)!
+        
+        budgets += [budget1, budget2]
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,27 +44,40 @@ class BudgetTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return budgets.count
     }
 
-    
-    @IBAction func unwindToBudgetList(sender: UIStoryboardSegue)
-    {
+    @IBAction func unwindToBudgetList(sender: UIStoryboardSegue) {
+        
     }
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        
+        let cellIdentifier = "BudgetTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! BudgetTableViewCell
+        let budget = budgets[indexPath.row]
+        
+        //let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
 
+        cell.budgetNameLbl.text = budget.name
+        cell.budgetAmtLbl.text = budget.remaining.asLocaleCurrency + "/" + budget.amount.asLocaleCurrency
+        
+        var progress = budget.remaining / budget.amount
+        if (progress > 1) {
+            progress = NSDecimalNumber(int: 1)
+        }
+        cell.budgetProgBar.progress = progress.floatValue
+     
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
