@@ -5,8 +5,9 @@ use_frameworks!
 
 target 'Zeal' do
 pod 'Charts', '2.1.6'
-pod 'FillableLoaders', '1.2.4'
+pod 'MLVerticalProgressView'
 pod 'BEMCheckBox', '1.1.1'
+pod 'TextFieldEffects'
 
 
 end

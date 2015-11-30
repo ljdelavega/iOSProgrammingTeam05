@@ -1,16 +1,19 @@
 PODS:
   - BEMCheckBox (1.1.1)
   - Charts (2.1.6)
-  - FillableLoaders (1.2.4)
+  - MLVerticalProgressView (0.1.0)
+  - TextFieldEffects (1.1.0)
 
 DEPENDENCIES:
   - BEMCheckBox (= 1.1.1)
   - Charts (= 2.1.6)
-  - FillableLoaders (= 1.2.4)
+  - MLVerticalProgressView
+  - TextFieldEffects
 
 SPEC CHECKSUMS:
   BEMCheckBox: e1dd80417e0a9f1db4b55d8b8d2f3f477d120795
   Charts: 5e1e5ac23898e5b09d226a2fc3e9d86bc281937e
-  FillableLoaders: 833331f85c24a5b7640cc3e5ae24f278853c10d0
+  MLVerticalProgressView: 1524a25eec9cda5860f94ba281c6d42ecee90880
+  TextFieldEffects: 8e43fea8836e97be80fc4db27a1596c9e98a26ba
 
 COCOAPODS: 0.39.0

@@ -17,7 +17,6 @@ class GoalViewController: UIViewController {
     @IBOutlet weak var amountRemainingLabel: UILabel!
     @IBOutlet weak var contributeButton: UIButton!
     
-    
     var goals = [Goal]()
     var primaryGoal: Goal?
 
@@ -181,5 +180,7 @@ class GoalViewController: UIViewController {
     func loadGoals() -> [Goal]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Goal.ArchiveURL.path!) as? [Goal]
     }
+    
+    
 
 }

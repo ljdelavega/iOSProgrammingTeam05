@@ -86,10 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Zeal/BEMCheckBox.framework"
   install_framework "Pods-Zeal/Charts.framework"
-  install_framework "Pods-Zeal/FillableLoaders.framework"
+  install_framework "Pods-Zeal/MLVerticalProgressView.framework"
+  install_framework "Pods-Zeal/TextFieldEffects.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Zeal/BEMCheckBox.framework"
   install_framework "Pods-Zeal/Charts.framework"
-  install_framework "Pods-Zeal/FillableLoaders.framework"
+  install_framework "Pods-Zeal/MLVerticalProgressView.framework"
+  install_framework "Pods-Zeal/TextFieldEffects.framework"
 fi
