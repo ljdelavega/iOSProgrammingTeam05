@@ -16,16 +16,19 @@ class TransactionTableViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = editButtonItem()
-        
-        loadSampleTransactions()
+        if let savedTransactions = loadTransactions() {
+            transactions += savedTransactions
+        } else {
+            loadSampleTransactions()
+        }
     }
     
     func loadSampleTransactions() {
         
-        let expense1 = Transaction(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: false)!
+        let expense1 = Transaction(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
         
         
-        let income1 = Transaction(name: "Salary", amount: 250.00, desc: "Job", date: NSDate(), type: "Income", repeating: false)!
+        let income1 = Transaction(name: "Salary", amount: 250.00, desc: "Job", date: NSDate(), type: "Income", repeating: "false")!
         
         transactions += [expense1, income1]
         
@@ -92,9 +95,10 @@ class TransactionTableViewController: UITableViewController {
             // Delete the row from the data source
             transactions.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            saveTransactions()
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
 
 
@@ -112,6 +116,20 @@ class TransactionTableViewController: UITableViewController {
         return true
     }
     */
+    
+    //MARK: - NSCoding
+    func saveTransactions() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(transactions, toFile: Transaction.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save transactions...")
+        }
+    }
+    
+    func loadTransactions() -> [Transaction]?{
+        
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Transaction.ArchiveURL.path!) as? [Transaction]
+    }
+    
 
     
     // MARK: - Navigation
@@ -132,6 +150,7 @@ class TransactionTableViewController: UITableViewController {
                 transactions.append(transaction)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
+            saveTransactions()
         }
     }
     

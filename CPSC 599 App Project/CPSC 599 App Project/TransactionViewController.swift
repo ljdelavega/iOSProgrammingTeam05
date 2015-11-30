@@ -122,7 +122,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
                 amt = NSDecimalNumber(int: 0)
             }
             
-            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: false)
+            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: "false")
         }
     }
 
