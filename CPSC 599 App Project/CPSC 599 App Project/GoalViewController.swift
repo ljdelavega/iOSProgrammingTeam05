@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MLVerticalProgressView
 
 // Primary Goal Screen
 class GoalViewController: UIViewController {
@@ -24,7 +25,16 @@ class GoalViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        updateInterface()
+        // add VerticalProgressView here
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func updateInterface() {
         // Load any saved goals, otherwise load sample data.
         if let savedGoals = loadGoals() {
             goals = savedGoals
@@ -39,11 +49,6 @@ class GoalViewController: UIViewController {
         nameLabel.text = primaryGoal?.name
         progressLabel.text = primaryGoal!.contributed.asLocaleCurrency + " / " + primaryGoal!.amount.asLocaleCurrency
         amountRemainingLabel.text = (primaryGoal!.amount - primaryGoal!.contributed).asLocaleCurrency
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -148,7 +153,7 @@ class GoalViewController: UIViewController {
         // save the goals
         saveGoals()
         // reload the view to update
-        self.viewDidLoad()
+        updateInterface()
     }
     
 
@@ -165,7 +170,7 @@ class GoalViewController: UIViewController {
         if let sourceViewController = sender.sourceViewController as? GoalTableViewController {
             sourceViewController.saveGoals()
         }
-        self.viewDidLoad()
+        updateInterface()
     }
     
     // MARK: NSCoding
