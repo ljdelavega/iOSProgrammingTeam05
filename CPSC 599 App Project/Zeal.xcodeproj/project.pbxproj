@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391E824A1C0BBB02009CAB6D /* OverviewChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E82491C0BBB02009CAB6D /* OverviewChartViewController.swift */; };
 		3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */; };
 		3952B9601BE832C500AB2BB2 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */; };
 		3952B9641BE84B7000AB2BB2 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		391E82491C0BBB02009CAB6D /* OverviewChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewChartViewController.swift; sourceTree = "<group>"; };
 		3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
 		3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
@@ -153,14 +155,15 @@
 			children = (
 				F7B42B321BD5FC5D00CB3308 /* Main.storyboard */,
 				F7D1F3131BE4826B000E1A17 /* Overview.storyboard */,
-				F7C726B01BDEB90F00B5C30A /* Transaction.swift */,
 				F7B42B2E1BD5FC5D00CB3308 /* OverviewViewController.swift */,
+				391E82491C0BBB02009CAB6D /* OverviewChartViewController.swift */,
 				F7D1F3101BE48257000E1A17 /* Transactions.storyboard */,
 				F7C726AE1BDEB8F000B5C30A /* Income.swift */,
+				F7D1F30D1BE48231000E1A17 /* Budgets.storyboard */,
+				F7C726B01BDEB90F00B5C30A /* Transaction.swift */,
 				3952B9631BE84B7000AB2BB2 /* TransactionViewController.swift */,
 				3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */,
 				3952B95F1BE832C500AB2BB2 /* TransactionTableViewCell.swift */,
-				F7D1F30D1BE48231000E1A17 /* Budgets.storyboard */,
 				F7C726B21BE0079B00B5C30A /* BudgetViewController.swift */,
 				F7ED287D1BEAA13400CC2453 /* BudgetTableViewCell.swift */,
 				F7ED287F1BEAA13B00CC2453 /* BudgetTableViewController.swift */,
@@ -380,6 +383,7 @@
 				F7606FE41BE93FAF004A7F73 /* NSDecimalNumber.swift in Sources */,
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,
 				F7ED287E1BEAA13400CC2453 /* BudgetTableViewCell.swift in Sources */,
+				391E824A1C0BBB02009CAB6D /* OverviewChartViewController.swift in Sources */,
 				F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */,
 				F7C726C21BE43E4F00B5C30A /* GoalTableViewCell.swift in Sources */,
 				F7C726AD1BDEB8B300B5C30A /* Goal.swift in Sources */,
