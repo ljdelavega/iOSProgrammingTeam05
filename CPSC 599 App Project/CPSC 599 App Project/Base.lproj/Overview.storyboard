@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -83,14 +83,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBn-ob-nrm">
                                         <rect key="frame" x="0.0" y="60" width="500" height="24"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMH-FX-Wo2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMH-FX-Wo2">
                                                 <rect key="frame" x="0.0" y="0.0" width="439" height="24"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpe-FD-sHX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpe-FD-sHX">
                                                 <rect key="frame" x="439" y="0.0" width="61" height="24"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -137,6 +137,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" image="file-document-7" id="acW-dT-cKf" userLabel="Overview"/>
+                    <navigationItem key="navigationItem" id="QoQ-n2-MMy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -163,7 +164,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="qMW-C1-Nuc">
+                                    <navigationItem title="Categories" id="qMW-C1-Nuc">
                                         <barButtonItem key="rightBarButtonItem" image="list-simple-star-7" id="hos-U0-rJ1">
                                             <color key="tintColor" red="0.14901960780000001" green="0.49803921569999998" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
@@ -191,17 +192,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" image="file-document-7" id="RSg-6h-hvr" userLabel="Overview"/>
+                    <navigationItem key="navigationItem" id="mlz-bv-QoT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pieChart" destination="Ghg-5S-WMO" id="aWk-tD-657"/>
                     </connections>
                 </viewController>
-                <view contentMode="scaleToFill" id="i42-bL-Us8" userLabel="Chart" customClass="PieChartView" customModule="Charts">
-                    <rect key="frame" x="0.0" y="0.0" width="561" height="561"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ak6-sj-kHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="870" y="-2845"/>
