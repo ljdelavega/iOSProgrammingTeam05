@@ -14,8 +14,8 @@ public class VerticalProgressView : UIView {
     
     @IBInspectable public var cornerRadius: CGFloat = 12;
     @IBInspectable public var fillDoneColor : UIColor = UIColor.blueColor()
-    //@IBInspectable public var fillUndoneColor: UIColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.1)
-    //@IBInspectable var fillRestColor : UIColor = UIColor.whiteColor()
+    @IBInspectable public var fillUndoneColor: UIColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.1)
+    @IBInspectable public var fillRestColor : UIColor = UIColor.whiteColor()
     @IBInspectable public var animationDuration: Double = 0.5
     
     @IBInspectable public var progress: Float {
@@ -86,7 +86,9 @@ public class VerticalProgressView : UIView {
         if val < 0 { val = 0.0 }
         else if val > 1 { val = 1 }
         self.progressPriv = val
-        
+        if self.filledView != nil {
+            self.filledView!.backgroundColor = self.fillDoneColor.CGColor
+        }
         setFilledPosition(self.shouldHavePosition(), animated: animated)
     }
 

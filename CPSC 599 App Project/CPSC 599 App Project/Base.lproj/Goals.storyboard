@@ -54,12 +54,15 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzW-d4-1hd">
                                 <rect key="frame" x="218" y="499" width="164" height="44"/>
+                                <color key="backgroundColor" red="0.34901960784313724" green="0.50588235294117645" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Axw-rY-o6m"/>
                                     <constraint firstAttribute="width" constant="164" id="XyI-a5-0jV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Contribute"/>
+                                <state key="normal" title="Contribute">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="contributePressed:" destination="8gW-Sg-X7X" eventType="touchUpInside" id="kDd-tP-piY"/>
                                 </connections>
@@ -74,13 +77,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqB-64-X6S" customClass="VerticalProgressView" customModule="MLVerticalProgressView">
-                                <rect key="frame" x="20" y="174" width="560" height="317"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="150" y="174" width="300" height="317"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.98431372549019602" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zo6-se-nB3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                <color key="backgroundColor" red="0.67450980392156867" green="0.8784313725490196" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VqB-64-X6S" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leadingMargin" id="0Za-lC-WXi"/>
+                            <constraint firstItem="VqB-64-X6S" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leadingMargin" constant="130" id="0Za-lC-WXi"/>
                             <constraint firstItem="SoZ-q7-cms" firstAttribute="top" secondItem="OYz-8Z-kHX" secondAttribute="bottom" id="4pO-Tj-APs"/>
                             <constraint firstItem="tzW-d4-1hd" firstAttribute="top" secondItem="VqB-64-X6S" secondAttribute="bottom" constant="8" symbolic="YES" id="4yb-cs-4Ca"/>
                             <constraint firstItem="OYz-8Z-kHX" firstAttribute="top" secondItem="lYd-xK-Tcm" secondAttribute="bottom" id="6zK-jX-t0H"/>
@@ -88,13 +95,13 @@
                             <constraint firstItem="VqB-64-X6S" firstAttribute="top" secondItem="Ahn-ja-5Vq" secondAttribute="bottom" constant="8" symbolic="YES" id="HRI-gA-Re0"/>
                             <constraint firstItem="SoZ-q7-cms" firstAttribute="leading" secondItem="RFZ-O8-o2t" secondAttribute="leading" id="TJC-rN-Hn1"/>
                             <constraint firstItem="RFZ-O8-o2t" firstAttribute="top" secondItem="SoZ-q7-cms" secondAttribute="bottom" constant="8" symbolic="YES" id="XiJ-Ib-oFm"/>
-                            <constraint firstItem="VqB-64-X6S" firstAttribute="leading" secondItem="Ahn-ja-5Vq" secondAttribute="leading" id="bRC-bm-XgB"/>
+                            <constraint firstItem="VqB-64-X6S" firstAttribute="leading" secondItem="Ahn-ja-5Vq" secondAttribute="leading" constant="130" id="bRC-bm-XgB"/>
                             <constraint firstItem="Ahn-ja-5Vq" firstAttribute="leading" secondItem="RFZ-O8-o2t" secondAttribute="leading" id="cef-Bg-X4I"/>
                             <constraint firstItem="Ahn-ja-5Vq" firstAttribute="top" secondItem="RFZ-O8-o2t" secondAttribute="bottom" constant="8" symbolic="YES" id="dmU-oa-IIf"/>
                             <constraint firstItem="RFZ-O8-o2t" firstAttribute="top" secondItem="OYz-8Z-kHX" secondAttribute="bottom" constant="50" id="fcs-Ga-8EA"/>
                             <constraint firstItem="OYz-8Z-kHX" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leading" id="fko-PS-a5j"/>
                             <constraint firstItem="tnz-pb-fhO" firstAttribute="top" secondItem="tzW-d4-1hd" secondAttribute="bottom" constant="8" symbolic="YES" id="fmM-hK-jzh"/>
-                            <constraint firstItem="Ahn-ja-5Vq" firstAttribute="trailing" secondItem="VqB-64-X6S" secondAttribute="trailing" id="nDx-AK-Fwc"/>
+                            <constraint firstItem="Ahn-ja-5Vq" firstAttribute="trailing" secondItem="VqB-64-X6S" secondAttribute="trailing" constant="130" id="nDx-AK-Fwc"/>
                             <constraint firstAttribute="trailing" secondItem="OYz-8Z-kHX" secondAttribute="trailing" id="pEm-b9-tur"/>
                             <constraint firstItem="VqB-64-X6S" firstAttribute="centerX" secondItem="tzW-d4-1hd" secondAttribute="centerX" id="qcn-V7-cY5"/>
                             <constraint firstItem="Ahn-ja-5Vq" firstAttribute="trailing" secondItem="RFZ-O8-o2t" secondAttribute="trailing" id="xAK-9C-Mjq"/>
@@ -106,6 +113,7 @@
                     <connections>
                         <outlet property="amountRemainingLabel" destination="Ahn-ja-5Vq" id="jk1-Y0-arA"/>
                         <outlet property="contributeButton" destination="tzW-d4-1hd" id="QVb-7A-jyS"/>
+                        <outlet property="goalProgressView" destination="VqB-64-X6S" id="oll-ia-VvD"/>
                         <outlet property="nameLabel" destination="SoZ-q7-cms" id="zbP-bT-aZJ"/>
                         <outlet property="progressLabel" destination="RFZ-O8-o2t" id="x2S-68-h1U"/>
                     </connections>
@@ -172,9 +180,11 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FII-JO-k22">
-                                                    <rect key="frame" x="0.0" y="58" width="484" height="25"/>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FII-JO-k22">
+                                                    <rect key="frame" x="0.0" y="58" width="484" height="26"/>
+                                                    <color key="backgroundColor" red="0.90980392160000001" green="0.98431372549999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.18008001867534495" green="1" blue="0.16399367346857752" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </progressView>
                                             </subviews>
                                         </stackView>
@@ -189,6 +199,7 @@
                                         <constraint firstItem="cza-SB-yrd" firstAttribute="trailing" secondItem="u6C-0d-cgg" secondAttribute="trailingMargin" id="tId-k8-f47"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.98431372549999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="costLabel" destination="t5y-Zd-ugf" id="S78-AK-kwH"/>
                                     <outlet property="nameLabel" destination="r4h-Qr-gJP" id="crh-uT-n1R"/>
@@ -232,6 +243,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gf6-vC-7lJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.70588235290000001" green="0.89019607840000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         </textAttributes>
@@ -288,7 +300,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OEp-i9-4ri">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OEp-i9-4ri">
                                 <rect key="frame" x="20" y="263" width="560" height="329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up8-jH-SW6">
@@ -348,32 +360,35 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hzm-sj-XL1">
-                                <rect key="frame" x="118" y="72" width="462" height="183"/>
+                                <rect key="frame" x="118" y="72" width="462" height="139"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter goal name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y40-ha-qyX">
-                                        <rect key="frame" x="0.0" y="0.0" width="462" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter goal name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y40-ha-qyX">
+                                        <rect key="frame" x="0.0" y="0.0" width="462" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cost of the goal..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDo-J1-ddf">
-                                        <rect key="frame" x="0.0" y="40" width="462" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cost of the goal..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDo-J1-ddf">
+                                        <rect key="frame" x="0.0" y="10" width="462" height="16"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Enter remainder to be paid..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-Mq-Iq0" userLabel="Contributed Text Field">
-                                        <rect key="frame" x="0.0" y="80" width="462" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Enter remainder to be paid..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-Mq-Iq0" userLabel="Contributed Text Field">
+                                        <rect key="frame" x="0.0" y="36" width="462" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOT-3b-7WY">
-                                        <rect key="frame" x="0.0" y="120" width="462" height="63"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOT-3b-7WY">
+                                        <rect key="frame" x="0.0" y="76" width="462" height="63"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.98431372549999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Kwu-VV-9xG" firstAttribute="top" secondItem="OEp-i9-4ri" secondAttribute="bottom" constant="8" id="2Km-gb-2CC"/>
                             <constraint firstItem="hzm-sj-XL1" firstAttribute="trailing" secondItem="OEp-i9-4ri" secondAttribute="trailing" id="6Ce-t3-uAz"/>
@@ -447,6 +462,6 @@
         <image name="trophy-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AdW-UP-I9e"/>
+        <segue reference="48Z-hC-161"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -149,6 +149,24 @@ class GoalTableViewController: UITableViewController {
         if (progress > 1) {
             progress = NSDecimalNumber(int: 1)
         }
+        // change color of the progress bar depending on how far they are
+        if (progress < 0.25)
+        {
+            cell.progressView.progressTintColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.25)
+        }
+        else if (progress < 0.5)
+        {
+            cell.progressView.progressTintColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.50)
+        }
+        else if (progress < 0.75)
+        {
+            cell.progressView.progressTintColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.75)
+        }
+        else
+        {
+            cell.progressView.progressTintColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
+        }
+        cell.progressView.trackTintColor = UIColor.whiteColor()
         cell.progressView.progress = progress.floatValue
         cell.photoImageView.image = goal.photo
         

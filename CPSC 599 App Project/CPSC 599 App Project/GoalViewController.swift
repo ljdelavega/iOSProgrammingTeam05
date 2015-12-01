@@ -17,16 +17,23 @@ class GoalViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var amountRemainingLabel: UILabel!
     @IBOutlet weak var contributeButton: UIButton!
+    @IBOutlet weak var goalProgressView: VerticalProgressView!
     
     var goals = [Goal]()
     var primaryGoal: Goal?
+    var progress: Float?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        progress = 0.0
+        
+        //change button design
+        //contributeButton.layer.borderColor = UIColor.blackColor().CGColor
+        contributeButton.layer.borderWidth = 1
+        contributeButton.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
         updateInterface()
-        // add VerticalProgressView here
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +56,33 @@ class GoalViewController: UIViewController {
         nameLabel.text = primaryGoal?.name
         progressLabel.text = primaryGoal!.contributed.asLocaleCurrency + " / " + primaryGoal!.amount.asLocaleCurrency
         amountRemainingLabel.text = (primaryGoal!.amount - primaryGoal!.contributed).asLocaleCurrency
+        
+        // update the progress view with animation
+        updateProgressView()
+    }
+    
+    func updateProgressView() {
+        progress = (primaryGoal!.contributed / primaryGoal!.amount).floatValue
+        if (progress < 0.25)
+        {
+            goalProgressView.fillDoneColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.25)
+        }
+        else if (progress < 0.5)
+        {
+            goalProgressView.fillDoneColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.50)
+        }
+        else if (progress < 0.75)
+        {
+            goalProgressView.fillDoneColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.75)
+        }
+        else
+        {
+            goalProgressView.fillDoneColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
+        }
+        goalProgressView.setNeedsLayout()
+
+        
+        goalProgressView.setProgress(progress!, animated: true)
     }
     
     
