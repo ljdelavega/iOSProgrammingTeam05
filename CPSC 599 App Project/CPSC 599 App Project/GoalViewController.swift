@@ -15,7 +15,6 @@ class GoalViewController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
-    @IBOutlet weak var amountRemainingLabel: UILabel!
     @IBOutlet weak var contributeButton: UIButton!
     @IBOutlet weak var goalProgressView: VerticalProgressView!
     
@@ -55,7 +54,6 @@ class GoalViewController: UIViewController {
         // populate the fields with information for the primary goal
         nameLabel.text = primaryGoal?.name
         progressLabel.text = primaryGoal!.contributed.asLocaleCurrency + " / " + primaryGoal!.amount.asLocaleCurrency
-        amountRemainingLabel.text = (primaryGoal!.amount - primaryGoal!.contributed).asLocaleCurrency
         
         // update the progress view with animation
         updateProgressView()
