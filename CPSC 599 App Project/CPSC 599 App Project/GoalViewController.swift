@@ -65,19 +65,19 @@ class GoalViewController: UIViewController {
         progress = (primaryGoal!.contributed / primaryGoal!.amount).floatValue
         if (progress < 0.25)
         {
-            goalProgressView.fillDoneColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.25)
+            goalProgressView.fillDoneColor = UIColor(red: 204.0/255.0, green: 249.0/255.0, blue: 234.0/255.0, alpha: 1.0)
         }
         else if (progress < 0.5)
         {
-            goalProgressView.fillDoneColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.50)
+            goalProgressView.fillDoneColor = UIColor(red: 105.0/255.0, green: 237.0/255.0, blue: 206.0/255.0, alpha: 1.0)
         }
         else if (progress < 0.75)
         {
-            goalProgressView.fillDoneColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.75)
+            goalProgressView.fillDoneColor = UIColor(red: 105.0/255.0, green: 219.0/255.0, blue: 179.0/255.0, alpha: 1.0)
         }
         else
         {
-            goalProgressView.fillDoneColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
+            goalProgressView.fillDoneColor = UIColor(red: 69.0/255.0, green: 198.0/255.0, blue: 153.0/255.0, alpha: 1.0)
         }
         goalProgressView.setNeedsLayout()
 

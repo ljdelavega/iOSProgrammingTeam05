@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8gW-Sg-X7X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8gW-Sg-X7X">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,6 +19,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYz-8Z-kHX">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Drm-VC-x7C"/>
                                 </constraints>
@@ -39,12 +40,14 @@
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Goal Title" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SoZ-q7-cms">
                                 <rect key="frame" x="20" y="64" width="560" height="42"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFZ-O8-o2t" userLabel="Progress Label">
                                 <rect key="frame" x="20" y="114" width="560" height="18"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="4x8-8N-2FE"/>
                                 </constraints>
@@ -54,6 +57,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzW-d4-1hd">
                                 <rect key="frame" x="218" y="499" width="164" height="44"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.34901960784313724" green="0.50588235294117645" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Axw-rY-o6m"/>
@@ -69,6 +73,7 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahn-ja-5Vq" userLabel="Amount Remaining Label">
                                 <rect key="frame" x="20" y="140" width="560" height="26"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="cCP-0J-2hI"/>
                                 </constraints>
@@ -78,13 +83,16 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqB-64-X6S" customClass="VerticalProgressView" customModule="MLVerticalProgressView">
                                 <rect key="frame" x="150" y="174" width="300" height="317"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.98431372549019602" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zo6-se-nB3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.67450980392156867" green="0.8784313725490196" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VqB-64-X6S" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leadingMargin" constant="130" id="0Za-lC-WXi"/>
@@ -130,6 +138,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJD-Tx-L3B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoalTableViewCell" rowHeight="100" id="emC-vw-BsE" customClass="GoalTableViewCell" customModule="Zeal" customModuleProvider="target">
@@ -141,6 +150,7 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WnV-F3-kAR">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="4J7-F8-pcj"/>
                                             </constraints>
@@ -153,6 +163,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4h-Qr-gJP">
                                                             <rect key="frame" x="0.0" y="0.0" width="447" height="37"/>
+                                                            <animations/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="37" id="Qa7-Sx-rvB"/>
                                                             </constraints>
@@ -162,17 +173,20 @@
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URO-Lg-6X8">
                                                             <rect key="frame" x="447" y="0.0" width="37" height="37"/>
+                                                            <animations/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="37" id="UHU-4i-Z7C"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
+                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstItem="URO-Lg-6X8" firstAttribute="leading" secondItem="r4h-Qr-gJP" secondAttribute="trailing" id="g2K-hA-NeD"/>
                                                     </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5y-Zd-ugf">
                                                     <rect key="frame" x="0.0" y="37" width="484" height="21"/>
+                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Ggy-gz-twT"/>
                                                     </constraints>
@@ -182,13 +196,16 @@
                                                 </label>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FII-JO-k22">
                                                     <rect key="frame" x="0.0" y="58" width="484" height="26"/>
+                                                    <animations/>
                                                     <color key="backgroundColor" red="0.90980392160000001" green="0.98431372549999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="progressTintColor" red="0.18008001867534495" green="1" blue="0.16399367346857752" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="progressTintColor" red="0.27779056743251518" green="0.80030286882040047" blue="0.61709689713096449" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </progressView>
                                             </subviews>
+                                            <animations/>
                                         </stackView>
                                     </subviews>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="cza-SB-yrd" firstAttribute="leading" secondItem="WnV-F3-kAR" secondAttribute="trailing" constant="8" symbolic="YES" id="JH4-SK-dFH"/>
                                         <constraint firstItem="cza-SB-yrd" firstAttribute="bottom" secondItem="u6C-0d-cgg" secondAttribute="bottomMargin" id="SL2-g0-O8G"/>
@@ -199,6 +216,7 @@
                                         <constraint firstItem="cza-SB-yrd" firstAttribute="trailing" secondItem="u6C-0d-cgg" secondAttribute="trailingMargin" id="tId-k8-f47"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <animations/>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.98431372549999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="costLabel" destination="t5y-Zd-ugf" id="S78-AK-kwH"/>
@@ -243,6 +261,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gf6-vC-7lJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="barTintColor" red="0.70588235290000001" green="0.89019607840000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -273,24 +292,28 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjS-jE-DHg">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-Jb-9gQ">
                                         <rect key="frame" x="0.0" y="41" width="92" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contributed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf7-ov-sop">
                                         <rect key="frame" x="0.0" y="82" width="92" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI2-KS-QUD">
                                         <rect key="frame" x="0.0" y="123" width="92" height="21"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="kco-en-VCe"/>
                                         </constraints>
@@ -299,12 +322,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <animations/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OEp-i9-4ri">
                                 <rect key="frame" x="20" y="219" width="560" height="329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up8-jH-SW6">
                                         <rect key="frame" x="234" y="0.0" width="92" height="24"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="92" id="clZ-jT-VIH"/>
                                             <constraint firstAttribute="height" constant="24" id="dRR-xb-tVv"/>
@@ -315,6 +340,7 @@
                                     </label>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="11O-8t-GmN">
                                         <rect key="frame" x="10" y="34" width="540" height="250"/>
+                                        <animations/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="dDM-df-mYB"/>
@@ -328,6 +354,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE7-rt-Fl6">
                                                 <rect key="frame" x="0.0" y="0.0" width="139" height="35"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="139" id="OCC-HO-Bgx"/>
                                                 </constraints>
@@ -337,6 +364,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gog-Ln-9IF" customClass="BEMCheckBox">
                                                 <rect key="frame" x="149" y="0.0" width="35" height="35"/>
+                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="aaO-QB-ov4"/>
@@ -353,8 +381,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
+                                        <animations/>
                                     </stackView>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstItem="N5t-JD-dqW" firstAttribute="top" secondItem="11O-8t-GmN" secondAttribute="bottom" constant="10" id="be7-o6-Ham"/>
                                 </constraints>
@@ -364,30 +394,36 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter goal name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y40-ha-qyX">
                                         <rect key="frame" x="0.0" y="0.0" width="462" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cost of the goal..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDo-J1-ddf">
                                         <rect key="frame" x="0.0" y="40" width="462" height="30"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Enter remainder to be paid..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-Mq-Iq0" userLabel="Contributed Text Field">
                                         <rect key="frame" x="0.0" y="80" width="462" height="30"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOT-3b-7WY">
                                         <rect key="frame" x="0.0" y="120" width="462" height="19"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <animations/>
                             </stackView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.90980392160000001" green="0.98431372549999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Kwu-VV-9xG" firstAttribute="top" secondItem="OEp-i9-4ri" secondAttribute="bottom" constant="8" id="2Km-gb-2CC"/>
@@ -441,6 +477,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TwT-55-OkK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="barTintColor" red="0.70588235290000001" green="0.89019607840000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
