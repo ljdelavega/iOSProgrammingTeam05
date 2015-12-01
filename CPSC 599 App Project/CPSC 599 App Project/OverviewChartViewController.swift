@@ -49,12 +49,12 @@ class OverviewChartViewController: UIViewController, ChartViewDelegate {
     }
     
     func loadSampleTransactions() {
-        let expense1 = Transaction(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
-        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
-        let expense3 = Transaction(name: "Food", amount: 99.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
-        let expense4 = Transaction(name: "Sports", amount: 20.75, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
-        let expense5 = Transaction(name: "Fuel", amount: 30.58, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
-        let expense6 = Transaction(name: "Kids", amount: 300, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        let expense1 = Transaction(name: "Gifts", amount: 45.25, desc: "Gifts for Christmas", date: NSDate(), type: "Expense", repeating: "false")!
+        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Shopping for clothes, electronics, etc.", date: NSDate(), type: "Expense", repeating: "false")!
+        let expense3 = Transaction(name: "Food", amount: 99.25, desc: "Eating out at restaurants / fast food", date: NSDate(), type: "Expense", repeating: "false")!
+        let expense4 = Transaction(name: "Entertainment", amount: 20.75, desc: "Going out for fun, watching movies, etc.", date: NSDate(), type: "Expense", repeating: "false")!
+        let expense5 = Transaction(name: "Gas", amount: 30.58, desc: "Gas for car", date: NSDate(), type: "Expense", repeating: "false")!
+        let expense6 = Transaction(name: "Groceries", amount: 300, desc: "Buying groceries from the grocery store.", date: NSDate(), type: "Expense", repeating: "false")!
         
         expenses += [expense1, expense2, expense3, expense4, expense5, expense6]
     }

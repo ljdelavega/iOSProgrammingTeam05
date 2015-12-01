@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8gW-Sg-X7X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8gW-Sg-X7X">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -46,12 +46,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFZ-O8-o2t" userLabel="Progress Label">
-                                <rect key="frame" x="20" y="114" width="560" height="18"/>
+                                <rect key="frame" x="20" y="114" width="560" height="52"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="4x8-8N-2FE"/>
+                                    <constraint firstAttribute="height" constant="52" id="4x8-8N-2FE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -71,22 +71,12 @@
                                     <action selector="contributePressed:" destination="8gW-Sg-X7X" eventType="touchUpInside" id="kDd-tP-piY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahn-ja-5Vq" userLabel="Amount Remaining Label">
-                                <rect key="frame" x="20" y="140" width="560" height="26"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="cCP-0J-2hI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqB-64-X6S" customClass="VerticalProgressView" customModule="MLVerticalProgressView">
                                 <rect key="frame" x="150" y="174" width="300" height="317"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zo6-se-nB3">
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zo6-se-nB3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.67450980392156867" green="0.8784313725490196" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
@@ -96,30 +86,30 @@
                         <color key="backgroundColor" red="0.89411764705882357" green="0.99607843137254903" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VqB-64-X6S" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leadingMargin" constant="130" id="0Za-lC-WXi"/>
+                            <constraint firstItem="RFZ-O8-o2t" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leadingMargin" id="3OS-1t-GU7"/>
+                            <constraint firstItem="zo6-se-nB3" firstAttribute="leading" secondItem="OYz-8Z-kHX" secondAttribute="leading" id="4JQ-OF-RTM"/>
                             <constraint firstItem="SoZ-q7-cms" firstAttribute="top" secondItem="OYz-8Z-kHX" secondAttribute="bottom" id="4pO-Tj-APs"/>
                             <constraint firstItem="tzW-d4-1hd" firstAttribute="top" secondItem="VqB-64-X6S" secondAttribute="bottom" constant="8" symbolic="YES" id="4yb-cs-4Ca"/>
                             <constraint firstItem="OYz-8Z-kHX" firstAttribute="top" secondItem="lYd-xK-Tcm" secondAttribute="bottom" id="6zK-jX-t0H"/>
+                            <constraint firstItem="zo6-se-nB3" firstAttribute="top" secondItem="Tn9-dH-6sh" secondAttribute="top" id="ANF-iE-J89"/>
                             <constraint firstItem="OYz-8Z-kHX" firstAttribute="centerX" secondItem="SoZ-q7-cms" secondAttribute="centerX" id="Bm4-aA-zPV"/>
-                            <constraint firstItem="VqB-64-X6S" firstAttribute="top" secondItem="Ahn-ja-5Vq" secondAttribute="bottom" constant="8" symbolic="YES" id="HRI-gA-Re0"/>
+                            <constraint firstItem="VqB-64-X6S" firstAttribute="top" secondItem="RFZ-O8-o2t" secondAttribute="bottom" constant="8" symbolic="YES" id="Mrj-g7-p5L"/>
                             <constraint firstItem="SoZ-q7-cms" firstAttribute="leading" secondItem="RFZ-O8-o2t" secondAttribute="leading" id="TJC-rN-Hn1"/>
+                            <constraint firstItem="VqB-64-X6S" firstAttribute="centerX" secondItem="RFZ-O8-o2t" secondAttribute="centerX" id="UcX-DK-xvC"/>
                             <constraint firstItem="RFZ-O8-o2t" firstAttribute="top" secondItem="SoZ-q7-cms" secondAttribute="bottom" constant="8" symbolic="YES" id="XiJ-Ib-oFm"/>
-                            <constraint firstItem="VqB-64-X6S" firstAttribute="leading" secondItem="Ahn-ja-5Vq" secondAttribute="leading" constant="130" id="bRC-bm-XgB"/>
-                            <constraint firstItem="Ahn-ja-5Vq" firstAttribute="leading" secondItem="RFZ-O8-o2t" secondAttribute="leading" id="cef-Bg-X4I"/>
-                            <constraint firstItem="Ahn-ja-5Vq" firstAttribute="top" secondItem="RFZ-O8-o2t" secondAttribute="bottom" constant="8" symbolic="YES" id="dmU-oa-IIf"/>
                             <constraint firstItem="RFZ-O8-o2t" firstAttribute="top" secondItem="OYz-8Z-kHX" secondAttribute="bottom" constant="50" id="fcs-Ga-8EA"/>
                             <constraint firstItem="OYz-8Z-kHX" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leading" id="fko-PS-a5j"/>
                             <constraint firstItem="tnz-pb-fhO" firstAttribute="top" secondItem="tzW-d4-1hd" secondAttribute="bottom" constant="8" symbolic="YES" id="fmM-hK-jzh"/>
-                            <constraint firstItem="Ahn-ja-5Vq" firstAttribute="trailing" secondItem="VqB-64-X6S" secondAttribute="trailing" constant="130" id="nDx-AK-Fwc"/>
+                            <constraint firstItem="zo6-se-nB3" firstAttribute="bottom" secondItem="OYz-8Z-kHX" secondAttribute="top" id="mjn-X5-y2d"/>
                             <constraint firstAttribute="trailing" secondItem="OYz-8Z-kHX" secondAttribute="trailing" id="pEm-b9-tur"/>
                             <constraint firstItem="VqB-64-X6S" firstAttribute="centerX" secondItem="tzW-d4-1hd" secondAttribute="centerX" id="qcn-V7-cY5"/>
-                            <constraint firstItem="Ahn-ja-5Vq" firstAttribute="trailing" secondItem="RFZ-O8-o2t" secondAttribute="trailing" id="xAK-9C-Mjq"/>
+                            <constraint firstItem="zo6-se-nB3" firstAttribute="trailing" secondItem="OYz-8Z-kHX" secondAttribute="trailing" id="r6x-nq-ocd"/>
                             <constraint firstItem="RFZ-O8-o2t" firstAttribute="trailing" secondItem="SoZ-q7-cms" secondAttribute="trailing" id="zeK-QZ-QDP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Goals" image="trophy-7" id="V3v-6e-rgs" userLabel="Goals"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="amountRemainingLabel" destination="Ahn-ja-5Vq" id="jk1-Y0-arA"/>
                         <outlet property="contributeButton" destination="tzW-d4-1hd" id="QVb-7A-jyS"/>
                         <outlet property="goalProgressView" destination="VqB-64-X6S" id="oll-ia-VvD"/>
                         <outlet property="nameLabel" destination="SoZ-q7-cms" id="zbP-bT-aZJ"/>
