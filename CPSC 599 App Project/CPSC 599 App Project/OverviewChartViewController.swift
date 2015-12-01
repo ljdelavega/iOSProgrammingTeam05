@@ -13,11 +13,19 @@ class OverviewChartViewController: UIViewController, ChartViewDelegate {
 
     @IBOutlet weak var pieChart: PieChartView!
     
+    var transactions = [Transaction]()
     var expenses = [Transaction]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadSampleTransactions()
+        //loadSampleTransactions()
+        
+        if let savedTransactions = loadTransactions() {
+            transactions += savedTransactions
+            checkExpenses()
+        } else {
+            loadSampleTransactions()
+        }
         setupChart()
         loadChart()
     }
@@ -29,6 +37,15 @@ class OverviewChartViewController: UIViewController, ChartViewDelegate {
     
     func loadTransactions() -> [Transaction]?{
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Transaction.ArchiveURL.path!) as? [Transaction]
+    }
+    
+    func checkExpenses() {
+        for var i = 0; i < transactions.count; i++ {
+            let transaction = transactions[i]
+            if(transaction.type == "Expense"){
+                expenses += [transaction]
+            }
+        }
     }
     
     func loadSampleTransactions() {
@@ -54,6 +71,7 @@ class OverviewChartViewController: UIViewController, ChartViewDelegate {
         pieChart.drawHoleEnabled = true
         pieChart.drawCenterTextEnabled = true
         pieChart.legend.enabled = true
+        pieChart.descriptionText = ""
         pieChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: ChartEasingOption.EaseOutBack)
         
         

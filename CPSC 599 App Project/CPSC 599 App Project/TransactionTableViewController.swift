@@ -20,19 +20,29 @@ class TransactionTableViewController: UITableViewController {
             transactions += savedTransactions
         } else {
             loadSampleTransactions()
+            saveTransactions()
         }
     }
     
     func loadSampleTransactions() {
         
-        let expense1 = Transaction(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
         
         
         let income1 = Transaction(name: "Salary", amount: 480.00, desc: "Job", date: NSDate(), type: "Income", repeating: "false")!
+        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
         
         let income2 = Transaction(name: "Allowance", amount: 100.00, desc: "Job", date: NSDate(), type: "Income", repeating: "false")!
         
-        transactions += [expense1, income1]
+        let expense3 = Transaction(name: "Food", amount: 99.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        
+        let expense4 = Transaction(name: "Sports", amount: 20.75, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        
+        let expense5 = Transaction(name: "Fuel", amount: 30.58, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        
+        let expense6 = Transaction(name: "Kids", amount: 300, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        
+        transactions += [expense1, income1, expense2, income2, expense3, expense4, expense5, expense6]
         
         
         
