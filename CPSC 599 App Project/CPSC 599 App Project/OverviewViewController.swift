@@ -42,6 +42,10 @@ class OverviewViewController: UIViewController {
     }
     
     func calculateTotal() {
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = NSLocale(localeIdentifier: "en_US")
+
         for var i = 0; i < transactions.count; i++ {
             let transaction = transactions[i]
             if(transaction.type == "Expense"){
@@ -50,9 +54,10 @@ class OverviewViewController: UIViewController {
                 totalIncome += Double(transaction.amount)
             }
         }
-        income.text = String(totalIncome)
-        expense.text = String(totalExpense)
-        totalLabel.text = String(total)
+        income.text = formatter.stringFromNumber(NSNumber(double: totalIncome))
+        expense.text = formatter.stringFromNumber(NSNumber(double: totalExpense))
+        total = totalIncome - totalExpense
+        totalLabel.text = formatter.stringFromNumber(NSNumber(double: total))
     }
     
     func loadTransactions() -> [Transaction]?{
