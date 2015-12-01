@@ -15,11 +15,14 @@ class OverviewViewController: UIViewController {
     var totalIncome = Double(0)
     var totalExpense = Double(0)
     
+    @IBOutlet weak var income: UILabel!
+    @IBOutlet weak var expense: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
+        overview()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +50,9 @@ class OverviewViewController: UIViewController {
                 totalIncome += Double(transaction.amount)
             }
         }
+        income.text = String(totalIncome)
+        expense.text = String(totalExpense)
+        totalLabel.text = String(total)
     }
     
     func loadTransactions() -> [Transaction]?{

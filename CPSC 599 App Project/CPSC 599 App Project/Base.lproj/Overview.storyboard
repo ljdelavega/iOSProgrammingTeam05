@@ -29,7 +29,7 @@
         <!--Overview-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" userLabel="Overview" customClass="OverviewViewController" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" userLabel="Overview" customClass="OverviewViewController" customModule="Zeal" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -166,6 +166,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="expense" destination="c7K-wE-Fit" id="m0m-2z-VLm"/>
+                        <outlet property="income" destination="S3Z-fj-Xtw" id="4kW-KV-ROY"/>
+                        <outlet property="totalLabel" destination="Lpe-FD-sHX" id="kQ8-CU-gzR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,7 +179,7 @@
         <!--Charts-->
         <scene sceneID="fE5-Ei-SiA">
             <objects>
-                <viewController id="ifr-Mi-Dur" customClass="OverviewChartViewController" customModule="Zeal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ifr-Mi-Dur" customClass="OverviewChartViewController" customModule="Zeal" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tBP-oO-i5D"/>
                         <viewControllerLayoutGuide type="bottom" id="PEW-RO-PIz"/>
