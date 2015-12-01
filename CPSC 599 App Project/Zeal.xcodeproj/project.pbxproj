@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		0AB336F11C0D196800AE9DBD /* BudgTranTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB336F01C0D196800AE9DBD /* BudgTranTableViewController.swift */; };
 		0AB336F31C0D19A100AE9DBD /* BudgTranTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB336F21C0D19A100AE9DBD /* BudgTranTableViewCell.swift */; };
-		0AB336F51C0D297400AE9DBD /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB336F41C0D297400AE9DBD /* GraphTableViewCell.swift */; };
-		0AB336F71C0D298C00AE9DBD /* GraphTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB336F61C0D298C00AE9DBD /* GraphTableViewController.swift */; };
-		0AB336F91C0D2A6900AE9DBD /* GraphTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB336F81C0D2A6900AE9DBD /* GraphTableViewController.swift */; };
-		0AB336FB1C0D2A8D00AE9DBD /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB336FA1C0D2A8D00AE9DBD /* GraphTableViewCell.swift */; };
 		0AB336FD1C0D2AF900AE9DBD /* CPSC 599 App Project in Resources */ = {isa = PBXBuildFile; fileRef = 0AB336FC1C0D2AF900AE9DBD /* CPSC 599 App Project */; };
 		391E824A1C0BBB02009CAB6D /* OverviewChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E82491C0BBB02009CAB6D /* OverviewChartViewController.swift */; };
 		3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */; };
@@ -62,10 +58,6 @@
 /* Begin PBXFileReference section */
 		0AB336F01C0D196800AE9DBD /* BudgTranTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgTranTableViewController.swift; sourceTree = "<group>"; };
 		0AB336F21C0D19A100AE9DBD /* BudgTranTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgTranTableViewCell.swift; sourceTree = "<group>"; };
-		0AB336F41C0D297400AE9DBD /* GraphTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
-		0AB336F61C0D298C00AE9DBD /* GraphTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTableViewController.swift; sourceTree = "<group>"; };
-		0AB336F81C0D2A6900AE9DBD /* GraphTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphTableViewController.swift; path = "CPSC 599 App Project/GraphTableViewController.swift"; sourceTree = "<group>"; };
-		0AB336FA1C0D2A8D00AE9DBD /* GraphTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphTableViewCell.swift; path = "CPSC 599 App Project/GraphTableViewCell.swift"; sourceTree = "<group>"; };
 		0AB336FC1C0D2AF900AE9DBD /* CPSC 599 App Project */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "CPSC 599 App Project"; sourceTree = "<group>"; };
 		391E82491C0BBB02009CAB6D /* OverviewChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewChartViewController.swift; sourceTree = "<group>"; };
 		3952B95D1BE8327200AB2BB2 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
@@ -147,11 +139,7 @@
 		F7B42B201BD5FC5D00CB3308 = {
 			isa = PBXGroup;
 			children = (
-				0AB336F41C0D297400AE9DBD /* GraphTableViewCell.swift */,
 				0AB336FC1C0D2AF900AE9DBD /* CPSC 599 App Project */,
-				0AB336F61C0D298C00AE9DBD /* GraphTableViewController.swift */,
-				0AB336F81C0D2A6900AE9DBD /* GraphTableViewController.swift */,
-				0AB336FA1C0D2A8D00AE9DBD /* GraphTableViewCell.swift */,
 				F7B42B2B1BD5FC5D00CB3308 /* src */,
 				F7B42B2A1BD5FC5D00CB3308 /* Products */,
 				51A5A06EB47D5364EC12B661 /* Pods */,
@@ -399,7 +387,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AB336FB1C0D2A8D00AE9DBD /* GraphTableViewCell.swift in Sources */,
 				3952B95E1BE8327200AB2BB2 /* TransactionTableViewController.swift in Sources */,
 				F7C726C41BE43E7600B5C30A /* GoalTableViewController.swift in Sources */,
 				F7C726B11BDEB90F00B5C30A /* Transaction.swift in Sources */,
@@ -408,16 +395,13 @@
 				F7B42B2D1BD5FC5D00CB3308 /* AppDelegate.swift in Sources */,
 				F7ED287E1BEAA13400CC2453 /* BudgetTableViewCell.swift in Sources */,
 				391E824A1C0BBB02009CAB6D /* OverviewChartViewController.swift in Sources */,
-				0AB336F71C0D298C00AE9DBD /* GraphTableViewController.swift in Sources */,
 				F7C726AB1BDEB22900B5C30A /* Budget.swift in Sources */,
 				F7C726C21BE43E4F00B5C30A /* GoalTableViewCell.swift in Sources */,
 				F7C726AD1BDEB8B300B5C30A /* Goal.swift in Sources */,
-				0AB336F91C0D2A6900AE9DBD /* GraphTableViewController.swift in Sources */,
 				F7C726C61BE4447700B5C30A /* GoalDetailViewController.swift in Sources */,
 				F7C726AF1BDEB8F000B5C30A /* Income.swift in Sources */,
 				0AB336F11C0D196800AE9DBD /* BudgTranTableViewController.swift in Sources */,
 				F7C726B51BE0083600B5C30A /* GoalViewController.swift in Sources */,
-				0AB336F51C0D297400AE9DBD /* GraphTableViewCell.swift in Sources */,
 				F7ED28801BEAA13B00CC2453 /* BudgetTableViewController.swift in Sources */,
 				3952B9641BE84B7000AB2BB2 /* TransactionViewController.swift in Sources */,
 				F7B42B2F1BD5FC5D00CB3308 /* OverviewViewController.swift in Sources */,
