@@ -65,7 +65,7 @@ class GoalViewController: UIViewController {
         progress = (primaryGoal!.contributed / primaryGoal!.amount).floatValue
         if (progress < 0.25)
         {
-            goalProgressView.fillDoneColor = UIColor(red: 204.0/255.0, green: 249.0/255.0, blue: 234.0/255.0, alpha: 1.0)
+            goalProgressView.fillDoneColor = UIColor(red: 168.0/255.0, green: 241.0/255.0, blue: 215.0/255.0, alpha: 1.0)
         }
         else if (progress < 0.5)
         {

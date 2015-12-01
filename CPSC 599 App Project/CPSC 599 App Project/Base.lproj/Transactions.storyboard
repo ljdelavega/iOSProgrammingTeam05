@@ -208,6 +208,7 @@
                             <outlet property="delegate" destination="IL6-6d-V7L" id="Oc0-TR-GPc"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="wallet-7" id="pWJ-9A-e1O"/>
                     <navigationItem key="navigationItem" title="Transactions" id="jxf-Tw-sL0">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="O33-2t-WU6">
                             <connections>
@@ -224,7 +225,7 @@
         <scene sceneID="V9q-l0-VfQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DnL-pF-IFQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Transactions" image="wallet-7" selectedImage="second" id="aiw-sI-2Vx"/>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="wallet-7" id="aiw-sI-2Vx"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OyJ-fJ-QVW">
@@ -270,7 +271,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
         <image name="wallet-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -28,7 +28,9 @@ class TransactionTableViewController: UITableViewController {
         let expense1 = Transaction(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
         
         
-        let income1 = Transaction(name: "Salary", amount: 250.00, desc: "Job", date: NSDate(), type: "Income", repeating: "false")!
+        let income1 = Transaction(name: "Salary", amount: 480.00, desc: "Job", date: NSDate(), type: "Income", repeating: "false")!
+        
+        let income2 = Transaction(name: "Allowance", amount: 100.00, desc: "Job", date: NSDate(), type: "Income", repeating: "false")!
         
         transactions += [expense1, income1]
         
