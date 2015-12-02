@@ -14,6 +14,8 @@ class OverviewViewController: UIViewController {
     var total = Double(0)
     var totalIncome = Double(0)
     var totalExpense = Double(0)
+    var goals = [Goal]()
+    var primaryGoal: Goal?
     
     @IBOutlet weak var income: UILabel!
     @IBOutlet weak var expense: UILabel!
@@ -22,6 +24,12 @@ class OverviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if let savedGoals = loadGoals() {
+            goals = savedGoals
+        } else {
+            // Load the sample data.
+        }
+        
         overview()
     }
 
@@ -60,8 +68,31 @@ class OverviewViewController: UIViewController {
         totalLabel.text = formatter.stringFromNumber(NSNumber(double: total))
     }
     
+    
+    
+    func loadPrimaryGoal() {
+        for goal in goals
+        {
+            if (goal.primary)
+            {
+                primaryGoal = goal
+            }
+        }
+        // if no primary goal is found, default to the first goal in the list.
+        if (primaryGoal == nil)
+        {
+            primaryGoal = goals[0]
+        }
+    }
+
+    
+    
     func loadTransactions() -> [Transaction]?{
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Transaction.ArchiveURL.path!) as? [Transaction]
+    }
+    
+    func loadGoals() -> [Goal]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Goal.ArchiveURL.path!) as? [Goal]
     }
     /*
     // MARK: - Navigation
