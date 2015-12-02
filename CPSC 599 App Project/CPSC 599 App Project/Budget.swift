@@ -31,6 +31,7 @@ class Budget: NSObject, NSCoding {
     var desc: String
     var date: NSDate
     var repeating: Bool
+    var photo: UIImage?
     
     
     // MARK: Archiving Paths
@@ -48,6 +49,7 @@ class Budget: NSObject, NSCoding {
         static let descKey = "desc"
         static let dateKey = "date"
         static let repeatingKey = "repeating"
+        static let photoKey = "photo"
     }
     
     // MARK: Initialization
@@ -92,7 +94,7 @@ class Budget: NSObject, NSCoding {
         let repeating = aDecoder.decodeBoolForKey(PropertyKey.repeatingKey)
         
         // Because photo is an optional property of Meal, use conditional cast.
-        //let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
+        let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
         
         // Must call designated initializer.
         self.init(name: name, amount: amount, remaining: remaining, desc: desc, date: date, repeating: repeating)

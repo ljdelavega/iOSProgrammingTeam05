@@ -27,11 +27,20 @@ class BudgTranTableViewController: UITableViewController {
     func loadSampleBudgTrans() {
         
         //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
-        let budgTran1 = Transaction(name: "Gift", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        let photo1 = UIImage(named: "shoppingcart")!
+        expense1.photo = photo1
         
-        let budgTran2 = Transaction(name: "Salary", amount: 250.00, desc: "Job", date: NSDate(), type: "Income", repeating: "false")!
+        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        let photo2 = UIImage(named: "shoppingcart")!
+        expense2.photo = photo2
         
-        budgTrans += [budgTran1, budgTran2]
+        let expense3 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false")!
+        let photo3 = UIImage(named: "shoppingcart")!
+        expense3.photo = photo3
+        
+        budgTrans += [expense1, expense2, expense3]
+
     }
     
     
@@ -72,6 +81,16 @@ class BudgTranTableViewController: UITableViewController {
         cell.budgTransDateLbl.text = datePrefix
         cell.budgTransPriceLbl.text = budgTran.amount.asLocaleCurrency
         
+        if budgTran.type == "Expense" {
+            //cell.priceLabel.textColor = UIColor(red: 223.0/255.0, green: 71.0/255.0, blue: 86.0/255.0, alpha: 1.0)
+            cell.backgroundColor = UIColor(red: 254.0/255.0, green: 218.0/255.0, blue: 221.0/255.0, alpha: 1.0)
+            
+        } else if budgTran.type == "Income"{
+            cell.backgroundColor = UIColor(red: 232.0/255.0, green: 253.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+            //cell.priceLabel.textColor = UIColor(red: 58.0/255.0, green: 168.0/255.0, blue: 129.0/255.0, alpha: 1.0)
+        }
+        
+        cell.budgTransPic.image = budgTran.photo
         return cell
     }
     

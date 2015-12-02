@@ -27,9 +27,13 @@ class BudgetTableViewController: UITableViewController {
     func loadSampleBudgets() {
         
         //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
-        let budget1 = Budget(name: "Total", amount: 1000.00, remaining: 750.00, desc: "Total Budget", date: NSDate(), repeating: false)!
+        let budget1 = Budget(name: "Total", amount: 1000.00, remaining: 556.08, desc: "Total Budget", date: NSDate(), repeating: false)!
+        let photo1 = UIImage(named: "dollarsign")!
+        budget1.photo = photo1
         
-        let budget2 = Budget(name: "Shopping", amount: 500.00, remaining: 250.00, desc: "Shopping Budget", date: NSDate(), repeating: false)!
+        let budget2 = Budget(name: "Shopping", amount: 500.00, remaining: 405.5, desc: "Shopping Budget", date: NSDate(), repeating: false)!
+        let photo2 = UIImage(named: "shoppingcart")!
+        budget2.photo = photo2
         
         budgets += [budget1, budget2]
     }
@@ -75,6 +79,7 @@ class BudgetTableViewController: UITableViewController {
         }
         cell.budgetProgBar.progress = progress.floatValue
      
+        cell.budgetPic.image = budget.photo
         
         return cell
     }
