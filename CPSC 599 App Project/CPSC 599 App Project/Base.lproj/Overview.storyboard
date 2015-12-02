@@ -40,6 +40,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Pl-Qr-ajO">
+                                <rect key="frame" x="20" y="102" width="560" height="441"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.89411764705882357" green="0.9882352941176471" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cvP-J2-tvv">
                                 <rect key="frame" x="50" y="109" width="500" height="100"/>
                                 <subviews>
@@ -224,12 +229,14 @@
                                     <constraint firstAttribute="width" constant="500" id="fmO-Kd-KXb"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-R5-Swr">
-                                <rect key="frame" x="244" y="71" width="123" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-R5-Swr">
+                                <rect key="frame" x="45" y="68" width="520" height="38"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.27779056740000002" green="0.80030286880000001" blue="0.61709689710000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.31764705882352939" green="0.49803921568627452" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="November"/>
+                                <state key="normal" title="November">
+                                    <color key="titleColor" red="0.96575178439999998" green="1" blue="0.94267466840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <animations/>
@@ -238,10 +245,13 @@
                             <constraint firstItem="GSL-l7-jnx" firstAttribute="top" secondItem="Jkt-yj-6rU" secondAttribute="bottom" constant="45" id="Joz-co-PLW"/>
                             <constraint firstItem="cvP-J2-tvv" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="45" id="RfI-rM-TVe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GSL-l7-jnx" secondAttribute="trailing" constant="25" id="Rsw-Eg-bez"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qC4-R5-Swr" secondAttribute="trailing" constant="15" id="SnQ-L6-IOT"/>
                             <constraint firstItem="Jkt-yj-6rU" firstAttribute="top" secondItem="cvP-J2-tvv" secondAttribute="bottom" constant="28" id="TD6-r3-c9k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cvP-J2-tvv" secondAttribute="trailing" constant="30" id="VUe-cg-lG4"/>
                             <constraint firstItem="cvP-J2-tvv" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="30" id="aPq-eZ-9Hr"/>
                             <constraint firstItem="GSL-l7-jnx" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="35" id="aWN-5g-zEm"/>
+                            <constraint firstItem="qC4-R5-Swr" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="4" id="lUg-eT-3v6"/>
+                            <constraint firstItem="qC4-R5-Swr" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="25" id="q7f-JI-4y9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jkt-yj-6rU" secondAttribute="trailing" constant="30" id="sjc-eF-aYi"/>
                             <constraint firstItem="Jkt-yj-6rU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="30" id="yP0-e5-eD4"/>
                         </constraints>
