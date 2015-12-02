@@ -16,8 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="4hb-JG-28f" customClass="GraphTableViewCell" customModule="Zeal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph" translatesAutoresizingMaskIntoConstraints="NO" id="DpI-6E-CNI">
+                                <rect key="frame" x="13" y="72" width="575" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="575" id="K7O-Uc-N0e"/>
+                                    <constraint firstAttribute="height" constant="226" id="go2-sN-5Ur"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DpI-6E-CNI" firstAttribute="leading" secondItem="4hb-JG-28f" secondAttribute="leadingMargin" constant="-7" id="gIW-uI-9jg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DpI-6E-CNI" secondAttribute="trailing" constant="-8" id="iYe-vK-brv"/>
+                            <constraint firstItem="OR3-DQ-pQ7" firstAttribute="top" secondItem="DpI-6E-CNI" secondAttribute="bottom" constant="253" id="phW-uI-WUw"/>
+                            <constraint firstItem="DpI-6E-CNI" firstAttribute="top" secondItem="WmO-E9-HhM" secondAttribute="bottom" constant="8" id="vwE-zU-HFD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Graph" id="XsW-6O-XVc"/>
                 </viewController>
@@ -210,7 +225,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Shopping" id="GnV-EP-aFk">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="dxD-3o-l8i"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="dxD-3o-l8i">
+                            <connections>
+                                <segue destination="Na7-qW-pAr" kind="presentation" id="8Ca-C4-0OR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uT1-Sh-m6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,7 +403,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="graph" width="1000" height="496"/>
         <image name="pie-chart-7" width="30" height="30"/>
         <image name="uptrend" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Ca-C4-0OR"/>
+    </inferredMetricsTieBreakers>
 </document>
