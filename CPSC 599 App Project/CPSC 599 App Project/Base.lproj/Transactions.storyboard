@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DnL-pF-IFQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DnL-pF-IFQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -147,13 +147,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="in0-Wb-bTv" userLabel="Icon">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="pP1-Xv-gVL"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUQ-iX-wi9">
                                             <rect key="frame" x="108" y="65" width="206" height="21"/>
                                             <animations/>
@@ -178,6 +171,13 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="in0-Wb-bTv" userLabel="Icon">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="pP1-Xv-gVL"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <animations/>
                                     <constraints>
@@ -196,7 +196,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="dateLabel" destination="zUQ-iX-wi9" id="koY-9U-2R8"/>
-                                    <outlet property="imageview" destination="in0-Wb-bTv" id="Cad-MA-bTI"/>
+                                    <outlet property="imageview" destination="in0-Wb-bTv" id="V5J-ja-TE7"/>
                                     <outlet property="priceLabel" destination="1JK-5j-LY2" id="HFH-1S-ghy"/>
                                     <outlet property="titleLabel" destination="lz9-cj-UBa" id="HjK-9X-x4e"/>
                                     <segue destination="eCN-S2-xiM" kind="show" identifier="ShowDetail" id="ag0-IA-KZf"/>
