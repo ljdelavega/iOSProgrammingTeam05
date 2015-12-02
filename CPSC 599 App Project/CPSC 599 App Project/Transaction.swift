@@ -31,6 +31,7 @@ class Transaction: NSObject, NSCoding {
     var date: NSDate
     var type: String
     var repeating: String
+    var photo: UIImage?
     
     
     // MARK: Archiving Paths
@@ -48,6 +49,7 @@ class Transaction: NSObject, NSCoding {
         static let dateKey = "date"
         static let typeKey = "type"
         static let repeatingKey = "repeating"
+        static let photoKey = "photo"
     }
     
     // MARK: Initialization
@@ -93,7 +95,7 @@ class Transaction: NSObject, NSCoding {
         let repeating = aDecoder.decodeObjectForKey(PropertyKey.repeatingKey) as! String
         
         // Because photo is an optional property of Meal, use conditional cast.
-        //let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
+        _ = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
         
         // Must call designated initializer.
         self.init(name: name, amount: amount, desc: desc, date: date, type: type, repeating: repeating)

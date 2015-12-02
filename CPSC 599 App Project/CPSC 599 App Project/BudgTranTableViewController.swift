@@ -28,10 +28,16 @@ class BudgTranTableViewController: UITableViewController {
         
         //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
         let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
-
+        let photo1 = UIImage(named: "shoppingcart")!
+        expense1.photo = photo1
+        
         let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
+        let photo2 = UIImage(named: "shoppingcart")!
+        expense2.photo = photo2
         
         let expense3 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false")!
+        let photo3 = UIImage(named: "shoppingcart")!
+        expense3.photo = photo3
         
         budgTrans += [expense1, expense2, expense3]
 
@@ -81,9 +87,10 @@ class BudgTranTableViewController: UITableViewController {
             
         } else if budgTran.type == "Income"{
             cell.backgroundColor = UIColor(red: 232.0/255.0, green: 253.0/255.0, blue: 245.0/255.0, alpha: 1.0)
-            
             //cell.priceLabel.textColor = UIColor(red: 58.0/255.0, green: 168.0/255.0, blue: 129.0/255.0, alpha: 1.0)
         }
+        
+        cell.budgTransPic.image = budgTran.photo
         return cell
     }
     
