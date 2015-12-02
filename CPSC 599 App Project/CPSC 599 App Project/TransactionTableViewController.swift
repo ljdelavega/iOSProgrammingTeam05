@@ -27,35 +27,35 @@ class TransactionTableViewController: UITableViewController {
     func loadSampleTransactions() {
         
         let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
-        let photo1 = UIImage(named: "dollarsign")!
+        let photo1 = UIImage(named: "entertainment")!
         expense1.photo = photo1
         
         let income1 = Transaction(name: "Paycheque", amount: 480.00, desc: "Part-time job", date: NSDate(), type: "Income", repeating: "false")!
-        let photo2 = UIImage(named: "dollarsign")!
+        let photo2 = UIImage(named: "cash")!
         income1.photo = photo2
         
         let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false")!
-        let photo3 = UIImage(named: "dollarsign")!
+        let photo3 = UIImage(named: "shopping")!
         expense2.photo = photo3
         
         let income2 = Transaction(name: "Allowance", amount: 100.00, desc: "Given by parents", date: NSDate(), type: "Income", repeating: "false")!
-        let photo4 = UIImage(named: "dollarsign")!
+        let photo4 = UIImage(named: "cash")!
         income2.photo = photo4
         
         let expense3 = Transaction(name: "Food", amount: 99.25, desc: "Eating out at restaurants", date: NSDate(), type: "Expense", repeating: "false")!
-        let photo5 = UIImage(named: "dollarsign")!
+        let photo5 = UIImage(named: "food")!
         expense3.photo = photo5
         
         let expense4 = Transaction(name: "Sports", amount: 20.75, desc: "Sporting events", date: NSDate(), type: "Expense", repeating: "false")!
-        let photo6 = UIImage(named: "dollarsign")!
+        let photo6 = UIImage(named: "sports")!
         expense4.photo = photo6
         
         let expense5 = Transaction(name: "Gas", amount: 30.58, desc: "Gas for car", date: NSDate(), type: "Expense", repeating: "false")!
-        let photo7 = UIImage(named: "dollarsign")!
+        let photo7 = UIImage(named: "gas")!
         expense5.photo = photo7
         
         let expense6 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false")!
-        let photo8 = UIImage(named: "dollarsign")!
+        let photo8 = UIImage(named: "groceries")!
         expense6.photo = photo8
         
         transactions += [expense1, income1, expense2, income2, expense3, expense4, expense5, expense6]
