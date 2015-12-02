@@ -81,6 +81,7 @@ class Transaction: NSObject, NSCoding {
         aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
         aCoder.encodeObject(type, forKey: PropertyKey.typeKey)
         aCoder.encodeObject(repeating, forKey: PropertyKey.repeatingKey)
+        aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
