@@ -95,7 +95,7 @@ class Transaction: NSObject, NSCoding {
         let repeating = aDecoder.decodeObjectForKey(PropertyKey.repeatingKey) as! String
         
         // Because photo is an optional property of Meal, use conditional cast.
-        _ = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
+        let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
         
         // Must call designated initializer.
         self.init(name: name, amount: amount, desc: desc, date: date, type: type, repeating: repeating)
