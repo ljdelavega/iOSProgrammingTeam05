@@ -224,6 +224,13 @@
                                     <constraint firstAttribute="width" constant="500" id="fmO-Kd-KXb"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-R5-Swr">
+                                <rect key="frame" x="244" y="71" width="123" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.27779056740000002" green="0.80030286880000001" blue="0.61709689710000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="November"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
