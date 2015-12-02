@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9uB-Wi-eO5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9uB-Wi-eO5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -40,8 +40,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Pl-Qr-ajO">
-                                <rect key="frame" x="20" y="102" width="560" height="441"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pl-Qr-ajO">
+                                <rect key="frame" x="20" y="106" width="560" height="437"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.89411764705882357" green="0.9882352941176471" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -240,16 +240,20 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.98823529409999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="3Pl-Qr-ajO" secondAttribute="bottom" constant="8" symbolic="YES" id="6Jp-pN-Vqb"/>
+                            <constraint firstItem="3Pl-Qr-ajO" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="6vN-OB-THx"/>
                             <constraint firstItem="GSL-l7-jnx" firstAttribute="top" secondItem="Jkt-yj-6rU" secondAttribute="bottom" constant="45" id="Joz-co-PLW"/>
                             <constraint firstItem="cvP-J2-tvv" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="45" id="RfI-rM-TVe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GSL-l7-jnx" secondAttribute="trailing" constant="25" id="Rsw-Eg-bez"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qC4-R5-Swr" secondAttribute="trailing" constant="15" id="SnQ-L6-IOT"/>
                             <constraint firstItem="Jkt-yj-6rU" firstAttribute="top" secondItem="cvP-J2-tvv" secondAttribute="bottom" constant="28" id="TD6-r3-c9k"/>
+                            <constraint firstItem="3Pl-Qr-ajO" firstAttribute="top" secondItem="qC4-R5-Swr" secondAttribute="bottom" id="VNQ-5p-2ql"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cvP-J2-tvv" secondAttribute="trailing" constant="30" id="VUe-cg-lG4"/>
                             <constraint firstItem="cvP-J2-tvv" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="30" id="aPq-eZ-9Hr"/>
                             <constraint firstItem="GSL-l7-jnx" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="35" id="aWN-5g-zEm"/>
+                            <constraint firstItem="3Pl-Qr-ajO" firstAttribute="centerX" secondItem="Jkt-yj-6rU" secondAttribute="centerX" id="cQM-R1-lnM"/>
                             <constraint firstItem="qC4-R5-Swr" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="4" id="lUg-eT-3v6"/>
                             <constraint firstItem="qC4-R5-Swr" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="25" id="q7f-JI-4y9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jkt-yj-6rU" secondAttribute="trailing" constant="30" id="sjc-eF-aYi"/>
