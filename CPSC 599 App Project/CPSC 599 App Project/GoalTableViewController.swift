@@ -99,15 +99,6 @@ class GoalTableViewController: UITableViewController {
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
             
-            // TODO: need to fix this so it doesn't interrupt the segue
-            /*
-            if (goal.primary)
-            {
-                let alert = UIAlertController(title: "Primary Goal", message: "The primary goal has been changed to \(name)", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
-            */
             if (goal.primary)
             {
                 // change all the goals' primary properties to false except the the actual primary goal.
