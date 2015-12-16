@@ -32,6 +32,7 @@ class Transaction: NSObject, NSCoding {
     var type: String
     var repeating: String
     var photo: UIImage?
+    var cat: String
     
     
     // MARK: Archiving Paths
@@ -50,11 +51,12 @@ class Transaction: NSObject, NSCoding {
         static let typeKey = "type"
         static let repeatingKey = "repeating"
         static let photoKey = "photo"
+        static let catKey = "cat"
     }
     
     // MARK: Initialization
     
-    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, type: String, repeating: String) {
+    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, type: String, repeating: String, cat: String) {
         // Initialize stored properties.
         self.name = name
         self.amount = amount
@@ -62,6 +64,7 @@ class Transaction: NSObject, NSCoding {
         self.date = date
         self.type = type
         self.repeating = repeating
+        self.cat = cat
         
         super.init()
         
@@ -82,6 +85,7 @@ class Transaction: NSObject, NSCoding {
         aCoder.encodeObject(type, forKey: PropertyKey.typeKey)
         aCoder.encodeObject(repeating, forKey: PropertyKey.repeatingKey)
         aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
+        aCoder.encodeObject(cat, forKey: PropertyKey.catKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -97,8 +101,11 @@ class Transaction: NSObject, NSCoding {
         
         // Because photo is an optional property of Meal, use conditional cast.
         let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
-        
+        let cat = aDecoder.decodeObjectForKey(PropertyKey.catKey) as! String
         // Must call designated initializer.
-        self.init(name: name, amount: amount, desc: desc, date: date, type: type, repeating: repeating)
+        self.init(name: name, amount: amount, desc: desc, date: date, type: type, repeating: repeating, cat: cat)
+        self.photo = photo
+        
+        
     }
 }

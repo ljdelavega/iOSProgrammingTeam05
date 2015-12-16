@@ -89,6 +89,9 @@
                                     <segment title="Income"/>
                                 </segments>
                             </segmentedControl>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4rj-Pw-G0h">
+                                <rect key="frame" x="128" y="242" width="452" height="58"/>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,6 +121,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="amountTextField" destination="8ti-ny-24g" id="DU6-Qk-DzV"/>
+                        <outlet property="catPicker" destination="4rj-Pw-G0h" id="NZ0-qx-gnl"/>
                         <outlet property="dateTextField" destination="ZsK-Dk-9cu" id="5tZ-3k-vzR"/>
                         <outlet property="descriptionTextField" destination="FUz-ED-wFy" id="k72-Pp-rkq"/>
                         <outlet property="nameTextField" destination="yo7-1B-ozH" id="nfI-WS-VPc"/>

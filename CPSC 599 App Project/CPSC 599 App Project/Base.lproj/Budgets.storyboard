@@ -405,7 +405,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="graph" width="1000" height="496"/>
+        <image name="graph" width="430" height="496"/>
         <image name="pie-chart-7" width="30" height="30"/>
         <image name="uptrend" width="30" height="30"/>
     </resources>

@@ -98,6 +98,7 @@ class Budget: NSObject, NSCoding {
         
         // Must call designated initializer.
         self.init(name: name, amount: amount, remaining: remaining, desc: desc, date: date, repeating: repeating)
+        self.photo = photo
     }
     
 }

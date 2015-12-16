@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class TransactionViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
@@ -16,6 +16,9 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var catPicker: UIPickerView!
+    
+    var catData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,10 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             dateTextField.text = datePrefix
         }
         
+        catPicker.delegate = self
+        catPicker.dataSource = self
+        catData = ["Item 1", "Item 2", "Item 3"]
+        
         checkValidTransaction()
     }
 
@@ -53,6 +60,20 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+    {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return catData.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        return catData[row]
+    }
     
     // MARK: UITextFieldDelegate
     
@@ -121,8 +142,8 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             if(amt == NSDecimalNumber.notANumber()){
                 amt = NSDecimalNumber(int: 0)
             }
-            
-            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: "false")
+
+            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: "false", cat: cat)
         }
     }
 
