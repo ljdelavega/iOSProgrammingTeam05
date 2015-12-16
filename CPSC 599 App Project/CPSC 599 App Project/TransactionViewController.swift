@@ -142,8 +142,10 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             if(amt == NSDecimalNumber.notANumber()){
                 amt = NSDecimalNumber(int: 0)
             }
+            
+            
 
-            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: "false", cat: cat)
+            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: "false")
         }
     }
 
