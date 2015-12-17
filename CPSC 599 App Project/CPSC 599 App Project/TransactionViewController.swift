@@ -70,9 +70,16 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
         return catData.count
     }
     
+    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
         return catData[row]
+    }
+
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        dateTextField.text = catData[row]
     }
     
     // MARK: UITextFieldDelegate
