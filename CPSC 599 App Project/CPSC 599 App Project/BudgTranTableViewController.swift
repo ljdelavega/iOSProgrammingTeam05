@@ -11,6 +11,7 @@ import UIKit
 class BudgTranTableViewController: UITableViewController {
 
     var budgTrans = [Transaction]()
+    var budget: Budget?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class BudgTranTableViewController: UITableViewController {
     func loadSampleBudgTrans() {
         
         //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
-        let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 2")!
+        let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 1")!
         let photo1 = UIImage(named: "shoppingcart")!
         expense1.photo = photo1
         
@@ -35,7 +36,7 @@ class BudgTranTableViewController: UITableViewController {
         let photo2 = UIImage(named: "shoppingcart")!
         expense2.photo = photo2
         
-        let expense3 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 2")!
+        let expense3 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 3")!
         let photo3 = UIImage(named: "shoppingcart")!
         expense3.photo = photo3
         

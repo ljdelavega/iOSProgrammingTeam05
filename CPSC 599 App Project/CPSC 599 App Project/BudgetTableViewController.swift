@@ -11,6 +11,7 @@ import UIKit
 class BudgetTableViewController: UITableViewController {
 
     var budgets = [Budget]()
+    var transactions = [Transaction]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,16 @@ class BudgetTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        loadSampleBudgets()
+        if let savedBudgets = loadBudgets()
+        {
+            budgets += savedBudgets
+        } else {
+            loadSampleBudgets()
+            saveBudgets()
+        }
+        
+        
+        //loadSampleBudgets()
     }
     
     func loadSampleBudgets() {
@@ -84,15 +94,16 @@ class BudgetTableViewController: UITableViewController {
         return cell
     }
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -102,7 +113,7 @@ class BudgetTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.
@@ -119,14 +130,41 @@ class BudgetTableViewController: UITableViewController {
     }
     */
 
-    /*
+    //MARK: - NSCoding
+    func saveBudgets() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(budgets, toFile: Budget.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save transactions...")
+        }
+    }
+    
+    func loadBudgets() -> [Budget]?
+    {
+        
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Transaction.ArchiveURL.path!) as? [Budget]
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetail"
+        {
+            let budgetDetailViewController = segue.destinationViewController as! BudgTranTableViewController
+            
+            //Get cell that generated this segue.
+            if let selectedBudgetCell = sender as? BudgetTableViewCell
+            {
+                let indexPath = tableView.indexPathForCell(selectedBudgetCell)!
+                let selectedBudget = budgets[indexPath.row]
+                budgetDetailViewController.budget = selectedBudget
+            }
+        }
+        
     }
-    */
+    
 
 }
