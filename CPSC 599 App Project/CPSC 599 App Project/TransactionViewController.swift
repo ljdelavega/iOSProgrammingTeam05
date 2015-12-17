@@ -19,6 +19,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var catPicker: UIPickerView!
     
     var catData: [String] = [String]()
+    var savedCatVar: String = "Item 1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,10 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
         dateTextField.delegate = self;
         descriptionTextField.delegate = self;
         // Do any additional setup after loading the view.
+        
+        catPicker.delegate = self
+        catPicker.dataSource = self
+        catData = ["Item 1", "Item 2", "Item 3"]
         
         if let transaction = transaction {
             navigationItem.title = transaction.name
@@ -46,11 +51,23 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             formatter.dateFormat = "yyyy-MM-dd"
             let datePrefix: String = formatter.stringFromDate(transaction.date)
             dateTextField.text = datePrefix
+            
+            //Chnage row for item number (0-2)
+        if(transaction.savedCat == "Item 2")
+        {
+            catPicker.selectRow(1, inComponent: 0, animated: true)
+            savedCatVar = "Item 2"
+        }
+        else if(transaction.savedCat == "Item 3")
+        {
+            catPicker.selectRow(2, inComponent: 0, animated: true)
+            savedCatVar = "Item 3"
+        }
         }
         
-        catPicker.delegate = self
-        catPicker.dataSource = self
-        catData = ["Item 1", "Item 2", "Item 3"]
+        
+        
+        
         
         checkValidTransaction()
     }
@@ -79,7 +96,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        dateTextField.text = catData[row]
+        savedCatVar = catData[row]
     }
     
     // MARK: UITextFieldDelegate
@@ -140,6 +157,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
                 type = "Income"
             }
             
+            let savedCat = savedCatVar
             let name = nameTextField.text ?? ""
             let amount = amountTextField.text
             let date = NSDate()
@@ -152,7 +170,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             
             
 
-            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: "false")
+            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: "false", savedCat: savedCat)
         }
     }
 

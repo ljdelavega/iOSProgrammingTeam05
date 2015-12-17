@@ -32,7 +32,8 @@ class Transaction: NSObject, NSCoding {
     var type: String
     var repeating: String
     var photo: UIImage?
-    var cat: UIPickerView?
+    var selectedCat: UIPickerView?
+    var savedCat: String
     
     
     // MARK: Archiving Paths
@@ -51,12 +52,14 @@ class Transaction: NSObject, NSCoding {
         static let typeKey = "type"
         static let repeatingKey = "repeating"
         static let photoKey = "photo"
-        static let catKey = "cat"
+        static let selCatKey = "selectedCat"
+        static let savCatKey = "savedCat"
     }
     
     // MARK: Initialization
     
-    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, type: String, repeating: String) {
+    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, type: String, repeating: String, savedCat: String)
+    {
         // Initialize stored properties.
         self.name = name
         self.amount = amount
@@ -64,6 +67,7 @@ class Transaction: NSObject, NSCoding {
         self.date = date
         self.type = type
         self.repeating = repeating
+        self.savedCat = savedCat
         
         super.init()
         
@@ -84,7 +88,8 @@ class Transaction: NSObject, NSCoding {
         aCoder.encodeObject(type, forKey: PropertyKey.typeKey)
         aCoder.encodeObject(repeating, forKey: PropertyKey.repeatingKey)
         aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
-        aCoder.encodeObject(cat, forKey: PropertyKey.catKey)
+        aCoder.encodeObject(savedCat, forKey: PropertyKey.savCatKey)
+        aCoder.encodeObject(selectedCat, forKey: PropertyKey.selCatKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -97,14 +102,17 @@ class Transaction: NSObject, NSCoding {
         let type = aDecoder.decodeObjectForKey(PropertyKey.typeKey) as! String
         
         let repeating = aDecoder.decodeObjectForKey(PropertyKey.repeatingKey) as! String
+        let savedCat = aDecoder.decodeObjectForKey(PropertyKey.savCatKey) as! String
         
         // Because photo is an optional property of Meal, use conditional cast.
         let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
-        let cat = aDecoder.decodeObjectForKey(PropertyKey.catKey) as? UIPickerView
-        // Must call designated initializer.
-        self.init(name: name, amount: amount, desc: desc, date: date, type: type, repeating: repeating)
-        self.photo = photo
-        self.cat = cat
         
+        let selectedCat = aDecoder.decodeObjectForKey(PropertyKey.selCatKey) as? UIPickerView
+        
+        
+        // Must call designated initializer.
+        self.init(name: name, amount: amount, desc: desc, date: date, type: type, repeating: repeating, savedCat: savedCat)
+        self.photo = photo
+        self.selectedCat = selectedCat
     }
 }

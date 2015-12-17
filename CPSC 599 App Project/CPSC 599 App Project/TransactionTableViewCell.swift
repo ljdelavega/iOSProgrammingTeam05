@@ -14,6 +14,8 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageview: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
