@@ -19,7 +19,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var catPicker: UIPickerView!
     
     var catData: [String] = [String]()
-    var savedCatVar: String = "Item 1"
+    var savedCatVar: String = "Total"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         catPicker.delegate = self
         catPicker.dataSource = self
-        catData = ["Item 1", "Item 2", "Item 3"]
+        catData = ["Total", "Shopping", "Other"]
         
         if let transaction = transaction {
             navigationItem.title = transaction.name
@@ -53,15 +53,15 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             dateTextField.text = datePrefix
             
             //Chnage row for item number (0-2)
-        if(transaction.savedCat == "Item 2")
+        if(transaction.category == "Shopping")
         {
             catPicker.selectRow(1, inComponent: 0, animated: true)
-            savedCatVar = "Item 2"
+            savedCatVar = "Shopping"
         }
-        else if(transaction.savedCat == "Item 3")
+        else if(transaction.category == "Other")
         {
             catPicker.selectRow(2, inComponent: 0, animated: true)
-            savedCatVar = "Item 3"
+            savedCatVar = "Other"
         }
         }
         
