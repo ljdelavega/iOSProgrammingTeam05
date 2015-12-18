@@ -82,7 +82,7 @@ class OverviewChartViewController: UIViewController, ChartViewDelegate {
         let expense6 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false", photo:  photo8, savedCat: "Other")!
         expense6.photo = photo8
         
-        transactions += [expense1, expense2, expense3, expense4, expense5, expense6]
+        expenses += [expense1, expense2, expense3, expense4, expense5, expense6]
     }
     
     func setupChart() {
@@ -111,8 +111,8 @@ class OverviewChartViewController: UIViewController, ChartViewDelegate {
         for var i = 0; i < expenses.count; i++ {
             let expense = expenses[i]
             //CHANGE IF WE IMPLEMENT CATEGORIES
-            if(!categories.contains(expense.name)){
-                categories.append(expense.name)
+            if(!categories.contains(expense.category)){
+                categories.append(expense.category)
             }
         }
         let count = categories.count
