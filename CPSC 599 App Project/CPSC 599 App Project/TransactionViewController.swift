@@ -37,7 +37,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
         if let transaction = transaction {
             navigationItem.title = transaction.name
             nameTextField.text = transaction.name
-            amountTextField.text = transaction.amount.asLocaleCurrency
+            amountTextField.text = String(transaction.amount)
             descriptionTextField.text = transaction.desc
             
             if(transaction.type == "Expense") {
@@ -159,11 +159,13 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             
             let savedCat = savedCatVar
             let name = nameTextField.text ?? ""
-            let amount = amountTextField.text
+            let amount = amountTextField.text ?? ""
             let date = NSDate()
             let description = descriptionTextField.text ?? ""
             
+            
             var amt = NSDecimalNumber(string: amount)
+            
             if(amt == NSDecimalNumber.notANumber()){
                 amt = NSDecimalNumber(int: 0)
             }
