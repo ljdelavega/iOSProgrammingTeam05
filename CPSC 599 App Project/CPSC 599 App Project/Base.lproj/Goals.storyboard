@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8gW-Sg-X7X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gW0-q1-u9a">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Primary Goal Navigation Controller-->
+        <scene sceneID="yy5-AW-fDv">
+            <objects>
+                <navigationController id="gW0-q1-u9a" userLabel="Primary Goal Navigation Controller" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yln-kH-cnh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.67450980392156867" green="0.8784313725490196" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8gW-Sg-X7X" kind="relationship" relationship="rootViewController" id="qpv-SQ-yUC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ag-aB-sc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="912"/>
+        </scene>
         <!--Primary Goal-->
         <scene sceneID="DkU-Sq-awA">
             <objects>
@@ -17,27 +34,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYz-8Z-kHX">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Drm-VC-x7C"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.70588235290000001" green="0.89019607840000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Primary Goal" id="nkG-ix-xiR">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="dKy-ED-oPm"/>
-                                        <barButtonItem key="rightBarButtonItem" image="layout-arrange-10-7" id="ldU-1m-hU8">
-                                            <connections>
-                                                <segue destination="ORa-A9-utl" kind="presentation" id="bJ0-Xi-Y1C"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Goal Title" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SoZ-q7-cms">
                                 <rect key="frame" x="20" y="64" width="560" height="42"/>
                                 <animations/>
@@ -87,27 +83,35 @@
                         <constraints>
                             <constraint firstItem="VqB-64-X6S" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leadingMargin" constant="130" id="0Za-lC-WXi"/>
                             <constraint firstItem="RFZ-O8-o2t" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leadingMargin" id="3OS-1t-GU7"/>
-                            <constraint firstItem="zo6-se-nB3" firstAttribute="leading" secondItem="OYz-8Z-kHX" secondAttribute="leading" id="4JQ-OF-RTM"/>
-                            <constraint firstItem="SoZ-q7-cms" firstAttribute="top" secondItem="OYz-8Z-kHX" secondAttribute="bottom" id="4pO-Tj-APs"/>
+                            <constraint firstItem="zo6-se-nB3" firstAttribute="centerX" secondItem="SoZ-q7-cms" secondAttribute="centerX" id="3kr-rV-hoS"/>
                             <constraint firstItem="tzW-d4-1hd" firstAttribute="top" secondItem="VqB-64-X6S" secondAttribute="bottom" constant="8" symbolic="YES" id="4yb-cs-4Ca"/>
-                            <constraint firstItem="OYz-8Z-kHX" firstAttribute="top" secondItem="lYd-xK-Tcm" secondAttribute="bottom" id="6zK-jX-t0H"/>
                             <constraint firstItem="zo6-se-nB3" firstAttribute="top" secondItem="Tn9-dH-6sh" secondAttribute="top" id="ANF-iE-J89"/>
-                            <constraint firstItem="OYz-8Z-kHX" firstAttribute="centerX" secondItem="SoZ-q7-cms" secondAttribute="centerX" id="Bm4-aA-zPV"/>
                             <constraint firstItem="VqB-64-X6S" firstAttribute="top" secondItem="RFZ-O8-o2t" secondAttribute="bottom" constant="8" symbolic="YES" id="Mrj-g7-p5L"/>
+                            <constraint firstAttribute="trailing" secondItem="zo6-se-nB3" secondAttribute="trailing" id="N3r-jI-kFJ"/>
+                            <constraint firstItem="lYd-xK-Tcm" firstAttribute="top" secondItem="zo6-se-nB3" secondAttribute="bottom" constant="44" id="P2r-Hb-dd7"/>
                             <constraint firstItem="SoZ-q7-cms" firstAttribute="leading" secondItem="RFZ-O8-o2t" secondAttribute="leading" id="TJC-rN-Hn1"/>
                             <constraint firstItem="VqB-64-X6S" firstAttribute="centerX" secondItem="RFZ-O8-o2t" secondAttribute="centerX" id="UcX-DK-xvC"/>
                             <constraint firstItem="RFZ-O8-o2t" firstAttribute="top" secondItem="SoZ-q7-cms" secondAttribute="bottom" constant="8" symbolic="YES" id="XiJ-Ib-oFm"/>
-                            <constraint firstItem="RFZ-O8-o2t" firstAttribute="top" secondItem="OYz-8Z-kHX" secondAttribute="bottom" constant="50" id="fcs-Ga-8EA"/>
-                            <constraint firstItem="OYz-8Z-kHX" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leading" id="fko-PS-a5j"/>
+                            <constraint firstItem="SoZ-q7-cms" firstAttribute="top" secondItem="lYd-xK-Tcm" secondAttribute="bottom" id="aCu-fm-VEg"/>
                             <constraint firstItem="tnz-pb-fhO" firstAttribute="top" secondItem="tzW-d4-1hd" secondAttribute="bottom" constant="8" symbolic="YES" id="fmM-hK-jzh"/>
-                            <constraint firstItem="zo6-se-nB3" firstAttribute="bottom" secondItem="OYz-8Z-kHX" secondAttribute="top" id="mjn-X5-y2d"/>
-                            <constraint firstAttribute="trailing" secondItem="OYz-8Z-kHX" secondAttribute="trailing" id="pEm-b9-tur"/>
+                            <constraint firstItem="zo6-se-nB3" firstAttribute="leading" secondItem="Tn9-dH-6sh" secondAttribute="leading" id="kea-kX-aIw"/>
                             <constraint firstItem="VqB-64-X6S" firstAttribute="centerX" secondItem="tzW-d4-1hd" secondAttribute="centerX" id="qcn-V7-cY5"/>
-                            <constraint firstItem="zo6-se-nB3" firstAttribute="trailing" secondItem="OYz-8Z-kHX" secondAttribute="trailing" id="r6x-nq-ocd"/>
                             <constraint firstItem="RFZ-O8-o2t" firstAttribute="trailing" secondItem="SoZ-q7-cms" secondAttribute="trailing" id="zeK-QZ-QDP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Goals" image="trophy-7" id="V3v-6e-rgs" userLabel="Goals"/>
+                    <navigationItem key="navigationItem" id="F7G-II-IkN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="dKy-ED-oPm" userLabel="Edit Button">
+                            <connections>
+                                <segue destination="vk1-6R-oOQ" kind="show" identifier="ShowDetail" id="Kqi-B2-vLR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="layout-arrange-10-7" id="ldU-1m-hU8" userLabel="List Button">
+                            <connections>
+                                <segue destination="ORa-A9-utl" kind="presentation" id="bJ0-Xi-Y1C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contributeButton" destination="tzW-d4-1hd" id="QVb-7A-jyS"/>
@@ -263,7 +267,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Sl-H7-qfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="1632"/>
+            <point key="canvasLocation" x="814" y="1644"/>
         </scene>
         <!--Goal Details-->
         <scene sceneID="RBY-DK-OX2">
@@ -314,7 +318,7 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OEp-i9-4ri">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OEp-i9-4ri">
                                 <rect key="frame" x="20" y="219" width="560" height="329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up8-jH-SW6">
@@ -380,30 +384,30 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hzm-sj-XL1">
-                                <rect key="frame" x="118" y="72" width="462" height="139"/>
+                                <rect key="frame" x="118" y="72" width="462" height="134"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter goal name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y40-ha-qyX">
-                                        <rect key="frame" x="0.0" y="0.0" width="462" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter goal name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y40-ha-qyX">
+                                        <rect key="frame" x="0.0" y="0.0" width="462" height="0.0"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cost of the goal..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDo-J1-ddf">
-                                        <rect key="frame" x="0.0" y="40" width="462" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cost of the goal..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDo-J1-ddf">
+                                        <rect key="frame" x="0.0" y="10" width="462" height="24"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Enter remainder to be paid..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-Mq-Iq0" userLabel="Contributed Text Field">
-                                        <rect key="frame" x="0.0" y="80" width="462" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Enter remainder to be paid..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-Mq-Iq0" userLabel="Contributed Text Field">
+                                        <rect key="frame" x="0.0" y="44" width="462" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOT-3b-7WY">
-                                        <rect key="frame" x="0.0" y="120" width="462" height="19"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOT-3b-7WY">
+                                        <rect key="frame" x="0.0" y="84" width="462" height="50"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -436,7 +440,8 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="dk6-lc-hXt">
                             <connections>
-                                <segue destination="tFw-DO-hgU" kind="unwind" unwindAction="unwindToGoalList:" id="H8U-qP-1I2"/>
+                                <action selector="save:" destination="vk1-6R-oOQ" id="pNa-53-iGn"/>
+                                <segue destination="tFw-DO-hgU" kind="unwind" unwindAction="unwindToGoalList:" id="E6v-Mp-Tbr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -447,7 +452,8 @@
                         <outlet property="nameTextField" destination="y40-ha-qyX" id="kSi-Ok-pfF"/>
                         <outlet property="photoImageView" destination="11O-8t-GmN" id="9jk-e5-UIT"/>
                         <outlet property="primaryCheck" destination="gog-Ln-9IF" id="gJY-O8-U5S"/>
-                        <outlet property="saveButton" destination="dk6-lc-hXt" id="yWU-2c-uMN"/>
+                        <outlet property="saveButton" destination="dk6-lc-hXt" id="CCd-HD-DTR"/>
+                        <segue destination="tFw-DO-hgU" kind="unwind" identifier="unwindToPrimaryGoal" unwindAction="unwindToPrimaryGoal:" id="mqr-Sq-cid"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Odw-yf-a0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -489,6 +495,6 @@
         <image name="trophy-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="48Z-hC-161"/>
+        <segue reference="Kqi-B2-vLR"/>
     </inferredMetricsTieBreakers>
 </document>
