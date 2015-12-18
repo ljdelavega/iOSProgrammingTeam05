@@ -30,38 +30,36 @@ class BudgetTableViewController: UITableViewController {
             saveBudgets()
         }
         
-        
-        //loadSampleBudgets()
+        tableView.reloadData()
     }
     
     func loadSampleBudgets()
     {
-        //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
-        let budget1 = Budget(name: "Total", amount: 600.00, remaining: 294.00, desc: "Total Budget", date: NSDate(), repeating: false)!
+        let budget1 = Budget(name: "Total", amount: 600.00, remaining: 294.00, desc: "Total Budget", date: NSDate())!
         let photo1 = UIImage(named: "dollarsign")!
         budget1.photo = photo1
         
-        let budget2 = Budget(name: "Paycheque", amount: 100.00, remaining: 45.5, desc: "Paycheque Budget", date: NSDate(), repeating: false)!
+        let budget2 = Budget(name: "Paycheque", amount: 100.00, remaining: 45.5, desc: "Paycheque Budget", date: NSDate())!
         let photo2 = UIImage(named: "shoppingcart")!
         budget2.photo = photo2
         
-        let budget3 = Budget(name: "Education", amount: 100.00, remaining: 45.5, desc: "Education Budget", date: NSDate(), repeating: false)!
+        let budget3 = Budget(name: "Education", amount: 100.00, remaining: 45.5, desc: "Education Budget", date: NSDate())!
         let photo3 = UIImage(named: "shoppingcart")!
         budget3.photo = photo3
         
-        let budget4 = Budget(name: "Food", amount: 100.00, remaining: 45.5, desc: "Food Budget", date: NSDate(), repeating: false)!
+        let budget4 = Budget(name: "Food", amount: 100.00, remaining: 45.5, desc: "Food Budget", date: NSDate())!
         let photo4 = UIImage(named: "shoppingcart")!
         budget4.photo = photo4
         
-        let budget5 = Budget(name: "Utilities", amount: 100.00, remaining: 45.5, desc: "Utilities Budget", date: NSDate(), repeating: false)!
+        let budget5 = Budget(name: "Utilities", amount: 100.00, remaining: 45.5, desc: "Utilities Budget", date: NSDate())!
         let photo5 = UIImage(named: "shoppingcart")!
         budget5.photo = photo5
         
-        let budget6 = Budget(name: "Shopping", amount: 100.00, remaining: 45.5, desc: "Shopping Budget", date: NSDate(), repeating: false)!
+        let budget6 = Budget(name: "Shopping", amount: 100.00, remaining: 45.5, desc: "Shopping Budget", date: NSDate())!
         let photo6 = UIImage(named: "shoppingcart")!
         budget6.photo = photo6
         
-        let budget7 = Budget(name: "Other", amount: 100.00, remaining: 45.5, desc: "Other Budget", date: NSDate(), repeating: false)!
+        let budget7 = Budget(name: "Other", amount: 100.00, remaining: 45.5, desc: "Other Budget", date: NSDate())!
         let photo7 = UIImage(named: "shoppingcart")!
         budget7.photo = photo7
         
@@ -99,6 +97,7 @@ class BudgetTableViewController: UITableViewController {
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
         }
+		saveBudgets()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -172,7 +171,7 @@ class BudgetTableViewController: UITableViewController {
     func loadBudgets() -> [Budget]?
     {
         
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Transaction.ArchiveURL.path!) as? [Budget]
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Budget.ArchiveURL.path!) as? [Budget]
     }
     
     
@@ -194,7 +193,7 @@ class BudgetTableViewController: UITableViewController {
                 budgetDetailViewController.budget = selectedBudget
             }
         }
-        
+        saveBudgets()
         self.tableView.reloadData()        
     }
     

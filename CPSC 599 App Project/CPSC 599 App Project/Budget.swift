@@ -30,7 +30,6 @@ class Budget: NSObject, NSCoding {
     var remaining: NSDecimalNumber
     var desc: String
     var date: NSDate
-    var repeating: Bool
     var photo: UIImage?
     
     
@@ -48,20 +47,18 @@ class Budget: NSObject, NSCoding {
         static let remainingKey = "remaining"
         static let descKey = "desc"
         static let dateKey = "date"
-        static let repeatingKey = "repeating"
         static let photoKey = "photo"
     }
     
     // MARK: Initialization
     //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
-    init?(name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool) {
+    init?(name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate) {
         // Initialize stored properties.
         self.name = name
         self.amount = amount
         self.remaining = remaining
         self.desc = desc
         self.date = date
-        self.repeating = repeating
         
         super.init()
         
@@ -80,7 +77,7 @@ class Budget: NSObject, NSCoding {
         aCoder.encodeObject(remaining, forKey: PropertyKey.remainingKey)
         aCoder.encodeObject(desc, forKey: PropertyKey.descKey)
         aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
-        aCoder.encodeObject(repeating, forKey: PropertyKey.repeatingKey)
+		aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -91,13 +88,11 @@ class Budget: NSObject, NSCoding {
         let desc = aDecoder.decodeObjectForKey(PropertyKey.descKey) as! String
         let date = aDecoder.decodeObjectForKey(PropertyKey.dateKey) as! NSDate
         
-        let repeating = aDecoder.decodeBoolForKey(PropertyKey.repeatingKey)
-        
         // Because photo is an optional property of Meal, use conditional cast.
         let photo = aDecoder.decodeObjectForKey(PropertyKey.photoKey) as? UIImage
         
         // Must call designated initializer.
-        self.init(name: name, amount: amount, remaining: remaining, desc: desc, date: date, repeating: repeating)
+        self.init(name: name, amount: amount, remaining: remaining, desc: desc, date: date)
         self.photo = photo
     }
     

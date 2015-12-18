@@ -37,11 +37,11 @@ class TransactionTableViewController: UITableViewController {
         income1.photo = photo2
 
         let photo3 = UIImage(named: "shopping")!
-        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false",photo: photo3, savedCat: "Total")!
+        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false",photo: photo3, savedCat: "Shopping")!
         expense2.photo = photo3
         
         let photo4 = UIImage(named: "cash")!
-        let income2 = Transaction(name: "Allowance", amount: 100.00, desc: "Given by parents", date: NSDate(), type: "Income", repeating: "false", photo: photo4, savedCat: "Total")!
+        let income2 = Transaction(name: "Allowance", amount: 100.00, desc: "Given by parents", date: NSDate(), type: "Income", repeating: "false", photo: photo4, savedCat: "Other")!
         income2.photo = photo4
         
         let photo5 = UIImage(named: "food")!

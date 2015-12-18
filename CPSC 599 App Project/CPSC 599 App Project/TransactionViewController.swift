@@ -33,7 +33,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         catPicker.delegate = self
         catPicker.dataSource = self
-        catData = ["Total", "Paycheque", "Education", "Food", "Utilities", "Shopping", "Other"]
+        catData = ["Paycheque", "Education", "Food", "Utilities", "Shopping", "Other"]
         
         if let transaction = transaction {
             navigationItem.title = transaction.name
