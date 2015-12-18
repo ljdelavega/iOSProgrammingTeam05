@@ -21,22 +21,49 @@ class BudgTranTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+       
+        if let savedTransactions = loadTransactions()
+        {
+            budgTrans += savedTransactions
+        } else {
+            //loadSampleBudgets()
+            loadSampleBudgTrans()
+            //saveTransactions()
+        }
+        //loadSampleBudgTrans()
         
-        loadSampleBudgTrans()
+        if (budget?.name)! == "Total"
+        {
+            //don't filter just return everything
+        }
+        else
+        {
+            // Filter the results by category
+            let filteredTrans = budgTrans.filter() {
+                if let category = ($0 as Transaction).category as String! {
+                    return category.containsString((budget?.name)!)
+                }
+                else
+                {
+                    return false
+                }
+            }
+            budgTrans = filteredTrans
+        }
     }
 
     func loadSampleBudgTrans() {
         
         //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
-        let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 1")!
+        let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Other")!
         let photo1 = UIImage(named: "shoppingcart")!
         expense1.photo = photo1
         
-        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 2")!
+        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Shopping")!
         let photo2 = UIImage(named: "shoppingcart")!
         expense2.photo = photo2
         
-        let expense3 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 3")!
+        let expense3 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Shopping")!
         let photo3 = UIImage(named: "shoppingcart")!
         expense3.photo = photo3
         
@@ -64,7 +91,7 @@ class BudgTranTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+       
         let cellIdentifier = "BudgTranTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! BudgTranTableViewCell
         let budgTran = budgTrans[indexPath.row]
@@ -92,6 +119,7 @@ class BudgTranTableViewController: UITableViewController {
         }
         
         cell.budgTransPic.image = budgTran.photo
+        
         return cell
     }
     
@@ -130,7 +158,13 @@ class BudgTranTableViewController: UITableViewController {
         return true
     }
     */
-
+    
+    func loadTransactions() -> [Transaction]?
+    {
+        
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Transaction.ArchiveURL.path!) as? [Transaction]
+    }
+    
     /*
     // MARK: - Navigation
 

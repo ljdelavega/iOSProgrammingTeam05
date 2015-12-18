@@ -128,7 +128,7 @@
                                     <outlet property="budgetNameLbl" destination="0hX-s1-Mur" id="VpS-Yh-QLK"/>
                                     <outlet property="budgetPic" destination="b7B-Pp-LeM" id="vv7-Gs-zjh"/>
                                     <outlet property="budgetProgBar" destination="mPU-o4-UAl" id="f1M-aD-IPY"/>
-                                    <segue destination="Y6z-q4-bUx" kind="show" id="wr7-uU-Q7J"/>
+                                    <segue destination="Y6z-q4-bUx" kind="show" identifier="ShowDetail" id="wr7-uU-Q7J"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="146" y="-368"/>
         </scene>
-        <!--Shopping-->
+        <!--BudgTrans-->
         <scene sceneID="ts9-zN-3Zu">
             <objects>
-                <tableViewController id="Y6z-q4-bUx" customClass="BudgTranTableViewController" customModule="Zeal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Y6z-q4-bUx" userLabel="BudgTrans" customClass="BudgTranTableViewController" customModule="Zeal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" id="h1M-gn-XoR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

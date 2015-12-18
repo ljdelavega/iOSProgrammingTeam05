@@ -33,7 +33,7 @@ class Transaction: NSObject, NSCoding {
     var repeating: String
     var photo: UIImage?
     var selectedCat: UIPickerView?
-    var savedCat: String
+    var category: String
     
     
     // MARK: Archiving Paths
@@ -67,7 +67,7 @@ class Transaction: NSObject, NSCoding {
         self.date = date
         self.type = type
         self.repeating = repeating
-        self.savedCat = savedCat
+        self.category = savedCat
         
         super.init()
         
@@ -88,7 +88,7 @@ class Transaction: NSObject, NSCoding {
         aCoder.encodeObject(type, forKey: PropertyKey.typeKey)
         aCoder.encodeObject(repeating, forKey: PropertyKey.repeatingKey)
         aCoder.encodeObject(photo, forKey: PropertyKey.photoKey)
-        aCoder.encodeObject(savedCat, forKey: PropertyKey.savCatKey)
+        aCoder.encodeObject(category, forKey: PropertyKey.savCatKey)
         aCoder.encodeObject(selectedCat, forKey: PropertyKey.selCatKey)
     }
     
