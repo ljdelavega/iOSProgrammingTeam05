@@ -32,7 +32,7 @@ class GoalTableViewController: UITableViewController {
     
     func loadSampleGoals() {
 
-        let goal1 = Goal(name: "Trip to Niagara Falls", amount: 1000, contributed: 0, desc: "Plane ticket to Ontario. Hotel Accomodations", primary: true)!
+        let goal1 = Goal(name: "Trip to Niagara Falls", amount: 1000, contributed: 0, desc: "Plane ticket to Ontario. Hotel Accomodations", primary: false)!
         let photo1 = UIImage(named: "defaultPhoto")!
         goal1.photo = photo1
         
@@ -40,11 +40,11 @@ class GoalTableViewController: UITableViewController {
         let photo2 = UIImage(named: "MacBook")!
         goal2.photo = photo2
         
-        let goal3 = Goal(name: "Student Loans", amount: 20000, contributed: 0, desc: "Paying off student loans for University of Calgary tuition.", primary: false)!
+        let goal3 = Goal(name: "Student Loans", amount: 20000, contributed: 0, desc: "Paying off student loans for University of Calgary tuition.", primary: true)!
         let photo3 = UIImage(named: "UofC")!
         goal3.photo = photo3
         
-        goals += [goal1, goal2, goal3]
+        goals += [goal3, goal2, goal1]
         
     }
 

@@ -51,19 +51,38 @@ class OverviewViewController: UIViewController, UITextFieldDelegate{
             calculateTotal()
         }
         
-        //load goals
-        if let savedGoals = loadGoals() {
-            goals = savedGoals
-            loadPrimaryGoal()
-            
-        } else {
-            // Load the sample data.
-        }
-    }
-    
-    
+		// Load any saved goals, otherwise load sample data.
+		if let savedGoals = loadGoals() {
+			goals += savedGoals
+		} else {
+			// Load the sample data.
+			loadSampleGoals()
+		}
+		// load the primary goal.
+		loadPrimaryGoal()
+	}
+	
+	func loadSampleGoals() {
+		
+		let goal1 = Goal(name: "Trip to Niagara Falls", amount: 1000, contributed: 0, desc: "Plane ticket to Ontario. Hotel Accomodations", primary: false)!
+		let photo1 = UIImage(named: "defaultPhoto")!
+		goal1.photo = photo1
+		
+		let goal2 = Goal(name: "New MacBook", amount: 1500, contributed: 0, desc: "A new MacBook Pro from the Apple store.", primary: false)!
+		let photo2 = UIImage(named: "MacBook")!
+		goal2.photo = photo2
+		
+		let goal3 = Goal(name: "Student Loans", amount: 20000, contributed: 0, desc: "Paying off student loans for University of Calgary tuition.", primary: true)!
+		let photo3 = UIImage(named: "UofC")!
+		goal3.photo = photo3
+		
+		goals += [goal3, goal2, goal1]
+		
+	}
+	
+	
     func loadSampleTransactions() {
-        
+		
         let photo1 = UIImage(named: "entertainment")!
         let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", photo: photo1, savedCat: "Shopping")!
         expense1.photo = photo1
