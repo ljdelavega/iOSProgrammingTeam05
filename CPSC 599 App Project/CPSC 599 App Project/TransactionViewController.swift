@@ -20,6 +20,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     var catData: [String] = [String]()
     var savedCatVar: String = "Total"
+    var photoVar: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             nameTextField.text = transaction.name
             amountTextField.text = String(transaction.amount)
             descriptionTextField.text = transaction.desc
-            
+            photoVar = transaction.photo
             if(transaction.type == "Expense") {
                 segmentControl.selectedSegmentIndex = 0
             }
@@ -163,7 +164,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             let date = NSDate()
             let description = descriptionTextField.text ?? ""
             
-            
+            let photo = photoVar
             var amt = NSDecimalNumber(string: amount)
             
             if(amt == NSDecimalNumber.notANumber()){
@@ -172,7 +173,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             
             
 
-            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: "false", savedCat: savedCat)
+            transaction = Transaction(name: name, amount: amt, desc: description, date: date, type: type, repeating: "false", photo: photo, savedCat: savedCat)
         }
     }
 

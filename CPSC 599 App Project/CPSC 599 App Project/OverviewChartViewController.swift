@@ -49,19 +49,40 @@ class OverviewChartViewController: UIViewController, ChartViewDelegate {
     }
     
     func loadSampleTransactions() {
-        let expense1 = Transaction(name: "Gifts", amount: 45.25, desc: "Gifts for Christmas", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 2")!
+        let photo1 = UIImage(named: "entertainment")!
+        let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", photo: photo1, savedCat: "Shopping")!
+        expense1.photo = photo1
         
-        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Shopping for clothes, electronics, etc.", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 2")!
+        let photo2 = UIImage(named: "cash")!
+        let income1 = Transaction(name: "Paycheque", amount: 480.00, desc: "Part-time job", date: NSDate(), type: "Income", repeating: "false",photo: photo2, savedCat: "Shopping")!
+        income1.photo = photo2
         
-        let expense3 = Transaction(name: "Food", amount: 99.25, desc: "Eating out at restaurants / fast food", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 2")!
+        let photo3 = UIImage(named: "shopping")!
+        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false",photo: photo3, savedCat: "Total")!
+        expense2.photo = photo3
         
-        let expense4 = Transaction(name: "Entertainment", amount: 20.75, desc: "Going out for fun, watching movies, etc.", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 2")!
+        let photo4 = UIImage(named: "cash")!
+        let income2 = Transaction(name: "Allowance", amount: 100.00, desc: "Given by parents", date: NSDate(), type: "Income", repeating: "false", photo: photo4, savedCat: "Total")!
+        income2.photo = photo4
         
-        let expense5 = Transaction(name: "Gas", amount: 30.58, desc: "Gas for car", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 2")!
+        let photo5 = UIImage(named: "food")!
+        let expense3 = Transaction(name: "Food", amount: 99.25, desc: "Eating out at restaurants", date: NSDate(), type: "Expense", repeating: "false",photo: photo5, savedCat: "Other")!
+        expense3.photo = photo5
         
-        let expense6 = Transaction(name: "Groceries", amount: 300, desc: "Buying groceries from the grocery store.", date: NSDate(), type: "Expense", repeating: "false", savedCat: "Item 2")!
+        let photo6 = UIImage(named: "sports")!
+        let expense4 = Transaction(name: "Sports", amount: 20.75, desc: "Sporting events", date: NSDate(), type: "Expense", repeating: "false", photo: photo6, savedCat: "Other")!
+        expense4.photo = photo6
         
-        expenses += [expense1, expense2, expense3, expense4, expense5, expense6]
+        
+        let photo7 = UIImage(named: "gas")!
+        let expense5 = Transaction(name: "Gas", amount: 30.58, desc: "Gas for car", date: NSDate(), type: "Expense", repeating: "false", photo:  photo7, savedCat: "Other")!
+        expense5.photo = photo7
+        
+        let photo8 = UIImage(named: "groceries")!
+        let expense6 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false", photo:  photo8, savedCat: "Other")!
+        expense6.photo = photo8
+        
+        transactions += [expense1, expense2, expense3, expense4, expense5, expense6]
     }
     
     func setupChart() {
