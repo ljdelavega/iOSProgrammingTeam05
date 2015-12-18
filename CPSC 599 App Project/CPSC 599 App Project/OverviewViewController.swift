@@ -47,7 +47,8 @@ class OverviewViewController: UIViewController, UITextFieldDelegate{
             calculateTotal()
             
         } else {
-            
+            loadSampleTransactions()
+            calculateTotal()
         }
         
         //load goals
@@ -59,6 +60,46 @@ class OverviewViewController: UIViewController, UITextFieldDelegate{
             // Load the sample data.
         }
     }
+    
+    
+    func loadSampleTransactions() {
+        
+        let photo1 = UIImage(named: "entertainment")!
+        let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", photo: photo1, savedCat: "Shopping")!
+        expense1.photo = photo1
+        
+        let photo2 = UIImage(named: "cash")!
+        let income1 = Transaction(name: "Paycheque", amount: 480.00, desc: "Part-time job", date: NSDate(), type: "Income", repeating: "false",photo: photo2, savedCat: "Shopping")!
+        income1.photo = photo2
+        
+        let photo3 = UIImage(named: "shopping")!
+        let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false",photo: photo3, savedCat: "Total")!
+        expense2.photo = photo3
+        
+        let photo4 = UIImage(named: "cash")!
+        let income2 = Transaction(name: "Allowance", amount: 100.00, desc: "Given by parents", date: NSDate(), type: "Income", repeating: "false", photo: photo4, savedCat: "Total")!
+        income2.photo = photo4
+        
+        let photo5 = UIImage(named: "food")!
+        let expense3 = Transaction(name: "Food", amount: 99.25, desc: "Eating out at restaurants", date: NSDate(), type: "Expense", repeating: "false",photo: photo5, savedCat: "Other")!
+        expense3.photo = photo5
+        
+        let photo6 = UIImage(named: "sports")!
+        let expense4 = Transaction(name: "Sports", amount: 20.75, desc: "Sporting events", date: NSDate(), type: "Expense", repeating: "false", photo: photo6, savedCat: "Other")!
+        expense4.photo = photo6
+        
+        
+        let photo7 = UIImage(named: "gas")!
+        let expense5 = Transaction(name: "Gas", amount: 30.58, desc: "Gas for car", date: NSDate(), type: "Expense", repeating: "false", photo:  photo7, savedCat: "Other")!
+        expense5.photo = photo7
+        
+        let photo8 = UIImage(named: "groceries")!
+        let expense6 = Transaction(name: "Groceries", amount: 300, desc: "Grocery shopping", date: NSDate(), type: "Expense", repeating: "false", photo:  photo8, savedCat: "Other")!
+        expense6.photo = photo8
+        
+        transactions += [expense1, income1, expense2, income2, expense3, expense4, expense5, expense6]
+    }
+
     
     
     //calculates and fills in the overview (top part with income, expense, and total)
