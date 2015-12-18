@@ -12,7 +12,7 @@ class BudgTranTableViewController: UITableViewController {
 
     var budgTrans = [Transaction]()
     var budget: Budget?
-    var expenses = 0
+    var expenses = 0.0
     
     
     override func viewDidLoad() {
@@ -65,7 +65,7 @@ class BudgTranTableViewController: UITableViewController {
            
             if(budgTrans[i].type == "Expense")
             {
-                expenses += Int(budgTrans[i].amount)
+                expenses += Double(budgTrans[i].amount)
             }
         }
         
