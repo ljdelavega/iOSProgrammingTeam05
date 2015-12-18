@@ -12,6 +12,8 @@ class BudgTranTableViewController: UITableViewController {
 
     var budgTrans = [Transaction]()
     var budget: Budget?
+    var expenses = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,8 @@ class BudgTranTableViewController: UITableViewController {
         }
         //loadSampleBudgTrans()
         
+        navigationItem.title = budget?.name
+        
         if (budget?.name)! == "Total"
         {
             //don't filter just return everything
@@ -50,15 +54,29 @@ class BudgTranTableViewController: UITableViewController {
             }
             budgTrans = filteredTrans
         }
+        
+        checkExpenses()
     }
-
+    
+    //income-expenses
+    func checkExpenses() {
+        for var i = 0; i < budgTrans.count; i++
+        {
+           
+            if(budgTrans[i].type == "Expense")
+            {
+                expenses += Int(budgTrans[i].amount)
+            }
+        }
+        
+        budget?.remaining = NSDecimalNumber(string: String(expenses))
+    }
     func loadSampleBudgTrans() {
         
         //name: String, amount: NSDecimalNumber, remaining: NSDecimalNumber, desc: String, date: NSDate, repeating: Bool
         let photo1 = UIImage(named: "shoppingcart")!
         let expense1 = Transaction(name: "Entertainment", amount: 45.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", photo: photo1, savedCat: "Other")!
         expense1.photo = photo1
-        
         
         let photo2 = UIImage(named: "shoppingcart")!
         let expense2 = Transaction(name: "Shopping", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false", photo: photo2, savedCat: "Shopping")!
