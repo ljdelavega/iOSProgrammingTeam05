@@ -58,7 +58,7 @@ class Transaction: NSObject, NSCoding {
     
     // MARK: Initialization
     
-    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, type: String, repeating: String, savedCat: String)
+    init?(name: String, amount: NSDecimalNumber, desc: String, date: NSDate, type: String, repeating: String, photo:UIImage?, savedCat: String)
     {
         // Initialize stored properties.
         self.name = name
@@ -67,6 +67,7 @@ class Transaction: NSObject, NSCoding {
         self.date = date
         self.type = type
         self.repeating = repeating
+        self.photo = photo
         self.category = savedCat
         
         super.init()
@@ -111,7 +112,7 @@ class Transaction: NSObject, NSCoding {
         
         
         // Must call designated initializer.
-        self.init(name: name, amount: amount, desc: desc, date: date, type: type, repeating: repeating, savedCat: savedCat)
+        self.init(name: name, amount: amount, desc: desc, date: date, type: type, repeating: repeating, photo: photo, savedCat: savedCat)
         self.photo = photo
         self.selectedCat = selectedCat
     }

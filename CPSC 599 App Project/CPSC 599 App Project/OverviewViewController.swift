@@ -37,33 +37,6 @@ class OverviewViewController: UIViewController, UITextFieldDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-/*
-    func loadGoalinTableView() {
-        self.tableView.registerClass(GoalTableViewCell.self, forCellReuseIdentifier: "GoalTableViewCell")
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-    
-    
-    
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "GoalTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! GoalTableViewCell
-        if let label = cell.nameLabel {
-            label.text = primaryGoal?.name
-        }
-        if let label2 = cell.costLabel {
-            label2.text = String(primaryGoal?.amount)
-        }
-        return cell
-    }*/
-    
     
     
     //does all the overview stuff
