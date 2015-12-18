@@ -224,7 +224,7 @@
                             <outlet property="delegate" destination="Y6z-q4-bUx" id="4Od-XG-d5g"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Shopping" id="GnV-EP-aFk">
+                    <navigationItem key="navigationItem" title="BudgTran" id="GnV-EP-aFk" userLabel="BudgTran">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="dxD-3o-l8i">
                             <connections>
                                 <segue destination="Na7-qW-pAr" kind="presentation" id="8Ca-C4-0OR"/>

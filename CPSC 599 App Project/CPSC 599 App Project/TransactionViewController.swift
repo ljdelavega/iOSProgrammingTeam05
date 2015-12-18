@@ -33,7 +33,7 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         catPicker.delegate = self
         catPicker.dataSource = self
-        catData = ["Total", "Shopping", "Other"]
+        catData = ["Total", "Paycheque", "Education", "Food", "Utilities", "Shopping", "Other"]
         
         if let transaction = transaction {
             navigationItem.title = transaction.name
@@ -53,22 +53,43 @@ class TransactionViewController: UIViewController, UITextFieldDelegate, UIImageP
             let datePrefix: String = formatter.stringFromDate(transaction.date)
             dateTextField.text = datePrefix
             
-            //Chnage row for item number (0-2)
-        if(transaction.category == "Shopping")
-        {
-            catPicker.selectRow(1, inComponent: 0, animated: true)
-            savedCatVar = "Shopping"
+            //Change row for item number (0 (total) - 6 (other))
+            if(transaction.category == "Paycheque")
+            {
+                catPicker.selectRow(1, inComponent: 0, animated: true)
+                savedCatVar = "Paycheque"
+            }
+            else if(transaction.category == "Education")
+            {
+                catPicker.selectRow(2, inComponent: 0, animated: true)
+                savedCatVar = "Education"
+            }
+            else if(transaction.category == "Food")
+            {
+                catPicker.selectRow(3, inComponent: 0, animated: true)
+                savedCatVar = "Food"
+            }
+            else if(transaction.category == "Utilities")
+            {
+                catPicker.selectRow(4, inComponent: 0, animated: true)
+                savedCatVar = "Utilities"
+            }
+            else if(transaction.category == "Shopping")
+            {
+                catPicker.selectRow(5, inComponent: 0, animated: true)
+                savedCatVar = "Shopping"
+            }
+            else if(transaction.category == "Other")
+            {
+                catPicker.selectRow(6, inComponent: 0, animated: true)
+                savedCatVar = "Other"
+            }
+            else
+            {
+                catPicker.selectRow(6, inComponent: 0, animated: true)
+                savedCatVar = "Other"
+            }
         }
-        else if(transaction.category == "Other")
-        {
-            catPicker.selectRow(2, inComponent: 0, animated: true)
-            savedCatVar = "Other"
-        }
-        }
-        
-        
-        
-        
         
         checkValidTransaction()
     }

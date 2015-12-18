@@ -62,9 +62,6 @@ class TransactionTableViewController: UITableViewController {
         expense6.photo = photo8
         
         transactions += [expense1, income1, expense2, income2, expense3, expense4, expense5, expense6]
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
