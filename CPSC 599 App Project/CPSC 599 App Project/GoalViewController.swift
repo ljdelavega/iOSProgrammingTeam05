@@ -198,25 +198,38 @@ class GoalViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+		if segue.identifier == "ShowDetail" {
+			let goalDetailViewController = segue.destinationViewController as! GoalDetailViewController
+			
+			goalDetailViewController.goal = primaryGoal
+		}
 
     }
-    
+	
     @IBAction func unwindToPrimaryGoal(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? GoalTableViewController {
             sourceViewController.saveGoals()
         }
+		else if let sourceViewController = sender.sourceViewController as? GoalDetailViewController, goal = sourceViewController.goal {
+			// Edit the primary goal in the goals list
+			let index = goals.indexOf(primaryGoal!)
+			goals[index!] = goal
+			// Save the goals.
+			saveGoals()
+		}
+
         updateInterface()
     }
-    
+	
     // MARK: NSCoding
-    
+	
     func saveGoals() {
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(goals, toFile: Goal.ArchiveURL.path!)
         if !isSuccessfulSave {
             print("Failed to save goals...")
         }
     }
-    
+	
     func loadGoals() -> [Goal]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Goal.ArchiveURL.path!) as? [Goal]
     }

@@ -36,9 +36,6 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, BEMCheckB
         amountTextField.delegate = self
         contributedTextField.delegate = self
         
-        
-        setupCheckbox()
-        
         // Set up views if editing an existing Meal.
         if let goal = goal {
             navigationItem.title = goal.name
@@ -57,12 +54,6 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, BEMCheckB
         
         // Enable the Save button only if the text field has a valid Goal name.
         checkValidGoal()
-    }
-    
-    // setup the primary goal checkbox
-    func setupCheckbox ()
-    {
-        
     }
     
     // MARK: UITextFieldDelegate
@@ -121,7 +112,12 @@ class GoalDetailViewController: UIViewController, UITextFieldDelegate, BEMCheckB
             navigationController!.popViewControllerAnimated(true)
         }
     }
-    
+	
+	@IBAction func save(sender: UIBarButtonItem) {
+		// Manually segue back to primary goal
+		performSegueWithIdentifier("unwindToPrimaryGoal", sender: self)
+	}
+	
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
