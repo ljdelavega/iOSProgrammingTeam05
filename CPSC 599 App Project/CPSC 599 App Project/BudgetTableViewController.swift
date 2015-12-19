@@ -40,15 +40,15 @@ class BudgetTableViewController: UITableViewController {
         budget1.photo = photo1
         
         let budget3 = Budget(name: "Education", amount: 500.00, remaining:500.00, desc: "Education Budget", date: NSDate())!
-        let photo3 = UIImage(named: "shoppingcart")!
+        let photo3 = UIImage(named: "education")!
         budget3.photo = photo3
         
         let budget4 = Budget(name: "Food", amount: 100.00, remaining: 99.25, desc: "Food Budget", date: NSDate())!
-        let photo4 = UIImage(named: "shoppingcart")!
+        let photo4 = UIImage(named: "NEWfoodICON")!
         budget4.photo = photo4
         
         let budget5 = Budget(name: "Utilities", amount: 100.00, remaining: 50.58, desc: "Utilities Budget", date: NSDate())!
-        let photo5 = UIImage(named: "shoppingcart")!
+        let photo5 = UIImage(named: "NEWutilitiesICON")!
         budget5.photo = photo5
         
         let budget6 = Budget(name: "Shopping", amount: 1500.00, remaining: 1032.33, desc: "Shopping Budget", date: NSDate())!
@@ -56,7 +56,7 @@ class BudgetTableViewController: UITableViewController {
         budget6.photo = photo6
         
         let budget7 = Budget(name: "Other", amount: 600.00, remaining: 405.25, desc: "Other Budget", date: NSDate())!
-        let photo7 = UIImage(named: "shoppingcart")!
+        let photo7 = UIImage(named: "NEWotherICON")!
         budget7.photo = photo7
         
         budgets += [budget1, budget3, budget4, budget5, budget6, budget7]
