@@ -53,10 +53,10 @@ class OverviewChartViewController: UIViewController, ChartViewDelegate {
         let expense1 = Transaction(name: "One Direction concert", amount: 405.25, desc: "Directioner for Lyfe", date: NSDate(), type: "Expense", repeating: "false", photo: photo1, savedCat: "Other")!
         expense1.photo = photo1
         
-        let photo2 = UIImage(named: "cash")!
-        let income1 = Transaction(name: "Got Paid!", amount: 480.00, desc: "Part-time job", date: NSDate(), type: "Income", repeating: "false",photo: photo2, savedCat: "Other")!
-        income1.photo = photo2
-        
+		let photo2 = UIImage(named: "cash")!
+		let income1 = Transaction(name: "Got Paid!", amount: 2700.00, desc: "Full-time job", date: NSDate(), type: "Income", repeating: "false",photo: photo2, savedCat: "Other")!
+		income1.photo = photo2
+		
         let photo3 = UIImage(named: "shopping")!
         let expense2 = Transaction(name: "New Jeans!", amount: 60.25, desc: "Gift for friend", date: NSDate(), type: "Expense", repeating: "false",photo: photo3, savedCat: "Shopping")!
         expense2.photo = photo3
