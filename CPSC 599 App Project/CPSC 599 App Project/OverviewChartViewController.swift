@@ -137,8 +137,24 @@ class OverviewChartViewController: UIViewController, ChartViewDelegate {
         // IMPORTANT: In a PieChart, no values (Entry) should have the same xIndex (even if from different DataSets), since no values can be drawn above each other.
         for var i = 0; i < count; i++
         {
-            let expense = expenses[i]
-            let chartDataEntry = ChartDataEntry(value: Double(expense.amount), xIndex: i)
+			// Filter the expenses by category
+			let filteredTrans = expenses.filter() {
+				if let category = ($0 as Transaction).category as String! {
+					return category.containsString(categories[i])
+				}
+				else
+				{
+					return false
+				}
+			}
+			// calculate the total expense for filtered category
+			var totalExpense = 0.0
+			for expense in filteredTrans
+			{
+				totalExpense += Double(expense.amount)
+			}
+
+            let chartDataEntry = ChartDataEntry(value: Double(totalExpense), xIndex: i)
             yVals1.append(chartDataEntry)
             
         }
