@@ -35,35 +35,31 @@ class BudgetTableViewController: UITableViewController {
     
     func loadSampleBudgets()
     {
-        let budget1 = Budget(name: "Total", amount: 600.00, remaining: 294.00, desc: "Total Budget", date: NSDate())!
+        let budget1 = Budget(name: "Total", amount: 2800.00, remaining: 2087.41, desc: "Total Budget", date: NSDate())!
         let photo1 = UIImage(named: "dollarsign")!
         budget1.photo = photo1
         
-        let budget2 = Budget(name: "Paycheque", amount: 100.00, remaining: 45.5, desc: "Paycheque Budget", date: NSDate())!
-        let photo2 = UIImage(named: "shoppingcart")!
-        budget2.photo = photo2
-        
-        let budget3 = Budget(name: "Education", amount: 100.00, remaining: 45.5, desc: "Education Budget", date: NSDate())!
+        let budget3 = Budget(name: "Education", amount: 500.00, remaining:500.00, desc: "Education Budget", date: NSDate())!
         let photo3 = UIImage(named: "shoppingcart")!
         budget3.photo = photo3
         
-        let budget4 = Budget(name: "Food", amount: 100.00, remaining: 45.5, desc: "Food Budget", date: NSDate())!
+        let budget4 = Budget(name: "Food", amount: 100.00, remaining: 99.25, desc: "Food Budget", date: NSDate())!
         let photo4 = UIImage(named: "shoppingcart")!
         budget4.photo = photo4
         
-        let budget5 = Budget(name: "Utilities", amount: 100.00, remaining: 45.5, desc: "Utilities Budget", date: NSDate())!
+        let budget5 = Budget(name: "Utilities", amount: 100.00, remaining: 50.58, desc: "Utilities Budget", date: NSDate())!
         let photo5 = UIImage(named: "shoppingcart")!
         budget5.photo = photo5
         
-        let budget6 = Budget(name: "Shopping", amount: 100.00, remaining: 45.5, desc: "Shopping Budget", date: NSDate())!
+        let budget6 = Budget(name: "Shopping", amount: 1500.00, remaining: 1032.33, desc: "Shopping Budget", date: NSDate())!
         let photo6 = UIImage(named: "shoppingcart")!
         budget6.photo = photo6
         
-        let budget7 = Budget(name: "Other", amount: 100.00, remaining: 45.5, desc: "Other Budget", date: NSDate())!
+        let budget7 = Budget(name: "Other", amount: 600.00, remaining: 405.25, desc: "Other Budget", date: NSDate())!
         let photo7 = UIImage(named: "shoppingcart")!
         budget7.photo = photo7
         
-        budgets += [budget1, budget2, budget3, budget4, budget5, budget6, budget7]
+        budgets += [budget1, budget3, budget4, budget5, budget6, budget7]
     }
     
     override func didReceiveMemoryWarning() {

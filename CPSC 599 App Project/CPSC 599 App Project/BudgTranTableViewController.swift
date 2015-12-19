@@ -29,7 +29,7 @@ class BudgTranTableViewController: UITableViewController {
             budgTrans += savedTransactions
         } else {
             //loadSampleBudgets()
-            loadSampleBudgTrans()
+            //loadSampleBudgTrans()
             //saveTransactions()
         }
         //loadSampleBudgTrans()
