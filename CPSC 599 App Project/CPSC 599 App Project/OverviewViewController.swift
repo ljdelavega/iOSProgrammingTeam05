@@ -37,13 +37,21 @@ class OverviewViewController: UIViewController, UITextFieldDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	override func viewWillAppear(animated: Bool) {
+		overview()
+	}
     
     
     //does all the overview stuff
     func overview() {
+		// reset the total income and expenses
+		totalExpense = 0.0
+		totalIncome = 0.0
+		total = 0.0
         //load transactions
         if let savedTransactions = loadTransactions() {
-            transactions += savedTransactions
+            transactions = savedTransactions
             calculateTotal()
             
         } else {
@@ -53,7 +61,7 @@ class OverviewViewController: UIViewController, UITextFieldDelegate{
         
 		// Load any saved goals, otherwise load sample data.
 		if let savedGoals = loadGoals() {
-			goals += savedGoals
+			goals = savedGoals
 		} else {
 			// Load the sample data.
 			loadSampleGoals()
@@ -140,6 +148,10 @@ class OverviewViewController: UIViewController, UITextFieldDelegate{
         let formatter = NSNumberFormatter()
         formatter.numberStyle = .CurrencyStyle
         formatter.locale = NSLocale(localeIdentifier: "en_US")
+		// reset the total income and expenses
+		totalExpense = 0.0
+		totalIncome = 0.0
+		total = 0.0
 
         for var i = 0; i < transactions.count; i++ {
             let transaction = transactions[i]

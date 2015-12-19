@@ -24,15 +24,29 @@ class BudgetTableViewController: UITableViewController {
         
         if let savedBudgets = loadBudgets()
         {
-            budgets += savedBudgets
+            budgets = savedBudgets
         } else {
             loadSampleBudgets()
             saveBudgets()
         }
-        
+        //checkExpenses()
         tableView.reloadData()
     }
-    
+	
+	override func viewWillAppear(animated: Bool) {
+		/*
+		if let savedBudgets = loadBudgets()
+		{
+			budgets = savedBudgets
+		} else {
+			loadSampleBudgets()
+			saveBudgets()
+		}
+		*/
+		//checkExpenses()
+		tableView.reloadData()
+	}
+	
     func loadSampleBudgets()
     {
         let budget1 = Budget(name: "Total", amount: 2800.00, remaining: 2087.41, desc: "Total Budget", date: NSDate())!
@@ -61,7 +75,46 @@ class BudgetTableViewController: UITableViewController {
         
         budgets += [budget1, budget3, budget4, budget5, budget6, budget7]
     }
-    
+	
+	/*
+	//income-expenses
+	func checkExpenses() {
+		for budget in budgets
+		{
+			if (budget.name) == "Total"
+			{
+				//don't filter just return everything
+			}
+			else
+			{
+				// Filter the results by category
+				let filteredTrans = transactions.filter() {
+					if let category = ($0 as Transaction).category as String! {
+						return category.containsString(budget.name)
+					}
+					else
+					{
+						return false
+					}
+				}
+				var expenses = 0.0
+				// calculate the remaining for each budget
+				for var i = 0; i < filteredTrans.count; i++
+				{
+					
+					if(filteredTrans[i].type == "Expense")
+					{
+						expenses += Double(filteredTrans[i].amount)
+					}
+				}
+				
+				budget.remaining = NSDecimalNumber(string: String(expenses))
+			}
+			
+		}
+	}
+	*/
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
